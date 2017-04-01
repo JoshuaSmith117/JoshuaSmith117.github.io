@@ -1,8 +1,23 @@
+
 body{
     background-color: white;
+  
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 h1{
-    color: darkgray;
+    color: darkgrey;
     font-family: 'Quicksand', sans-serif;
-    font-size: 60px;
+    font-size: 48px;
 }
+p{
+    color: darkgrey;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 36px;
+}
+span{
+                display: block;
+            }

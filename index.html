@@ -1,23 +1,58 @@
 <!DOCTYPE html>
+
 <!--Begin html portion of code-->
 <html>
+<!--jQuery download-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <head>
+    <!--Link to custom font from google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
-        <style>
-            body {
-                font-family: 'Quicksand', sans-serif;
-                font-size: 48px;
+    <!--Link to index.css stylesheet-->
+        <link href="index.css" rel="stylesheet">
+    <!--Begin defining style for the page-->
+        <style> 
+            .noIbar {
+                
+            }
+            .h11{
+                display:none;
+                position: absolute;
+                top: 30%;
+                width: 100%;
+                text-align: center;
+                cursor:default;
+            }
+            .h12{
+                display:none;
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                text-align: center;
+                cursor:default;
             }
         </style>
-
     </head>
-    <body>
-        <h1>Hello World</h1>
 
-            <p>I'm hosted with GitHub Pages.</p>
+    <body>
+        <div class="h11" id="intro1">
+            <h1>
+                My name is Joshua Smith.
+            </h1>
+        </div>
+        <div class="h12" id="intro2">
+            <h1>
+                I am a User Experience Designer.
+            </h1>
+        </div>
     </body>
+
 </html>
+
 <!--Begin javascript portion of code-->
 <script>
-
+    function fadein() {
+        $("#intro1").fadeIn(800);
+        $("#intro2").delay(1000).fadeIn(800);
+    }
+    window.onload = fadein
 </script>
