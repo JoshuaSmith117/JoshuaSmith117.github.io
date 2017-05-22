@@ -3,7 +3,7 @@
 <!--Begin html portion of code-->
 <html>
 <!--jQuery download-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <head>
     <!--Link to custom font from google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
@@ -11,24 +11,43 @@
         <link href="index.css" rel="stylesheet">
     <!--Begin defining style for the page-->
         <style> 
-            .noIbar {
-                
-            }
+    
             .h11{
                 display:none;
                 position: absolute;
-                top: 30%;
                 width: 100%;
+                top: 20px;
+                left: 0%;
                 text-align: center;
-                cursor:default;
+                cursor: default;
+                border: 3px solid #73AD21;
             }
+            
             .h12{
                 display:none;
                 position: absolute;
-                top: 50%;
                 width: 100%;
+                left: 0%;
+                bottom: 20px;
+                cursor: default;
                 text-align: center;
-                cursor:default;
+                border: 3px solid #73AD21;
+            }
+
+            .btn1{
+                display: inline-block;
+                
+                /*background-color: #4CAF50;*/
+                background-image: url("Assets/Images/IconGameController");
+                border: none;
+                color: white;
+                padding: 128px 128px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 48px;
+                margin: 4px 4px;
+                cursor: pointer;
+                border-radius: 50%;
             }
         </style>
     </head>
@@ -36,23 +55,29 @@
     <body>
         <div class="h11" id="intro1">
             <h1>
-                My name is Joshua Smith.
+                My name is <span style="display: inline; color:black">Joshua Smith </span>
+                and I am a <span style="display: inline; color:black">User Experience Designer.</span>
             </h1>
         </div>
-        <div class="h12" id="intro2">
+        <div class="h12" id="intro3">
             <h1>
-                I am a User Experience Designer.
+                What would you like to <span style="display: inline; color:black">Learn More About Me</span>?
             </h1>
         </div>
-    </body>
+        <div id="intro2">
+            <button class="btn1">
+                Hi!
+            </button>
+        </div>
+</body>
 
 </html>
 
 <!--Begin javascript portion of code-->
 <script>
     function fadein() {
-        $("#intro1").fadeIn(800);
-        $("#intro2").delay(1000).fadeIn(800);
+        $("#intro1").fadeIn(800)
+        $("#intro3").delay(1600).fadeIn(800)
     }
     window.onload = fadein
 </script>

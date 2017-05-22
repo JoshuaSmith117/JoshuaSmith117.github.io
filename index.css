@@ -1,7 +1,6 @@
 
 body{
     background-color: white;
-  
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -9,15 +8,22 @@ body{
     user-select: none;
 }
 h1{
-    color: darkgrey;
+    color: lightgray;
     font-family: 'Quicksand', sans-serif;
     font-size: 48px;
 }
 p{
-    color: darkgrey;
+    color: black;
     font-family: 'Quicksand', sans-serif;
     font-size: 36px;
 }
-span{
-                display: block;
-            }
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
