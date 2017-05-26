@@ -39,7 +39,7 @@
                 background-position-y: 55%;
                 padding: 145px 140px;
                 transform: translate(-50%, -50%);
-                border: 3px solid white;
+                border: 3px solid grey;
                 cursor: pointer;
                 border-radius: 50%;
                 position: absolute; 
@@ -56,7 +56,7 @@
                 background-position-y: 55%;
                 padding: 145px 140px;
                 transform: translate(-50%, -50%);
-                border: 3px solid white;
+                border: 3px solid grey;
                 cursor: pointer;
                 border-radius: 50%;
                 position: absolute; 
@@ -67,20 +67,29 @@
                 background-position-y: 50%;
                 padding: 140px 140px;
             }
+            .box{
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+                display: none;
+            }
         </style>
     </head>
 
     <!--Begin Writing Body Content-->
     <body>
-            <h1 class="h11" id="intro1">
-                My name is <span >Joshua Smith </span>
-                and I am a <span >User Experience Designer.</span>
-            </h1>
-            <h1 class="h12" id="intro2">
-                What would you like to <span >Learn More About Me</span>?
-            </h1>
-        <button class="btn1"></button>
+        <h1 class="h11" id="intro1">
+            My name is <span >Joshua Smith </span>
+            and I am a <span >User Experience Designer.</span>
+        </h1>
+        <h1 class="h12" id="intro2">
+            What would you like to <span >Learn More About Me</span>?
+        </h1>
+        <button class="btn1" id="show"></button>
         <button class="btn2"></button>
+        <div class="box">
+
+        </div>
     </body>
 </html>
 
@@ -93,4 +102,13 @@
     }
     window.onload = fadein
     //End Fadein
+
+    //$(document).ready(function () {
+        $('#show').mouseover(function () {
+            $('.box').show('fast');
+        });
+        $('#show').mouseout(function () {
+            $('.box').hide('fast');
+        });
+    //});
 </script>
