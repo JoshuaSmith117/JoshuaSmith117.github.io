@@ -33,28 +33,59 @@
                 cursor: default;
                 text-align: center;
             }
+            .btn1cont{
+                transform: translate(-50%, -50%);
+                height: 290px;
+                width:280px;
+                position: absolute; 
+                top: 50%;
+                left: 33%;
+            }
             .btn1{
                 background-image: url(Assets/Images/IconGameControllerPop.png);
                 background-position-x: 50%;
                 background-position-y: 55%;
-                padding: 145px 140px;
-                transform: translate(-50%, -50%);
-                border: 3px solid grey;
+                height: 290px;
+                width:280px;
+                border: 3px solid white;
                 cursor: pointer;
                 border-radius: 50%;
-                position: absolute; 
-                top: 50%;
-                left: 33%
+                position: static; 
+            }
+            .box1{
+                transform: translate(-50%, -50%);
+                width: 150px;
+                height: 150px;
+                display: none;
+                position: fixed;
+                top: -10%;
+                left: -10%;
+                border: 3px solid lightgrey;
+                border-radius: 50%;
+            }
+            .box2{
+                transform: translate(-50%, -50%);
+                width: 150px;
+                height: 150px;
+                background-color: blue;
+                display: none;
+                position: fixed;
+                top: 110%;
+                left: -10%;
+                border: 3px solid lightgrey;
+                border-radius: 50%;
             }
             .btn1:focus{
                 background-position-y: 50%;
-                padding: 140px 140px;
+                height: 290px;
+                width:280px;
             }
             .btn2{
                 background-image: url(Assets/Images/IconMousePop.png);
                 background-position-x: 50%;
                 background-position-y: 55%;
-                padding: 145px 140px;
+                height: 290px;
+                width: 280px;
                 transform: translate(-50%, -50%);
                 border: 3px solid grey;
                 cursor: pointer;
@@ -67,12 +98,7 @@
                 background-position-y: 50%;
                 padding: 140px 140px;
             }
-            .box{
-                width: 200px;
-                height: 200px;
-                background-color: blue;
-                display: none;
-            }
+            
         </style>
     </head>
 
@@ -85,11 +111,15 @@
         <h1 class="h12" id="intro2">
             What would you like to <span >Learn More About Me</span>?
         </h1>
-        <button class="btn1" id="show"></button>
-        <button class="btn2"></button>
-        <div class="box">
-
+        <div class="btn1cont">
+            <img src="Assets/Images/ToriLogo.png" class="box1">
+            <img src="Assets/Images/TTPLogo.png" class="box2">
+            <button class="btn1" id="show"></button>
+            
         </div>
+        
+        <button class="btn2"></button>
+        
     </body>
 </html>
 
@@ -104,11 +134,13 @@
     //End Fadein
 
     //$(document).ready(function () {
-        $('#show').mouseover(function () {
-            $('.box').show('fast');
+    $('#show').mouseover(function () {
+            $('.box1').show('fast');
+            $('.box2').show('fast');
         });
         $('#show').mouseout(function () {
-            $('.box').hide('fast');
+            $('.box1').hide('fast');
+            $('.box2').hide('fast');
         });
     //});
 </script>
