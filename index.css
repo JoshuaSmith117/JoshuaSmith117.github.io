@@ -1,4 +1,7 @@
 
+div{
+    border: 3px solid #73AD21;
+}
 body{
     background-color: white;
     -webkit-touch-callout: none;
@@ -8,7 +11,7 @@ body{
     user-select: none;
 }
 h1{
-    color: lightgray;
+    color: gray;
     font-family: 'Quicksand', sans-serif;
     font-size: 3vw;
 }
@@ -17,9 +20,13 @@ p{
     font-family: 'Quicksand', sans-serif;
     font-size: 36px;
 }
+span{
+    color: black;
+}
 .button {
     background-color: #4CAF50; /* Green */
-    border: none;
+    outline: none;
+    border: 1px solid white;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -27,3 +34,4 @@ p{
     display: inline-block;
     font-size: 16px;
 }
+
