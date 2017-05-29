@@ -13,6 +13,7 @@
     <!--Link to index.css stylesheet------------------------------------------------------------------------>
         <link href="index.css" rel="stylesheet">
 
+        <link rel="prefetch" href="Assets/Images/GameControllerIconPop_NoBG.png">
     <!--Begin defining style for the page------------------------------------------------------------------------>
         <style> 
 
@@ -82,7 +83,7 @@
             }
             /*Intro Text Stuff----------------------------------------------------------------------*/
             .h11{
-                display:none;
+               
                 position: absolute;
                 width: 100%;
                 top: 60px;
@@ -91,16 +92,23 @@
                 cursor: default;  
             }
             .h12{
-                display:none;
+                
                 position: absolute;
                 width: 100%;
                 left: 0%;
                 bottom: 20px;
                 cursor: default;
                 text-align: center;
-
             }
-
+            .btntxt{
+                display:none;
+                color:white;
+                position:center;
+                text-align:center;
+                width:auto;
+                height:auto;
+                font-size: 20px;
+            }
             /*btn1 Stuff----------------------------------------------------------------------*/
             .btn1cont{
                 transform: translate(-50%, -50%);
@@ -111,70 +119,80 @@
                 left: 33%;
             }
             .btn1{
-                background-image: url(Assets/Images/IconGameControllerPop.png);
+                background-image: url(Assets/Images/IconGameController.png);
                 transform: translate(-50%, -50%);
                 background-position-x: 50%;
                 background-position-y: 55%;
                 background-size: 190px;
+                background-color: rgb(251,176,59);
                 height: 145px;
                 width: 140px;
-                border: 3px solid white;
+                border: 0px solid;
                 cursor: pointer;
                 border-radius: 50%;
-                position: absolute;
+                position: relative;
                 top: 50%;
                 left: 50%; 
+                box-shadow: 0 9px rgb(180,100,20);
             }
-            .box1-1{
+            .btn1.hide-bg {
+                background-image: none;
+            }
+            .box1{
                 transform: translate(-50%, -50%);
                 width: 100px;
                 height: 100px;
-                display: none;
                 position: fixed;
-                top: -10%;
-                left: -10%;
+                top: -30%;
+                left: 50%;
                 border: 3px solid lightgrey;
                 border-radius: 50%;
             }
-            .box1-2{
+            .box2{
                 transform: translate(-50%, -50%);
                 width: 100px;
                 height: 100px;
-                display: none;
+                
                 position: fixed;
-                top: 110%;
-                left: -10%;
+                top: 10%;
+                left: -25%;
                 border: 3px solid lightgrey;
                 border-radius: 50%;
             }
-            .box1-3{
+            .box3{
                 transform: translate(-50%, -50%);
                 width: 100px;
                 height: 100px;
-                display: none;
                 position: fixed;
-                top: -10%;
-                left: 110%;
+                top: 90%;
+                left: -25%;
                 border: 3px solid lightgrey;
                 border-radius: 50%;
             }
-            .box1-4{
+            .box4{
                 transform: translate(-50%, -50%);
                 width: 100px;
                 height: 100px;
-                display: none;
                 position: fixed;
-                top: 110%;
-                left: 110%;
+                top: 130%;
+                left: 50%;
                 border: 3px solid lightgrey;
                 border-radius: 50%;
             }
-            .btn1:focus{
-                background-position-y: 50%;
-                height: 290px;
-                width:280px;
+            .btn1:active{
+                box-shadow: 0 5px rgb(180,100,20);
             }
-
+            .game{
+                transform: translate(0%, -10%);
+                display:none;   
+                position:relative;
+                width:600px;
+                text-align: left; 
+                font-size: 48px;
+                left:100%;
+                bottom:50%;
+                color:black;
+            }
             /*btn2 stuff----------------------------------------------------------------------*/
             .btn2cont{
                 transform: translate(-50%, -50%);
@@ -184,40 +202,33 @@
                 top: 50%;
                 left: 66%;
             }
-            .btn2{
-                background-image: url(Assets/Images/IconMousePop.png);
+            .btn2 {
+                background-image: url(Assets/Images/IconMouse.png);
                 transform: translate(-50%, -50%);
                 background-position-x: 50%;
                 background-position-y: 55%;
                 background-size: 190px;
+                background-color: rgb(106,215,255);
                 height: 145px;
                 width: 140px;
-                border: 3px solid white;
+                border: 0px solid;
                 cursor: pointer;
                 border-radius: 50%;
-                position: absolute;
+                position: relative;
                 top: 50%;
                 left: 50%; 
+                box-shadow: 0 9px rgb(80,170,200);
             }
-            .box2-1{
-                transform: translate(-50%, -50%);
-                width: 100px;
-                height: 100px;
-                display: none;
-                position: fixed;
-                top: -10%;
-                left: -10%;
-                border: 3px solid lightgrey;
-                border-radius: 50%;
+            .btn2.hide-bg {
+                background-image: none;
             }
             .box2-2{
                 transform: translate(-50%, -50%);
                 width: 100px;
                 height: 100px;
-                display: none;
                 position: fixed;
-                top: 110%;
-                left: -10%;
+                top: 10%;
+                left: 125%;
                 border: 3px solid lightgrey;
                 border-radius: 50%;
             }
@@ -225,29 +236,26 @@
                 transform: translate(-50%, -50%);
                 width: 100px;
                 height: 100px;
-                display: none;
                 position: fixed;
-                top: -10%;
-                left: 110%;
+                top: 90%;
+                left: 125%;
                 border: 3px solid lightgrey;
                 border-radius: 50%;
             }
-            .box2-4{
-                transform: translate(-50%, -50%);
-                width: 100px;
-                height: 100px;
-                display: none;
-                position: fixed;
-                top: 110%;
-                left: 110%;
-                border: 3px solid lightgrey;
-                border-radius: 50%;
+            .btn2:active{
+                box-shadow: 0 5px rgb(80,170,200);
             }
-            .btn2:focus{
-                background-position-y: 50%;
-                padding: 140px 140px;
+            .web{
+                transform: translate(0%, -10%);
+                display:none;   
+                position:relative;
+                width:500px;
+                text-align: right; 
+                font-size: 48px;
+                right:250%;
+                bottom:50%;
+                color:black;
             }
-            
         </style>
     </head>
 
@@ -255,7 +263,7 @@
     <body>
         <div class="header">
             <div class="headerdiv">
-                <button class="linkedinbtn headerbtn"></button>
+                <button class="headerbtn linkedinbtn"></button>
                 <h2 class="headertxt">https://www.linkedin.com/in/joshsmith117</h2>
             </div>
             <div class="headerdiv">
@@ -264,65 +272,76 @@
             </div>
             
         </div>
-        <h1 class="h11" id="intro1">
-            My name is <span >Joshua Smith </span>
-            and I am a <span >User Experience Designer.</span>
+        <h1 class="h11">
+            My name is Joshua Smith
+            and I'm a User Experience Designer.
         </h1>
-        <h1 class="h12" id="intro2">
-            What would you like to <span >Learn More About Me</span>?
+        <h1 class="h12">
+            Would you like to learn more about me?
         </h1>
         <div class="btn1cont">
-            <img src="Assets/Images/ToriLogo.png" class="box1-1">
-            <img src="Assets/Images/TTPLogo.png" class="box1-2">
-            <img src="Assets/Images/IUArcade.png" class="box1-3">
-            <img src="Assets/Images/EscapeLogo.png" class="box1-4">
-            <button class="btn1" id="show1"></button>
+            <button class="btn1">
+                <h1 class="btntxt" id="btntxt1">Learn More</h1>
+            </button>
+            <h1 class="game">Game Development</h1>
+            <div class="boxcont1" style="display: none;">
+                <img src="Assets/Images/ToriLogo.png" class="box1">
+                <img src="Assets/Images/TTPLogo.png" class="box2">
+                <img src="Assets/Images/IUArcade.png" class="box3">
+                <img src="Assets/Images/EscapeLogo.png" class="box4">
+            </div>
+            
         </div>
-        <div class="btn2cont">
-            <img src="Assets/Images/JSLogo.png" class="box2-1">
-            <img src="Assets/Images/TTPLogo.png" class="box2-2">
-            <img src="Assets/Images/IUArcade.png" class="box2-3">
-            <img src="Assets/Images/EscapeLogo.png" class="box2-4">
-            <button class="btn2" id="show2"></button>
-        </div>
+            <div class="btn2cont">
+                <button class="btn2">
+                    <h1 class="btntxt" id="btntxt2">Learn More</h1>
+                </button>
+                <h1 class="web">Web Development</h1>
+                <div class="boxcont2" style="display: none;">
+                    <img src="Assets/Images/JSLogo.png" class="box1">
+                    <img src="Assets/Images/TTPLogo.png" class="box2-2">
+                    <img src="Assets/Images/IUArcade.png" class="box2-3">
+                    <img src="Assets/Images/EscapeLogo.png" class="box4">
+                </div>
+            </div>
         
-    </body>
+</body>
 </html>
 
 <!--Begin javascript portion of code------------------------------------------------------------------------>
 <script>
     //Opening Text Fadein Sequence----------------------------------------------------------------------
-    function fadein() {
-        $("#intro1").fadeIn(800)
-        $("#intro2").delay(1600).fadeIn(800)
-    }
-    window.onload = fadein
+        
     //End Fadein----------------------------------------------------------------------
 
-    $('#show1').mouseover(function () {
-        $('.box1-1').show('fast');
-        $('.box1-2').show('fast');
-        $('.box1-3').show('fast');
-        $('.box1-4').show('fast');
+    $('.btn1').mouseover(function () {
+        $('.boxcont1').fadeIn('fast');
+        $('.game').fadeIn('fast');
+        $('.btn1').addClass("hide-bg");
+        $('#btntxt1').fadeIn('fast');
+        $('.btn2').fadeOut('fast');
     });
-    $('#show1').mouseout(function () {
-        $('.box1-1').hide('fast');
-        $('.box1-2').hide('fast');
-        $('.box1-3').hide('fast');
-        $('.box1-4').hide('fast');
+    $('.btn1cont').mouseout(function () {
+        $('.btn2').fadeIn('fast');
+        $('.boxcont1').fadeOut('fast');
+        $('.btn1').removeClass("hide-bg");
+        $('#btntxt1').fadeOut('fast');
+        $('.game').fadeOut('fast');
     });
 
-    $('#show2').mouseover(function () {
-        $('.box2-1').show('fast');
-        $('.box2-2').show('fast');
-        $('.box2-3').show('fast');
-        $('.box2-4').show('fast');
+    $('.btn2').mouseover(function () {
+        $('.btn2').addClass("hide-bg");
+        $('.web').fadeIn('fast');
+        $('#btntxt2').fadeIn('fast');
+        $('.boxcont2').fadeIn('fast');
+        $('.btn1').fadeOut('fast');
     });
-    $('#show2').mouseout(function () {
-        $('.box2-1').hide('fast');
-        $('.box2-2').hide('fast');
-        $('.box2-3').hide('fast');
-        $('.box2-4').hide('fast');
+    $('.btn2cont').mouseout(function () {
+        $('.btn2').removeClass("hide-bg");
+        $('.web').fadeOut('fast');
+        $('#btntxt2').fadeOut('fast');
+        $('.boxcont2').fadeOut('fast');
+        $('.btn1').fadeIn('fast');
     });
 
 </script>
