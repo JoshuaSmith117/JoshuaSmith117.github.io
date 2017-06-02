@@ -7,256 +7,20 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     
     <head>
-    <!--Link to custom font from google fonts------------------------------------------------------------------------>
+        <!--Link to custom font from google fonts------------------------------------------------------------------------>
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
 
-    <!--Link to index.css stylesheet------------------------------------------------------------------------>
+        <!--Link to index.css stylesheets ------------------------------------------------------------------------>
+        <link href="index.firefox.css" rel="stylesheet">
+        <link href="index.chrome.css" rel="stylesheet">
+        <link href="index.ie.css" rel="stylesheet">
         <link href="index.css" rel="stylesheet">
 
         <link rel="prefetch" href="Assets/Images/GameControllerIconPop_NoBG.png">
-    <!--Begin defining style for the page------------------------------------------------------------------------>
-        <style> 
 
-            /*Header Stuff----------------------------------------------------------------------*/
-            .header{
-                position:fixed;
-                background-color: rgb(250, 250, 250);
-                height:70px;
-                width:100%;
-                left:0%;
-                top:0%;
-            }
-            .headerdiv{
-                display:inline-block;
-                position:relative;
-                top: 2.5px;
-                width:auto;
-            }
-            .headertxt{
-                display:inline-block;
-                position:relative;
-                right: 0px;
-                top: 5px;
-                width: auto;
-                text-align:left;
-            }
-            .headerbtn{
-                position: relative;
-                background-position-x: 50%;
-                background-position-y: 55%;
-                background-size: 60px;
-                height: 60px;
-                width: 60px;
-                cursor: pointer;
-                border-radius: 50%;
-                border: 3px solid rgb(250, 250, 250);
-            }
-            .linkedin{
-                display:inline-block;
-                position: relative;
-                top: 2.5px;
-                border: 3px solid rgb(0,0,0);
-                width:20%;
-            }
-            .linkedinbtn{
-                background-image: url(Assets/Images/LinkedInLogo.png);
-            }
-            .email{
-                display:inline-block;
-                position: relative;
-                top: 2.5px;
-                border: 3px solid rgb(0,0,0);
-                width:20%
-            }
-            .emailbtn{
-                background-image: url(Assets/Images/JSLogo.png);
-            }
-            .phone{
-                display:inline-block;
-                position: relative;
-                top: 2.5px;
-                border: 3px solid rgb(0,0,0);
-                width:20%
-            }
-            .phonebtn{
-                background-image: url(Assets/Images/PhoneIconPop.png);
-            }
-            /*Intro Text Stuff----------------------------------------------------------------------*/
-            .h11{
-               
-                position: absolute;
-                width: 100%;
-                top: 60px;
-                left: 0%;
-                text-align: center;
-                cursor: default;  
-            }
-            .h12{
-                
-                position: absolute;
-                width: 100%;
-                left: 0%;
-                bottom: 20px;
-                cursor: default;
-                text-align: center;
-            }
-            .btntxt{
-                display:none;
-                color:white;
-                position:center;
-                text-align:center;
-                width:auto;
-                height:auto;
-                font-size: 20px;
-            }
-            /*btn1 Stuff----------------------------------------------------------------------*/
-            .btn1cont{
-                transform: translate(-50%, -50%);
-                height: 200px;
-                width:200px;
-                position: absolute; 
-                top: 50%;
-                left: 33%;
-            }
-            .btn1{
-                background-image: url(Assets/Images/IconGameController.png);
-                transform: translate(-50%, -50%);
-                background-position-x: 50%;
-                background-position-y: 55%;
-                background-size: 190px;
-                background-color: rgb(251,176,59);
-                height: 145px;
-                width: 140px;
-                border: 0px solid;
-                cursor: pointer;
-                border-radius: 50%;
-                position: relative;
-                top: 50%;
-                left: 50%; 
-                box-shadow: 0 9px rgb(180,100,20);
-            }
-            .btn1.hide-bg {
-                background-image: none;
-            }
-            .box1{
-                transform: translate(-50%, -50%);
-                width: 100px;
-                height: 100px;
-                position: fixed;
-                top: -30%;
-                left: 50%;
-                border: 3px solid lightgrey;
-                border-radius: 50%;
-            }
-            .box2{
-                transform: translate(-50%, -50%);
-                width: 100px;
-                height: 100px;
-                
-                position: fixed;
-                top: 10%;
-                left: -25%;
-                border: 3px solid lightgrey;
-                border-radius: 50%;
-            }
-            .box3{
-                transform: translate(-50%, -50%);
-                width: 100px;
-                height: 100px;
-                position: fixed;
-                top: 90%;
-                left: -25%;
-                border: 3px solid lightgrey;
-                border-radius: 50%;
-            }
-            .box4{
-                transform: translate(-50%, -50%);
-                width: 100px;
-                height: 100px;
-                position: fixed;
-                top: 130%;
-                left: 50%;
-                border: 3px solid lightgrey;
-                border-radius: 50%;
-            }
-            .btn1:active{
-                box-shadow: 0 5px rgb(180,100,20);
-            }
-            .game{
-                transform: translate(0%, -10%);
-                display:none;   
-                position:relative;
-                width:600px;
-                text-align: left; 
-                font-size: 48px;
-                left:100%;
-                bottom:50%;
-                color:black;
-            }
-            /*btn2 stuff----------------------------------------------------------------------*/
-            .btn2cont{
-                transform: translate(-50%, -50%);
-                height: 200px;
-                width:200px;
-                position: absolute; 
-                top: 50%;
-                left: 66%;
-            }
-            .btn2 {
-                background-image: url(Assets/Images/IconMouse.png);
-                transform: translate(-50%, -50%);
-                background-position-x: 50%;
-                background-position-y: 55%;
-                background-size: 190px;
-                background-color: rgb(106,215,255);
-                height: 145px;
-                width: 140px;
-                border: 0px solid;
-                cursor: pointer;
-                border-radius: 50%;
-                position: relative;
-                top: 50%;
-                left: 50%; 
-                box-shadow: 0 9px rgb(80,170,200);
-            }
-            .btn2.hide-bg {
-                background-image: none;
-            }
-            .box2-2{
-                transform: translate(-50%, -50%);
-                width: 100px;
-                height: 100px;
-                position: fixed;
-                top: 10%;
-                left: 125%;
-                border: 3px solid lightgrey;
-                border-radius: 50%;
-            }
-            .box2-3{
-                transform: translate(-50%, -50%);
-                width: 100px;
-                height: 100px;
-                position: fixed;
-                top: 90%;
-                left: 125%;
-                border: 3px solid lightgrey;
-                border-radius: 50%;
-            }
-            .btn2:active{
-                box-shadow: 0 5px rgb(80,170,200);
-            }
-            .web{
-                transform: translate(0%, -10%);
-                display:none;   
-                position:relative;
-                width:500px;
-                text-align: right; 
-                font-size: 48px;
-                right:250%;
-                bottom:50%;
-                color:black;
-            }
-        </style>
+        <!--Allow for easy debugging int IE------------------------------------------------------>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     </head>
 
     <!--Begin Writing Body Content------------------------------------------------------------------------>
@@ -292,20 +56,19 @@
             </div>
             
         </div>
-            <div class="btn2cont">
-                <button class="btn2">
-                    <h1 class="btntxt" id="btntxt2">Learn More</h1>
-                </button>
-                <h1 class="web">Web Development</h1>
-                <div class="boxcont2" style="display: none;">
-                    <img src="Assets/Images/JSLogo.png" class="box1">
-                    <img src="Assets/Images/TTPLogo.png" class="box2-2">
-                    <img src="Assets/Images/IUArcade.png" class="box2-3">
-                    <img src="Assets/Images/EscapeLogo.png" class="box4">
-                </div>
+        <div class="btn2cont">
+            <button class="btn2">
+                <h1 class="btntxt" id="btntxt2">Learn More</h1>
+            </button>
+            <h1 class="web">Web Development</h1>
+            <div class="boxcont2" style="display: none;">
+                <img src="Assets/Images/JSLogo.png" class="box1">
+                <img src="Assets/Images/TTPLogo.png" class="box2-2">
+                <img src="Assets/Images/IUArcade.png" class="box2-3">
+                <img src="Assets/Images/EscapeLogo.png" class="box4">
             </div>
-        
-</body>
+        </div>
+    </body>
 </html>
 
 <!--Begin javascript portion of code------------------------------------------------------------------------>

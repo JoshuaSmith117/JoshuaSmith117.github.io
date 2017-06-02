@@ -1,3 +1,4 @@
+﻿@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /*Begin IE Hack=============================*/
 
     /*Default Styles ---------------------------------*/
     body {
@@ -50,12 +51,12 @@
         width:auto;
         height:70px;
     }
-    .headertxt {
+    .headertxt{
+        transform: translate(0%, -80%);
         display:inline-block;
         position:relative;
         width: auto;
         text-align:left;
-        top: 15%;
     }
     .headerbtn{
         transform: translate(0%, -50%);
@@ -266,4 +267,4 @@
         bottom:50%;
         color:black;
     }
-    
+}/*End IE Hack===================================================*/

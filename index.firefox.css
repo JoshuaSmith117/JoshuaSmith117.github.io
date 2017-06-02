@@ -1,4 +1,6 @@
 
+@supports (-moz-appearance:meterbar) { /*Begin Firefox Hack=============================*/
+
     /*Default Styles ---------------------------------*/
     body {
         background-color: white;
@@ -266,4 +268,5 @@
         bottom:50%;
         color:black;
     }
+}/*End Firefox Hack===================================================*/
     
