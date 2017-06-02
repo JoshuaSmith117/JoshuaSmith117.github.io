@@ -70,7 +70,7 @@
         cursor: pointer;
         border-radius: 50%;
         top: 50%;
-        border: 3px solid rgb(0,0, 0);
+        border: 3px solid rgb(250,250,250);
     }
     .linkedinbtn{
         background-image: url(Assets/Images/LinkedInLogo.png);
@@ -125,21 +125,12 @@
     /*btn1 Stuff----------------------------------------------------------------------*/
     .boxcont1{
         pointer-events:none;
-        border: 1px solid red;
         position: fixed;
         height: 180px;
         width: 180px;
         display: inline-block;
         transform: translate(-50%,-50%);
         position: fixed;
-        top: 50%;
-        left: 33%;
-    }
-    .btn1cont{
-        transform: translate(-50%, -50%);
-        height: 200px;
-        width:200px;
-        position: absolute; 
         top: 50%;
         left: 33%;
     }
@@ -229,14 +220,12 @@
         width: 600px;
         font-size: 48px;
         text-align:left;
-        border: 1px solid green;
         top:18%;
         left: 100%;
     }
     /*btn2 stuff----------------------------------------------------------------------*/
     .boxcont2{
         pointer-events:none;
-        border: 1px solid red;
         position: fixed;
         height: 180px;
         width: 180px;
@@ -295,7 +284,6 @@
         width: 450px;
         font-size: 48px;
         text-align:right;
-        border: 1px solid green;
         top: 30px;
         right:452px;
     }
