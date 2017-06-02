@@ -70,7 +70,7 @@
         cursor: pointer;
         border-radius: 50%;
         top: 50%;
-        border: 3px solid rgb(0,0, 0);
+        border: 3px solid rgb(0,0,0);
     }
     .linkedinbtn{
         background-image: url(Assets/Images/LinkedInLogo.png);
@@ -103,8 +103,7 @@
         text-align: center;
         cursor: default;  
     }
-    .h12{
-                
+    .h12{  
         position: absolute;
         width: 100%;
         left: 0%;
@@ -120,31 +119,44 @@
         width:auto;
         height:auto;
         font-size: 20px;
+        pointer-events:none;
     }
     /*btn1 Stuff----------------------------------------------------------------------*/
-    .btn1cont{
-        transform: translate(-50%, -50%);
-        height: 200px;
-        width:200px;
-        position: absolute; 
+    .boxcont1{
+        pointer-events:none;
+        border: 1px solid red;
+        position: fixed;
+        height: 180px;
+        width: 180px;
+        display: inline-block;
+        transform: translate(-50%,-50%);
+        position: fixed;
         top: 50%;
         left: 33%;
     }
+    .btn1cont{
+        display:inline-block;
+        position: fixed; 
+        left:0%;
+        top: 70px;
+        border: 1px solid blue;
+        
+    }
     .btn1{
         background-image: url(Assets/Images/IconGameController.png);
-        transform: translate(-50%, -50%);
+        background-color: rgb(251,176,59);
+        transform: translate(-50%,-50%);
+        position: fixed;
         background-position-x: 50%;
         background-position-y: 55%;
-        background-size: 190px;
-        background-color: rgb(251,176,59);
+        background-size: 215px;
+        border: 0px;
         height: 145px;
-        width: 140px;
-        border: 0px solid;
+        width: 145px;
         cursor: pointer;
         border-radius: 50%;
-        position: relative;
         top: 50%;
-        left: 50%; 
+        left: 33%;
         box-shadow: 0 9px rgb(180,100,20);
     }
     .btn1.hide-bg {
@@ -164,7 +176,6 @@
         transform: translate(-50%, -50%);
         width: 100px;
         height: 100px;
-                
         position: fixed;
         top: 10%;
         left: -25%;
@@ -195,17 +206,28 @@
         box-shadow: 0 5px rgb(180,100,20);
     }
     .game{
-        transform: translate(0%, -10%);
-        display:none;   
+        display: inline-block;
         position:relative;
-        width:600px;
-        text-align: left; 
+        width: 450px;
         font-size: 48px;
-        left:100%;
-        bottom:50%;
-        color:black;
+        text-align:left;
+        border: 1px solid green;
+        top: 30px;
+        left: 100%;
     }
     /*btn2 stuff----------------------------------------------------------------------*/
+    .boxcont2{
+        pointer-events:none;
+        border: 1px solid red;
+        position: fixed;
+        height: 180px;
+        width: 180px;
+        display: inline-block;
+        transform: translate(-50%,-50%);
+        position: fixed;
+        top: 50%;
+        left: 66%;
+    }
     .btn2cont{
         transform: translate(-50%, -50%);
         height: 200px;
@@ -216,19 +238,19 @@
     }
     .btn2 {
         background-image: url(Assets/Images/IconMouse.png);
-        transform: translate(-50%, -50%);
+        background-color: rgb(106,215,255);
+        transform: translate(-50%,-50%);
+        position: fixed;
         background-position-x: 50%;
         background-position-y: 55%;
-        background-size: 190px;
-        background-color: rgb(106,215,255);
+        background-size: 215px;
+        border: 0px;
         height: 145px;
-        width: 140px;
-        border: 0px solid;
+        width: 145px;
         cursor: pointer;
         border-radius: 50%;
-        position: relative;
         top: 50%;
-        left: 50%; 
+        left: 66%;
         box-shadow: 0 9px rgb(80,170,200);
     }
     .btn2.hide-bg {
@@ -258,15 +280,14 @@
         box-shadow: 0 5px rgb(80,170,200);
     }
     .web{
-        transform: translate(0%, -10%);
-        display:none;   
+        display:inline-block;
         position:relative;
-        width:500px;
-        text-align: right; 
+        width: 450px;
         font-size: 48px;
-        right:250%;
-        bottom:50%;
-        color:black;
+        text-align:right;
+        border: 1px solid green;
+        top: 30px;
+        right:452px;
     }
 }/*End Chrome Hack===================================================*/
     

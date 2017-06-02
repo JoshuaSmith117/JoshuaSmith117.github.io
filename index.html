@@ -44,31 +44,26 @@
         <h1 class="h12">
             Would you like to learn more about me?
         </h1>
-        <div class="btn1cont">
             <button class="btn1">
                 <h1 class="btntxt" id="btntxt1">Learn More</h1>
             </button>
-            <h1 class="game">Game Development</h1>
             <div class="boxcont1" style="display: none;">
                 <img src="Assets/Images/ToriLogo.png" class="box1">
                 <img src="Assets/Images/TTPLogo.png" class="box2">
                 <img src="Assets/Images/IUArcade.png" class="box3">
                 <img src="Assets/Images/EscapeLogo.png" class="box4">
+                <h1 class="game" display="none;">Game Development</h1>
             </div>
-            
-        </div>
-        <div class="btn2cont">
             <button class="btn2">
                 <h1 class="btntxt" id="btntxt2">Learn More</h1>
             </button>
-            <h1 class="web">Web Development</h1>
             <div class="boxcont2" style="display: none;">
                 <img src="Assets/Images/JSLogo.png" class="box1">
                 <img src="Assets/Images/TTPLogo.png" class="box2-2">
                 <img src="Assets/Images/IUArcade.png" class="box2-3">
                 <img src="Assets/Images/EscapeLogo.png" class="box4">
+                <h1 class="web">Web Development</h1>
             </div>
-        </div>
     </body>
 </html>
 
@@ -85,7 +80,7 @@
         $('#btntxt1').fadeIn('fast');
         $('.btn2').fadeOut('fast');
     });
-    $('.btn1cont').mouseout(function () {
+    $('.btn1').mouseout(function () {
         $('.btn2').fadeIn('fast');
         $('.boxcont1').fadeOut('fast');
         $('.btn1').removeClass("hide-bg");
@@ -100,7 +95,7 @@
         $('.boxcont2').fadeIn('fast');
         $('.btn1').fadeOut('fast');
     });
-    $('.btn2cont').mouseout(function () {
+    $('.btn2').mouseout(function () {
         $('.btn2').removeClass("hide-bg");
         $('.web').fadeOut('fast');
         $('#btntxt2').fadeOut('fast');
