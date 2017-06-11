@@ -19,11 +19,11 @@
 
         <link rel="prefetch" href="Assets/Images/GameControllerIconPop_NoBG.png">
 
-        <!--Allow for easy debugging int IE------------------------------------------------------>
+        <!--Allow for easy debugging in IE------------------------------------------------------>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <!--Automatically scale  with viewport---------------------------------------------------->
-        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
     </head>
@@ -32,25 +32,30 @@
     <body>
         <div class="header">
             <div class="headerdiv">
-                <button class="headerbtn linkedinbtn"></button>
-                <h2 class="headertxt">https://www.linkedin.com/in/joshsmith117</h2>
+                <button class="headerbtn" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"></button>
+                <!--<h2 class="headertxt" style="top:15px; transform:translate(0%,-50%);">Linked In</h2>-->
             </div>
             <div class="headerdiv">
-                <button class="emailbtn headerbtn"></button>
-                <h2 class="headertxt">joshsmith117@yahoo.com</h2>
-            </div>
+                <button class="headerbtn" style="background-image: url(Assets/Images/emailicon.png);"></button>
+                <!--<h2 class="headertxt" style="top:15px; transform:translate(0%,-50%);">Email</h2>-->
+            </div>    
+
             
+            <div id="JSdiv">
+                <h2 class="headertxt" style="top:0%; transform:translate(0%,-50%);">Joshua</h2>
+                <img style="margin-left:5px;margin-right:5px;" id="JSicon" src="Assets/Images/JSIconSimple.png"/>
+                <h2 class="headertxt" style="top:0%; transform:translate(0%,-50%);">Smith</h2>
+            </div>
         </div>
-        <h1 class="h11">
-            My name is Joshua Smith
-            and I'm a User Experience Designer.
-        </h1>
-        <h1 class="h12">
-            Would you like to learn more about me?
-        </h1>
-            <button class="btn1">
-                <h1 class="btntxt" id="btntxt1">Learn More</h1>
-            </button>
+        <div class="footer">
+            <div class="footerdiv">
+                <h2 class="headertxt" style= "transform:translate(-50%,0%); left: 50%; font-size: 24px;">Welcome to my portfolio. Would you like to learn more about what I do?</h2>
+            </div>
+        </div>
+        <button class="btn1">
+            <h1 class="btntxt" id="btntxt1">Learn More</h1>
+            <img src="Assets/Images/OrangeArrowRight.png" style="transform:translate(0%,-50%); max-width: 20px; position: absolute; top: 50%; left: -60px" />
+            <img src="Assets/Images/OrangeArrowLeft.png" style="transform:translate(0%,-50%); max-width: 20px; position: absolute; top: 50%; right: -60px" />
             <div class="boxcont1" style="display: none;">
                 <img src="Assets/Images/ToriLogo.png" class="box1">
                 <img src="Assets/Images/TTPLogo.png" class="box2">
@@ -58,9 +63,12 @@
                 <img src="Assets/Images/EscapeLogo.png" class="box4">
                 <h1 class="game" display="none;">Game Development</h1>
             </div>
-            <button class="btn2">
-                <h1 class="btntxt" id="btntxt2">Learn More</h1>
-            </button>
+        </button>
+
+        <button class="btn2">
+            <h1 class="btntxt" id="btntxt2">Learn More</h1>
+            <img src="Assets/Images/BlueArrowRight.png" style="transform:translate(0%,-50%); max-width: 20px; position: absolute; top: 50%; left: -60px" />
+            <img src="Assets/Images/BlueArrowLeft.png" style="transform:translate(0%,-50%); max-width: 20px; position: absolute; top: 50%; right: -60px" />
             <div class="boxcont2" style="display: none;">
                 <img src="Assets/Images/JSLogo.png" class="box1">
                 <img src="Assets/Images/TTPLogo.png" class="box2-2">
@@ -68,15 +76,52 @@
                 <img src="Assets/Images/EscapeLogo.png" class="box4">
                 <h1 class="web">Web Development</h1>
             </div>
-    </body>
+        </button>
+</body>
 </html>
 
-<!--Begin javascript portion of code------------------------------------------------------------------------>
-<script>
-    //Opening Text Fadein Sequence----------------------------------------------------------------------
-        
-    //End Fadein----------------------------------------------------------------------
 
+<script>
+    
+    function resize() {
+        var btn1 = document.getElementsByClassName("btn1");
+        var btn2 = document.getElementsByClassName("btn2");
+        if (window.innerWidth < 1000) {
+
+            btn1[0].style.top = "33%";
+            btn1[0].style.left = "50%";
+            btn1[0].style.width = "100px";
+            btn1[0].style.height = "100px";
+            btn1[0].style.backgroundSize = "140px";
+            btn1[0].style.boxShadow = "0 6px rgb(180,100,20)";
+
+            btn2[0].style.top = "66%";
+            btn2[0].style.left = "50%";
+            btn2[0].style.width = "100px";
+            btn2[0].style.height = "100px";
+            btn2[0].style.backgroundSize = "140px";
+            btn2[0].style.boxShadow = "0 6px rgb(80,170,200)";
+
+        } else {
+
+            btn1[0].style.height = "150px";
+            btn1[0].style.width = "150px";
+            btn1[0].style.top = "50%";
+            btn1[0].style.left = "33%";
+            btn1[0].style.backgroundSize = "215px";
+            btn1[0].style.boxShadow = "0 9px rgb(180,100,20)";
+
+            btn2[0].style.top = "50%";
+            btn2[0].style.left = "66%";
+            btn2[0].style.width = "150px";
+            btn2[0].style.height = "150px";
+            btn2[0].style.backgroundSize = "215px";
+            btn2[0].style.boxShadow = "0 9px rgb(80,170,200)";
+        }
+    }
+
+    window.onresize = resize;
+    //Begin jquery portion of code------------------------------------------------------------------------>
     $('.btn1').mouseover(function () {
         $('.boxcont1').fadeIn('fast');
         $('.game').fadeIn('fast');
