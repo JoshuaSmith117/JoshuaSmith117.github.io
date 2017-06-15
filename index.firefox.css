@@ -1,6 +1,6 @@
 
 @supports (-moz-appearance:meterbar) { /*Begin Firefox Hack=============================*/
-    /*Default Styles ---------------------------------*/
+/*Default Styles ---------------------------------*/
     body {
         background-color: white;
         -webkit-touch-callout: none;
@@ -46,9 +46,10 @@
         bottom: 0%;
         line-height: 70px;
         text-align: center;
-        vertical-align:middle;
+        vertical-align: middle;
     }
-    .footertxt{
+
+    .footertxt {
         color: white;
         font-family: 'Quicksand', sans-serif;
         font-size: 24px;
@@ -93,6 +94,12 @@
         cursor: pointer;
         box-shadow: 0 5px rgb(150,150,150);
     }
+    .headerbtn:hover {
+        background-color: rgb(180,180,180);
+    }
+        .headerbtn:active {
+            box-shadow: 0 2px rgb(150,150,150);
+        }
 
     #JSdiv {
         height: inherit;
@@ -139,37 +146,42 @@
         cursor: default;
         text-align: center;
     }
+
     .arrow {
         transform: translate(0%,-50%);
         max-width: 20px;
         position: absolute;
-    }
-    .arrow.left{
-
-    }
-    .arrow.right{
-
+        pointer-events: none;
     }
     /*btn1 Stuff----------------------------------------------------------------------*/
+    .btn1div{
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 33%;
+    }
     .btn1 {
         background-image: url(Assets/Images/IconGameController.png);
         background-repeat: no-repeat;
         background-color: rgb(251,176,59);
-        transform: translate(-50%,-50%);
-        position: absolute;
         background-position-x: 50%;
         background-position-y: 55%;
         background-size: 215px;
         border: 0px;
-        height: 150px;
-        width: 150px;
+        height: 100%;
+        width: 100%;
         cursor: pointer;
         border-radius: 50%;
-        top: 50%;
-        left: 33%;
         box-shadow: 0 9px rgb(180,100,20);
     }
-
+    .btn1:hover {
+        background-image: none;
+    }
+    .btn1:active {
+        box-shadow: 0 5px rgb(180,100,20);
+    }
     .btntxt {
         pointer-events: none;
         display: none;
@@ -180,15 +192,6 @@
         height: auto;
         font-size: 20px;
     }
-
-    .btn1:active {
-        box-shadow: 0 5px rgb(180,100,20);
-    }
-
-    .btn1.hide-bg {
-        background-image: none;
-    }
-
     .boxcont1 {
         pointer-events: none;
         position: absolute;
@@ -200,6 +203,7 @@
     }
 
     .box1 {
+        pointer-events: none;
         transform: translate(-50%, -50%);
         width: 100px;
         height: 100px;
@@ -211,6 +215,7 @@
     }
 
     .box2 {
+        pointer-events: none;
         transform: translate(-50%, -50%);
         width: 100px;
         height: 100px;
@@ -222,6 +227,7 @@
     }
 
     .box3 {
+        pointer-events: none;
         transform: translate(-50%, -50%);
         width: 100px;
         height: 100px;
@@ -233,6 +239,7 @@
     }
 
     .box4 {
+        pointer-events: none;
         transform: translate(-50%, -50%);
         width: 100px;
         height: 100px;
@@ -244,6 +251,7 @@
     }
 
     .game {
+        pointer-events: none;
         display: inline-block;
         position: relative;
         width: 600px;
@@ -254,33 +262,37 @@
         color: rgb(251,176,59);
     }
     /*btn2 stuff----------------------------------------------------------------------*/
+    .btn2div{
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 66%;
+    }
     .btn2 {
         background-image: url(Assets/Images/IconMouse.png);
-        background-color: rgb(106,215,255);
         background-repeat: no-repeat;
-        transform: translate(-50%,-50%);
-        position: absolute;
         background-position-x: 50%;
         background-position-y: 55%;
         background-size: 215px;
         border: 0px;
-        height: 145px;
-        width: 145px;
+        height: 100%;
+        width: 100%;
         cursor: pointer;
         border-radius: 50%;
-        top: 50%;
-        left: 66%;
+        background-color: rgb(106,215,255);
         box-shadow: 0 9px rgb(80,170,200);
+
     }
 
-        .btn2:active {
-            box-shadow: 0 5px rgb(80,170,200);
-        }
+    .btn2:hover {
+        background-image: none;
+    }
 
-        .btn2.hide-bg {
-            background-image: none;
-        }
-
+    .btn2:active {
+        box-shadow: 0 5px rgb(80,170,200);
+    }
     .boxcont2 {
         pointer-events: none;
         position: absolute;
@@ -292,6 +304,7 @@
     }
 
     .box2-2 {
+        pointer-events: none;
         transform: translate(-50%, -50%);
         width: 100px;
         height: 100px;
@@ -303,6 +316,7 @@
     }
 
     .box2-3 {
+        pointer-events: none;
         transform: translate(-50%, -50%);
         width: 100px;
         height: 100px;
@@ -314,6 +328,7 @@
     }
 
     .web {
+        pointer-events: none;
         display: inline-block;
         position: relative;
         width: 450px;
