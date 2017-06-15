@@ -1,6 +1,18 @@
 
 @supports (-moz-appearance:meterbar) { /*Begin Firefox Hack=============================*/
     /*Default Styles ---------------------------------*/
+    #myContainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
     body {
         background-color: white;
         -webkit-touch-callout: none;
@@ -29,27 +41,29 @@
     }
 
     span {
-        color: gray;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
     }
 
     .button {
     }
-    .footer{
+
+    .footer {
         position: absolute;
         background-color: rgb(200, 200, 200);
         height: 70px;
         width: 100%;
         left: 0%;
         bottom: 0%;
+        line-height: 70px;
+        text-align: center;
+        vertical-align:middle;
     }
-    .footerdiv{
-        height:inherit; 
-        width:100%; 
-        position: absolute; 
-        transform:translate(-50%,-50%); 
-        left: 50%; 
-        top: 50%;
-        margin: auto;
+    .footertxt{
+        color: white;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 24px;
     }
     /*Header Styles ----------------------------------------------*/
     .header {
@@ -60,23 +74,25 @@
         left: 0%;
         top: 0%;
     }
-    .headerdiv { 
-        left: 0px; 
-        height:inherit; 
-        width: auto; 
-        display:inline-block;   
-    }
-    .headertxt { 
+
+    .headerdiv {
+        left: 0px;
+        height: inherit;
+        width: auto;
         display: inline-block;
-        position: relative;
+    }
+
+    .headertxt {
+        display: inline-block;
         color: white;
     }
-     .headerbtn {
-        margin-top:25px;
+
+    .headerbtn {
+        margin-top: 25px;
         margin-left: 15px;
-        position:relative;
-        transform:translate(0%,-50%);
-        top:50%;
+        position: relative;
+        transform: translate(0%,-50%);
+        top: 50%;
         height: 70px;
         width: 70px;
         background-position-x: 50%;
@@ -89,23 +105,25 @@
         cursor: pointer;
         box-shadow: 0 5px rgb(150,150,150);
     }
-    #JSdiv{ 
-        height:inherit; 
-        width: auto; 
-        position: absolute; 
-        transform:translate(-50%,-50%); 
-        left: 50%; 
+
+    #JSdiv {
+        height: inherit;
+        width: auto;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
         top: 50%;
         margin: auto;
     }
-    #JSicon{
+
+    #JSicon {
         display: inline-block;
-        transform:translate(0%,-50%);
+        transform: translate(0%,-50%);
         position: relative;
-        width:50px;
-        top:50%;
+        width: 50px;
+        top: 50%;
     }
-   
+
     .emailbtn {
         height: 70px;
         width: 70px;
@@ -118,50 +136,33 @@
         background-color: red;
         border-radius: 50%;
     }
-
     /*--------------------------------------------------*/
     .h11 {
         position: absolute;
         width: 100%;
-        top: 60px;
         left: 0%;
         text-align: center;
         cursor: default;
     }
+
     .h12 {
         position: absolute;
         width: 100%;
-        left: 0%;
-        bottom: 20px;
         cursor: default;
         text-align: center;
     }
-
-    /*btn1 Stuff----------------------------------------------------------------------*/
-    .btntxt {
-        pointer-events: none;
-        display: none;
-        color: white;
-        position: center;
-        text-align: center;
-        width: auto;
-        height: auto;
-        font-size: 20px;
-    }
-    .boxcont1 {
-        pointer-events: none;
+    .arrow {
+        transform: translate(0%,-50%);
+        max-width: 20px;
         position: absolute;
-        height: 180px;
-        width: 180px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
     }
+    .arrow.left{
 
-    .btn1.hide-bg {
-        background-image: none;
     }
+    .arrow.right{
 
+    }
+    /*btn1 Stuff----------------------------------------------------------------------*/
     .btn1 {
         background-image: url(Assets/Images/IconGameController.png);
         background-repeat: no-repeat;
@@ -179,6 +180,35 @@
         top: 50%;
         left: 33%;
         box-shadow: 0 9px rgb(180,100,20);
+    }
+
+    .btntxt {
+        pointer-events: none;
+        display: none;
+        color: white;
+        position: center;
+        text-align: center;
+        width: auto;
+        height: auto;
+        font-size: 20px;
+    }
+
+    .btn1:active {
+        box-shadow: 0 5px rgb(180,100,20);
+    }
+
+    .btn1.hide-bg {
+        background-image: none;
+    }
+
+    .boxcont1 {
+        pointer-events: none;
+        position: absolute;
+        height: 180px;
+        width: 180px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
     }
 
     .box1 {
@@ -225,10 +255,6 @@
         border-radius: 50%;
     }
 
-    .btn1:active {
-        box-shadow: 0 5px rgb(180,100,20);
-    }
-
     .game {
         display: inline-block;
         position: relative;
@@ -240,16 +266,6 @@
         color: rgb(251,176,59);
     }
     /*btn2 stuff----------------------------------------------------------------------*/
-    .boxcont2 {
-        pointer-events: none;
-        position: absolute;
-        height: 180px;
-        width: 180px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-    }
-
     .btn2 {
         background-image: url(Assets/Images/IconMouse.png);
         background-color: rgb(106,215,255);
@@ -269,9 +285,23 @@
         box-shadow: 0 9px rgb(80,170,200);
     }
 
+        .btn2:active {
+            box-shadow: 0 5px rgb(80,170,200);
+        }
+
         .btn2.hide-bg {
             background-image: none;
         }
+
+    .boxcont2 {
+        pointer-events: none;
+        position: absolute;
+        height: 180px;
+        width: 180px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
 
     .box2-2 {
         transform: translate(-50%, -50%);
@@ -293,10 +323,6 @@
         left: 125%;
         border: 1px solid lightgrey;
         border-radius: 50%;
-    }
-
-    .btn2:active {
-        box-shadow: 0 5px rgb(80,170,200);
     }
 
     .web {

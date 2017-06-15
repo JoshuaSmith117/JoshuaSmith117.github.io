@@ -1,7 +1,18 @@
 
 @supports (-webkit-appearance:none) { /*Begin Chrome Hack=============================*/
-
     /*Default Styles ---------------------------------*/
+    #myContainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
     body {
         background-color: white;
         -webkit-touch-callout: none;
@@ -10,226 +21,257 @@
         -ms-user-select: none;
         user-select: none;
     }
+
     h1 {
         color: black;
         font-family: 'Quicksand', sans-serif;
         font-size: 3vw;
     }
+
     h2 {
         color: black;
         font-family: 'Quicksand', sans-serif;
-        font-size: 16px;
+        font-size: 18px;
     }
+
     p {
         color: black;
         font-family: 'Quicksand', sans-serif;
         font-size: 36px;
     }
+
     span {
-        color: gray;
-    }
-    .button {
-        background-color: #4CAF50; /* Green */
-        color: white;
-        text-align: center;
-        text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        vertical-align: middle;
+        line-height: normal;
     }
 
+    .button {
+    }
+
+    .footer {
+        position: absolute;
+        background-color: rgb(200, 200, 200);
+        height: 70px;
+        width: 100%;
+        left: 0%;
+        bottom: 0%;
+        line-height: 70px;
+        text-align: center;
+        vertical-align:middle;
+    }
+    .footertxt{
+        color: white;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 24px;
+    }
     /*Header Styles ----------------------------------------------*/
-    .header{
-        position:fixed;
-        background-color: rgb(250, 250, 250);
-        height:70px;
-        width:100%;
-        left:0%;
-        top:0%;
+    .header {
+        position: absolute;
+        background-color: rgb(200, 200, 200);
+        height: 70px;
+        width: 100%;
+        left: 0%;
+        top: 0%;
     }
-    .headerdiv{
-        display:inline-block;
-        position:relative;
-        width:auto;
-        height:70px;
-    }
-    .headertxt{
-        transform: translate(0%, -80%);
-        display:inline-block;
-        position:relative;
+
+    .headerdiv {
+        left: 0px;
+        height: inherit;
         width: auto;
-        text-align:left;
+        display: inline-block;
     }
-    .headerbtn{
-        transform: translate(0%, -50%);
+
+    .headertxt {
+        display: inline-block;
+        color: white;
+    }
+
+    .headerbtn {
+        margin-top: 25px;
+        margin-left: 15px;
         position: relative;
-        background-position-x: 50%;
-        background-position-y: 55%;
-        background-size: 60px;
-        height: 60px;
-        width: 60px;
-        cursor: pointer;
-        border-radius: 50%;
+        transform: translate(0%,-50%);
         top: 50%;
-        border: 3px solid rgb(250,250,250);
+        height: 70px;
+        width: 70px;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        border: solid 0px;
+        background-color: rgb(200,200,200);
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 5px rgb(150,150,150);
     }
-    .linkedinbtn{
-        background-image: url(Assets/Images/LinkedInLogo.png);
+
+    #JSdiv {
+        height: inherit;
+        width: auto;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 50%;
+        margin: auto;
     }
-    .email{
-        display:inline-block;
+
+    #JSicon {
+        display: inline-block;
+        transform: translate(0%,-50%);
         position: relative;
-        top: 2.5px;
-        border: 3px solid rgb(0,0,0);
-        width:20%
+        width: 50px;
+        top: 50%;
     }
-    .emailbtn{
-        background-image: url(Assets/Images/JSLogo.png);
+
+    .emailbtn {
+        height: 70px;
+        width: 70px;
+        background-position-x: 50%;
+        background-position-y: 40%;
+        background-image: url(Assets/Images/emailicon.png);
+        background-repeat: no-repeat;
+        background-size: 30px;
+        border: solid 1px;
+        background-color: red;
+        border-radius: 50%;
     }
-    .phone{
-        display:inline-block;
-        position: relative;
-        top: 2.5px;
-        border: 3px solid rgb(0,0,0);
-        width:20%
-    }
-    .phonebtn{
-        background-image: url(Assets/Images/PhoneIconPop.png);
-    }
-    .h11{      
+    /*--------------------------------------------------*/
+    .h11 {
         position: absolute;
         width: 100%;
-        top: 60px;
         left: 0%;
         text-align: center;
-        cursor: default;  
+        cursor: default;
     }
-    .h12{  
+
+    .h12 {
         position: absolute;
         width: 100%;
-        left: 0%;
-        bottom: 20px;
         cursor: default;
         text-align: center;
     }
-    .btntxt{
-        display:none;
-        color:white;
-        position:center;
-        text-align:center;
-        width:auto;
-        height:auto;
-        font-size: 20px;
-        pointer-events:none;
+    .arrow {
+        transform: translate(0%,-50%);
+        max-width: 20px;
+        position: absolute;
+    }
+    .arrow.left{
+
+    }
+    .arrow.right{
+
     }
     /*btn1 Stuff----------------------------------------------------------------------*/
-    .boxcont1{
-        pointer-events:none;
-        position: fixed;
-        height: 180px;
-        width: 180px;
-        display: inline-block;
-        transform: translate(-50%,-50%);
-        position: fixed;
-        top: 50%;
-        left: 33%;
-    }
-    .btn1{
+    .btn1 {
         background-image: url(Assets/Images/IconGameController.png);
+        background-repeat: no-repeat;
         background-color: rgb(251,176,59);
         transform: translate(-50%,-50%);
-        position: fixed;
+        position: absolute;
         background-position-x: 50%;
         background-position-y: 55%;
         background-size: 215px;
         border: 0px;
-        height: 145px;
-        width: 145px;
+        height: 150px;
+        width: 150px;
         cursor: pointer;
         border-radius: 50%;
         top: 50%;
         left: 33%;
         box-shadow: 0 9px rgb(180,100,20);
     }
+
+    .btntxt {
+        pointer-events: none;
+        display: none;
+        color: white;
+        position: center;
+        text-align: center;
+        width: auto;
+        height: auto;
+        font-size: 20px;
+    }
+
+    .btn1:active {
+        box-shadow: 0 5px rgb(180,100,20);
+    }
+
     .btn1.hide-bg {
         background-image: none;
     }
-    .box1{
-        transform: translate(-50%, -50%);
-        width: 100px;
-        height: 100px;
-        position: fixed;
-        top: -30%;
-        left: 50%;
-        border: 3px solid lightgrey;
-        border-radius: 50%;
-    }
-    .box2{
-        transform: translate(-50%, -50%);
-        width: 100px;
-        height: 100px;
-        position: fixed;
-        top: 10%;
-        left: -25%;
-        border: 3px solid lightgrey;
-        border-radius: 50%;
-    }
-    .box3{
-        transform: translate(-50%, -50%);
-        width: 100px;
-        height: 100px;
-        position: fixed;
-        top: 90%;
-        left: -25%;
-        border: 3px solid lightgrey;
-        border-radius: 50%;
-    }
-    .box4{
-        transform: translate(-50%, -50%);
-        width: 100px;
-        height: 100px;
-        position: fixed;
-        top: 130%;
-        left: 50%;
-        border: 3px solid lightgrey;
-        border-radius: 50%;
-    }
-    .btn1:active{
-        box-shadow: 0 5px rgb(180,100,20);
-    }
-    .game{
-        display: inline-block;
-        position:relative;
-        width: 450px;
-        font-size: 48px;
-        text-align:left;
-        top: 30px;
-        left: 100%;
-    }
-    /*btn2 stuff----------------------------------------------------------------------*/
-    .boxcont2{
-        pointer-events:none;
-        position: fixed;
+
+    .boxcont1 {
+        pointer-events: none;
+        position: absolute;
         height: 180px;
         width: 180px;
-        display: inline-block;
+        left: 50%;
+        top: 50%;
         transform: translate(-50%,-50%);
-        position: fixed;
-        top: 50%;
-        left: 66%;
     }
-    .btn2cont{
+
+    .box1 {
         transform: translate(-50%, -50%);
-        height: 200px;
-        width:200px;
-        position: absolute; 
-        top: 50%;
-        left: 66%;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -30%;
+        left: 50%;
+        border: 1px solid lightgrey;
+        border-radius: 50%;
     }
+
+    .box2 {
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 10%;
+        left: -25%;
+        border: 1px solid lightgrey;
+        border-radius: 50%;
+    }
+
+    .box3 {
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 90%;
+        left: -25%;
+        border: 1px solid lightgrey;
+        border-radius: 50%;
+    }
+
+    .box4 {
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 130%;
+        left: 50%;
+        border: 1px solid lightgrey;
+        border-radius: 50%;
+    }
+
+    .game {
+        display: inline-block;
+        position: relative;
+        width: 600px;
+        font-size: 48px;
+        text-align: left;
+        top: 18%;
+        left: 100%;
+        color: rgb(251,176,59);
+    }
+    /*btn2 stuff----------------------------------------------------------------------*/
     .btn2 {
         background-image: url(Assets/Images/IconMouse.png);
         background-color: rgb(106,215,255);
+        background-repeat: no-repeat;
         transform: translate(-50%,-50%);
-        position: fixed;
+        position: absolute;
         background-position-x: 50%;
         background-position-y: 55%;
         background-size: 215px;
@@ -242,40 +284,56 @@
         left: 66%;
         box-shadow: 0 9px rgb(80,170,200);
     }
-    .btn2.hide-bg {
-        background-image: none;
+
+        .btn2:active {
+            box-shadow: 0 5px rgb(80,170,200);
+        }
+
+        .btn2.hide-bg {
+            background-image: none;
+        }
+
+    .boxcont2 {
+        pointer-events: none;
+        position: absolute;
+        height: 180px;
+        width: 180px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
     }
-    .box2-2{
+
+    .box2-2 {
         transform: translate(-50%, -50%);
         width: 100px;
         height: 100px;
-        position: fixed;
+        position: absolute;
         top: 10%;
         left: 125%;
-        border: 3px solid lightgrey;
+        border: 1px solid lightgrey;
         border-radius: 50%;
     }
-    .box2-3{
+
+    .box2-3 {
         transform: translate(-50%, -50%);
         width: 100px;
         height: 100px;
-        position: fixed;
+        position: absolute;
         top: 90%;
         left: 125%;
-        border: 3px solid lightgrey;
+        border: 1px solid lightgrey;
         border-radius: 50%;
     }
-    .btn2:active{
-        box-shadow: 0 5px rgb(80,170,200);
-    }
-    .web{
-        display:inline-block;
-        position:relative;
+
+    .web {
+        display: inline-block;
+        position: relative;
         width: 450px;
         font-size: 48px;
-        text-align:right;
+        text-align: right;
         top: 30px;
-        right:452px;
+        right: 452px;
+        color: rgb(106,215,255);
     }
 }/*End Chrome Hack===================================================*/
     

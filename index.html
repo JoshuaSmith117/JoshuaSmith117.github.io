@@ -38,24 +38,21 @@
             <div class="headerdiv">
                 <button class="headerbtn" style="background-image: url(Assets/Images/emailicon.png);"></button>
                 <!--<h2 class="headertxt" style="top:15px; transform:translate(0%,-50%);">Email</h2>-->
-            </div>    
-
-            
+            </div>
             <div id="JSdiv">
                 <h2 class="headertxt" style="top:0%; transform:translate(0%,-50%);">Joshua</h2>
-                <img style="margin-left:5px;margin-right:5px;" id="JSicon" src="Assets/Images/JSIconSimple.png"/>
+                <img style="margin-left:5px;margin-right:5px;" id="JSicon" src="Assets/Images/JSIconSimple.png" />
                 <h2 class="headertxt" style="top:0%; transform:translate(0%,-50%);">Smith</h2>
             </div>
         </div>
+
         <div class="footer">
-            <div class="footerdiv">
-                <h2 class="headertxt" style= "transform:translate(-50%,0%); left: 50%; font-size: 24px;">Welcome to my portfolio. Would you like to learn more about what I do?</h2>
-            </div>
+            <span class="footertxt">Welcome to my portfolio. Would you like to learn more about what I do? </span>
         </div>
         <button class="btn1">
             <h1 class="btntxt" id="btntxt1">Learn More</h1>
-            <img src="Assets/Images/OrangeArrowRight.png" style="transform:translate(0%,-50%); max-width: 20px; position: absolute; top: 50%; left: -60px" />
-            <img src="Assets/Images/OrangeArrowLeft.png" style="transform:translate(0%,-50%); max-width: 20px; position: absolute; top: 50%; right: -60px" />
+            <img class="arrow" src="Assets/Images/OrangeArrowRight.png" style="top: 50%; left: -60px" />
+            <img class="arrow" src="Assets/Images/OrangeArrowLeft.png" style="top: 50%; right: -60px" />
             <div class="boxcont1" style="display: none;">
                 <img src="Assets/Images/ToriLogo.png" class="box1">
                 <img src="Assets/Images/TTPLogo.png" class="box2">
@@ -67,8 +64,8 @@
 
         <button class="btn2">
             <h1 class="btntxt" id="btntxt2">Learn More</h1>
-            <img src="Assets/Images/BlueArrowRight.png" style="transform:translate(0%,-50%); max-width: 20px; position: absolute; top: 50%; left: -60px" />
-            <img src="Assets/Images/BlueArrowLeft.png" style="transform:translate(0%,-50%); max-width: 20px; position: absolute; top: 50%; right: -60px" />
+            <img class="arrow" src="Assets/Images/BlueArrowRight.png" style="top: 50%; left: -60px" />
+            <img class="arrow" src="Assets/Images/BlueArrowLeft.png" style="top: 50%; right: -60px" />
             <div class="boxcont2" style="display: none;">
                 <img src="Assets/Images/JSLogo.png" class="box1">
                 <img src="Assets/Images/TTPLogo.png" class="box2-2">
@@ -82,11 +79,49 @@
 
 
 <script>
-    
+    function arrowmoveright() {
+        var arrow = document.getElementsByClassName("arrow");
+        var pos = -60;
+        var id = setInterval(frame, 20);
+        function frame() {
+            if (pos == -30) {
+                clearInterval(id);
+                arrowmoveleft();
+            }
+            else{
+                pos++;
+                arrow[0].style.left = pos + 'px';
+                arrow[1].style.right = pos + 'px';
+                arrow[2].style.left = pos + 'px';
+                arrow[3].style.right = pos + 'px';
+            } 
+        }
+    }
+    function arrowmoveleft() {
+        var arrow = document.getElementsByClassName("arrow");
+        var pos = -30;
+        var id = setInterval(frame, 20);
+        function frame() {
+            if (pos == -60) {
+                clearInterval(id);
+                arrowmoveright();
+            }
+            else {
+                pos--;
+                arrow[0].style.left = pos + 'px';
+                arrow[1].style.right = pos + 'px';
+                arrow[2].style.left = pos + 'px';
+                arrow[3].style.right = pos + 'px';
+            }
+        }
+    }
     function resize() {
         var btn1 = document.getElementsByClassName("btn1");
         var btn2 = document.getElementsByClassName("btn2");
-        if (window.innerWidth < 1000) {
+        var ftr = document.getElementsByClassName("footertxt");
+        var 
+        if ((window.innerWidth < 1000)) {
+            ftr[0].style.fontSize = "18px";
 
             btn1[0].style.top = "33%";
             btn1[0].style.left = "50%";
@@ -102,7 +137,12 @@
             btn2[0].style.backgroundSize = "140px";
             btn2[0].style.boxShadow = "0 6px rgb(80,170,200)";
 
+            if ((window.innerWidth < 700)) {
+                ftr[0].style.fontSize = "10px";
+            }
+
         } else {
+            ftr[0].style.fontSize = "24px";
 
             btn1[0].style.height = "150px";
             btn1[0].style.width = "150px";
@@ -118,9 +158,11 @@
             btn2[0].style.backgroundSize = "215px";
             btn2[0].style.boxShadow = "0 9px rgb(80,170,200)";
         }
-    }
 
-    window.onresize = resize;
+    }
+    $(document).ready(arrowmoveright);
+    $(document).ready(resize);
+    $(window).resize(resize);
     //Begin jquery portion of code------------------------------------------------------------------------>
     $('.btn1').mouseover(function () {
         $('.boxcont1').fadeIn('fast');
@@ -128,6 +170,7 @@
         $('.btn1').addClass("hide-bg");
         $('#btntxt1').fadeIn('fast');
         $('.btn2').fadeOut('fast');
+        $('.arrow').fadeOut('fast');
     });
     $('.btn1').mouseout(function () {
         $('.btn2').fadeIn('fast');
@@ -135,14 +178,15 @@
         $('.btn1').removeClass("hide-bg");
         $('#btntxt1').fadeOut('fast');
         $('.game').fadeOut('fast');
+        $('.arrow').fadeIn('fast');
     });
-
     $('.btn2').mouseover(function () {
         $('.btn2').addClass("hide-bg");
         $('.web').fadeIn('fast');
         $('#btntxt2').fadeIn('fast');
         $('.boxcont2').fadeIn('fast');
         $('.btn1').fadeOut('fast');
+        $('.arrow').fadeOut('fast');
     });
     $('.btn2').mouseout(function () {
         $('.btn2').removeClass("hide-bg");
@@ -150,6 +194,6 @@
         $('#btntxt2').fadeOut('fast');
         $('.boxcont2').fadeOut('fast');
         $('.btn1').fadeIn('fast');
+        $('.arrow').fadeIn('fast');
     });
-
 </script>
