@@ -13,8 +13,8 @@
         <!--Link to index.css stylesheets ------------------------------------------------------------------------>
         
         <link href="index.firefox.css" rel="stylesheet">
-        <link href="index.chrome.css" rel="stylesheet">
-        <link href="index.ie.css" rel="stylesheet">
+        <!--<link href="index.chrome.css" rel="stylesheet">------------------------------------------------------------------------>
+        <!--<link href="index.ie.css" rel="stylesheet">------------------------------------------------------------------------>
         
 
         <link rel="prefetch" href="Assets/Images/GameControllerIconPop_NoBG.png">
@@ -33,11 +33,9 @@
         <div class="header">
             <div class="headerdiv">
                 <button class="headerbtn" onclick="window.location.href = 'https://www.linkedin.com/in/joshsmith117/<button'" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"></button>
-                <!--<h2 class="headertxt" style="top:15px; transform:translate(0%,-50%);">Linked In</h2>-->
             </div>
             <div class="headerdiv">
                 <button class="headerbtn" style="background-image: url(Assets/Images/emailicon.png);"></button>
-                <!--<h2 class="headertxt" style="top:15px; transform:translate(0%,-50%);">Email</h2>-->
             </div>
             <div id="JSdiv">
                 <h2 class="headertxt" style="top:0%; transform:translate(0%,-50%);">Joshua</h2>
@@ -50,7 +48,7 @@
             <span class="footertxt">Welcome to my portfolio. Would you like to learn more about what I do? </span>
         </div>
         <div class="btn1div">
-            <button class="btn1"><h1 class="btntxt" id="btntxt1">Learn More</h1></button>
+            <button class="btn1" onclick="window.location.href = 'games.html'"><h1 class="btntxt" id="btntxt1">Learn More</h1></button>
             <img class="arrow" src="Assets/Images/OrangeArrowRight.png" style="top: 50%; left: -60px" />
             <img class="arrow" src="Assets/Images/OrangeArrowLeft.png" style="top: 50%; right: -60px" />
             <div class="boxcont1" style="display: none;">
@@ -73,7 +71,7 @@
                 <h1 class="web">Web Development</h1>
             </div>
         </div>
-</body>
+    </body>
 </html>
 
 
@@ -82,9 +80,11 @@
     var btn1 = document.getElementsByClassName("btn1");
     var btn2div = document.getElementsByClassName("btn2div");
     var btn2 = document.getElementsByClassName("btn2");
-    var ftr = document.getElementsByClassName("footertxt");
+    var ftr = document.getElementsByClassName("footer");
+    var ftrtxt = document.getElementsByClassName("footertxt");
     var arrow = document.getElementsByClassName("arrow");
-
+    var hdr = document.getElementsByClassName("header");
+    var hdrbtn = document.getElementsByClassName("headerbtn");
 
     function arrowmoveright() {
         var pos = -60;
@@ -123,7 +123,7 @@
     function resize() {
         
         if ((window.innerWidth < 1000)) {
-            ftr[0].style.fontSize = "18px";
+            ftrtxt[0].style.fontSize = "18px";
 
             btn1div[0].style.top = "33%";
             btn1div[0].style.left = "50%";
@@ -140,7 +140,7 @@
             btn2[0].style.backgroundSize = "140px";
             btn2[0].style.boxShadow = "0 6px rgb(80,170,200)";
 
-            ftr[0].innerHTML = "Welcome to my portfolio. Would you like to learn more about what I do?";
+            ftrtxt[0].innerHTML = "Welcome to my portfolio. Would you like to learn more about what I do?";
 
             for (i = 0; i<arrow.length; i++){
                 arrow[i].style.width= "1px;"
@@ -148,15 +148,15 @@
             
 
             if ((window.innerWidth < 700)) {
-                ftr[0].innerHTML = "Welcome to my portfolio. <br> Would you like to learn more about what I do?";
+                ftrtxt[0].innerHTML = "Welcome to my portfolio. <br> Would you like to learn more about what I do?";
 
                 if ((window.innerWidth < 400)) {
-                    ftr[0].style.fontSize = "12px";
+                    ftrtxt[0].style.fontSize = "12px";
                 }
             }
 
         } else {
-            ftr[0].style.fontSize = "24px";
+            ftrtxt[0].style.fontSize = "24px";
 
             btn1div[0].style.height = "150px";
             btn1div[0].style.width = "150px";
@@ -170,7 +170,7 @@
             btn2div[0].style.height = "150px";
             btn2[0].style.backgroundSize = "215px";
 
-            ftr[0].innerHTML = "Welcome to my portfolio. Would you like to learn more about what I do?";
+            ftrtxt[0].innerHTML = "Welcome to my portfolio. Would you like to learn more about what I do?";
         }
 
     }
@@ -178,16 +178,19 @@
     $(document).ready(resize);
     $(window).resize(resize);
     //Begin jquery portion of code------------------------------------------------------------------------>
-    var ftr = document.getElementsByClassName("footertxt");
     $('.btn1').mouseover(function () {
-        
-
         $('.boxcont1').fadeIn('fast');
         $('.game').fadeIn('fast');
         $('#btntxt1').fadeIn('fast');
         $('.btn2').fadeOut('fast');
         $('.arrow').fadeOut('fast');
-        ftr[0].innerHTML = "hi";
+        ftrtxt[0].innerHTML = "hi";
+        ftr[0].style.backgroundColor = "rgb(251,176,59)";
+        hdr[0].style.backgroundColor = "rgb(251,176,59)";
+        for (x = 0; x < hdrbtn.length; x++) {
+            hdrbtn[x].style.backgroundColor = "rgb(251,176,59)";
+            hdrbtn[x].style.boxShadow = "0 5px rgb(180,100,20)";
+        }
     });
     $('.btn1').mouseout(function () {
         $('.btn2').fadeIn('fast');
@@ -195,6 +198,12 @@
         $('#btntxt1').fadeOut('fast');
         $('.game').fadeOut('fast');
         $('.arrow').fadeIn('fast');
+        ftr[0].style.backgroundColor = "rgb(200,200,200)";
+        hdr[0].style.backgroundColor = "rgb(200,200,200)";
+        for (x = 0; x < hdrbtn.length; x++) {
+            hdrbtn[x].style.backgroundColor = "rgb(200,200,200)";
+            hdrbtn[x].style.boxShadow = "0 5px rgb(150,150,150)";
+        }
     });
     $('.btn2').mouseover(function () {
         $('.web').fadeIn('fast');
@@ -202,6 +211,12 @@
         $('.boxcont2').fadeIn('fast');
         $('.btn1').fadeOut('fast');
         $('.arrow').fadeOut('fast');
+        ftr[0].style.backgroundColor = "rgb(106,215,255)";
+        hdr[0].style.backgroundColor = "rgb(106,215,255)";
+        for (x = 0; x < hdrbtn.length; x++) {
+            hdrbtn[x].style.backgroundColor = "rgb(106,215,255)";
+            hdrbtn[x].style.boxShadow = "0 5px rgb(0,170,200)";
+        }
     });
     $('.btn2').mouseout(function () {
         $('.web').fadeOut('fast');
@@ -209,5 +224,11 @@
         $('.boxcont2').fadeOut('fast');
         $('.btn1').fadeIn('fast');
         $('.arrow').fadeIn('fast');
+        ftr[0].style.backgroundColor = "rgb(200,200,200)";
+        hdr[0].style.backgroundColor = "rgb(200,200,200)";
+        for (x = 0; x < hdrbtn.length; x++) {
+            hdrbtn[x].style.backgroundColor = "rgb(200,200,200)";
+            hdrbtn[x].style.boxShadow = "0 5px rgb(150,150,150)";
+        }
     });
 </script>
