@@ -45,8 +45,8 @@
         </div>
 
         <div class="footer">
-            <span class="footertxt">Welcome to my portfolio. Would you like to learn more about what I do? </span>
-        </div>
+            <span class="footertxt">Welcome to my portfolio. &nbsp;</span><span class="footertxt">Would you like to learn more about what I do?</span>
+</div>
         <div class="btn1div">
             <button class="btn1" onclick="window.location.href = 'games.html'"><h1 class="btntxt" id="btntxt1">Learn More</h1></button>
             <img class="arrow" src="Assets/Images/OrangeArrowRight.png" style="top: 50%; left: -60px" />
@@ -123,7 +123,9 @@
     function resize() {
         
         if ((window.innerWidth < 1000)) {
-            ftrtxt[0].style.fontSize = "18px";
+            for (x = 0; x < ftrtxt.length; x++) {
+                ftrtxt[x].style.fontSize = "18px";
+            }
 
             btn1div[0].style.top = "33%";
             btn1div[0].style.left = "50%";
@@ -140,7 +142,6 @@
             btn2[0].style.backgroundSize = "140px";
             btn2[0].style.boxShadow = "0 6px rgb(80,170,200)";
 
-            ftrtxt[0].innerHTML = "Welcome to my portfolio. Would you like to learn more about what I do?";
 
             for (i = 0; i<arrow.length; i++){
                 arrow[i].style.width= "1px;"
@@ -148,15 +149,19 @@
             
 
             if ((window.innerWidth < 700)) {
-                ftrtxt[0].innerHTML = "Welcome to my portfolio. <br> Would you like to learn more about what I do?";
 
                 if ((window.innerWidth < 400)) {
-                    ftrtxt[0].style.fontSize = "12px";
+                    for (x = 0; x < ftrtxt.length; x++) {
+                        ftrtxt[x].style.fontSize = "12px";
+                    }
                 }
             }
 
         } else {
-            ftrtxt[0].style.fontSize = "24px";
+            for (x = 0; x < ftrtxt.length; x++) {
+                ftrtxt[x].style.fontSize = "24px";
+            }
+            
 
             btn1div[0].style.height = "150px";
             btn1div[0].style.width = "150px";
@@ -170,7 +175,6 @@
             btn2div[0].style.height = "150px";
             btn2[0].style.backgroundSize = "215px";
 
-            ftrtxt[0].innerHTML = "Welcome to my portfolio. Would you like to learn more about what I do?";
         }
 
     }
@@ -184,13 +188,9 @@
         $('#btntxt1').fadeIn('fast');
         $('.btn2').fadeOut('fast');
         $('.arrow').fadeOut('fast');
-        ftrtxt[0].innerHTML = "hi";
+        $('.headerbtn').addClass("orange");
         ftr[0].style.backgroundColor = "rgb(251,176,59)";
         hdr[0].style.backgroundColor = "rgb(251,176,59)";
-        for (x = 0; x < hdrbtn.length; x++) {
-            hdrbtn[x].style.backgroundColor = "rgb(251,176,59)";
-            hdrbtn[x].style.boxShadow = "0 5px rgb(180,100,20)";
-        }
     });
     $('.btn1').mouseout(function () {
         $('.btn2').fadeIn('fast');
@@ -198,12 +198,9 @@
         $('#btntxt1').fadeOut('fast');
         $('.game').fadeOut('fast');
         $('.arrow').fadeIn('fast');
+        $('.headerbtn').removeClass("orange");
         ftr[0].style.backgroundColor = "rgb(200,200,200)";
         hdr[0].style.backgroundColor = "rgb(200,200,200)";
-        for (x = 0; x < hdrbtn.length; x++) {
-            hdrbtn[x].style.backgroundColor = "rgb(200,200,200)";
-            hdrbtn[x].style.boxShadow = "0 5px rgb(150,150,150)";
-        }
     });
     $('.btn2').mouseover(function () {
         $('.web').fadeIn('fast');
@@ -211,12 +208,9 @@
         $('.boxcont2').fadeIn('fast');
         $('.btn1').fadeOut('fast');
         $('.arrow').fadeOut('fast');
+        $('.headerbtn').addClass("blue");
         ftr[0].style.backgroundColor = "rgb(106,215,255)";
         hdr[0].style.backgroundColor = "rgb(106,215,255)";
-        for (x = 0; x < hdrbtn.length; x++) {
-            hdrbtn[x].style.backgroundColor = "rgb(106,215,255)";
-            hdrbtn[x].style.boxShadow = "0 5px rgb(0,170,200)";
-        }
     });
     $('.btn2').mouseout(function () {
         $('.web').fadeOut('fast');
@@ -224,11 +218,8 @@
         $('.boxcont2').fadeOut('fast');
         $('.btn1').fadeIn('fast');
         $('.arrow').fadeIn('fast');
+        $('.headerbtn').removeClass("blue");
         ftr[0].style.backgroundColor = "rgb(200,200,200)";
         hdr[0].style.backgroundColor = "rgb(200,200,200)";
-        for (x = 0; x < hdrbtn.length; x++) {
-            hdrbtn[x].style.backgroundColor = "rgb(200,200,200)";
-            hdrbtn[x].style.boxShadow = "0 5px rgb(150,150,150)";
-        }
     });
 </script>

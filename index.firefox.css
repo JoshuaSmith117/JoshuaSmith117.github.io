@@ -52,6 +52,7 @@
     }
 
     .footertxt {
+        background-color:blue;
         color: white;
         font-family: 'Quicksand', sans-serif;
         font-size: 24px;
@@ -105,7 +106,14 @@
     .headerbtn:active {
         box-shadow: 0 2px rgb(150,150,150);
     }
-
+    .orange{
+        background-color: rgb(251,176,59);
+        box-shadow: 0 5px rgb(180,100,20);
+    }
+    .blue{
+        background-color: rgb(106,215,255);
+        box-shadow: 0 5px rgb(80,170,200);
+    }
     #JSdiv {
         height: inherit;
         width: auto;
