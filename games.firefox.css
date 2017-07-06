@@ -34,9 +34,6 @@
         line-height: normal;
     }
 
-    .button {
-    }
-
     .footer {
         position: fixed;
         background-color: #fbb03b;
@@ -120,7 +117,6 @@
         width: 50px;
         top: 50%;
     }
-
     .emailbtn {
         height: 70px;
         width: 70px;
@@ -136,48 +132,44 @@
     .bodycont{
         margin:auto;
         margin-top:70px;
-        margin-bottom:70px;
+        margin-bottom:80px;
         width:1000px;
         max-width:100%;
         padding-top:10px;
     }
     .bodydiv{
-        background-color:white;
-        -webkit-flex: 1;  /* Safari 6.1+ */
-        -ms-flex: 1;  /* IE 10 */    
-        flex: 1;
-        height:200px;
         margin-top:20px;
         margin-bottom:20px;
     }
     .bodyimg{
-        cursor:pointer;
-        float:left;
         height: 200px;
+        width: 200px;
+        background-position-x: 50%; 
+        background-position-y: 50%;
+        background-size: 100%;
+        cursor:pointer;
         border-radius: 50%;
-        margin-right:10px;
-    }
-    .bodytitlecont{
+        box-shadow: 0 9px gray;
     }
     .bodytitle{
-        display:inline;
+        display:inline-block;
         color: black;
         font-family: 'Quicksand', sans-serif;
         font-size: 36px;
+        margin-top:20px;
+    }
+    .bodytitle:hover{
+        cursor: pointer;
+        color : gray;
+    }
+    .bodytitlesub{
+        font-size: 24px;
     }
     .bodysummary{
-        margin-left:150px;
-        color: black;
+        color: gray;
         font-family: 'Quicksand', sans-serif;
         font-size: 18px;
         line-height: 36px;
-        border-top:1px solid black;
-    }
-    .learnmore{
-
-    }
-    .bodyline{
-
     }
 }/*End Firefox Hack===================================================*/
     

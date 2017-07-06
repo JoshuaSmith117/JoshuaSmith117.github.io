@@ -93,7 +93,7 @@
         background-position-y: 50%;
         background-repeat: no-repeat;
         background-size: 30px;
-        border: solid 0px;
+        border: 1px solid rgb(150,150,150);
         background-color: rgb(200,200,200);
         border-radius: 50%;
         cursor: pointer;
@@ -109,10 +109,12 @@
     .orange{
         background-color: rgb(251,176,59);
         box-shadow: 0 5px rgb(180,100,20);
+        border: 1px solid rgb(180,100,20);
     }
     .blue{
         background-color: rgb(106,215,255);
         box-shadow: 0 5px rgb(80,170,200);
+        border: 1px solid rgb(80,170,200);
     }
     #JSdiv {
         height: inherit;
@@ -182,7 +184,7 @@
         background-position-x: 50%;
         background-position-y: 55%;
         background-size: 215px;
-        border: 0px;
+        border: 1px solid black;
         height: 100%;
         width: 100%;
         cursor: pointer;
@@ -289,7 +291,7 @@
         background-position-x: 50%;
         background-position-y: 55%;
         background-size: 215px;
-        border: 0px;
+        border: 1px solid black;
         height: 100%;
         width: 100%;
         cursor: pointer;
