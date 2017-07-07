@@ -85,6 +85,12 @@
     var arrow = document.getElementsByClassName("arrow");
     var hdr = document.getElementsByClassName("header");
     var hdrbtn = document.getElementsByClassName("headerbtn");
+    var boxcont1 = document.getElementsByClassName("boxcont1");
+    var game = document.getElementsByClassName("game");
+    var box1 = document.getElementsByClassName("box1");
+    var box2 = document.getElementsByClassName("box2");
+    var box3 = document.getElementsByClassName("box3");
+    var box4 = document.getElementsByClassName("box4");
 
     function arrowmoveright() {
         var pos = -60;
@@ -121,8 +127,26 @@
         }
     }
     function resize() {
-        
         if ((window.innerWidth < 1000)) {
+            game[0].style.position = "relative";
+            game[0].style.transform = "translate(-50%,0%)";
+            game[0].style.fontSize = "24px";
+            game[0].style.left = "50%";
+            game[0].style.top = "125%";
+            game[0].style.textAlign = "center";
+            game[0].style.width = "280px";
+            for (x = 0; x < box1.length; x++) {
+                box1[x].style.display = "none";
+            }
+            for (x = 0; x < box2.length; x++) {
+                box2[x].style.display = "none";
+            }
+            for (x = 0; x < box3.length; x++) {
+                box3[x].style.display = "none";
+            }
+            for (x = 0; x < box4.length; x++) {
+                box4[x].style.display = "none";
+            }
             for (x = 0; x < ftrtxt.length; x++) {
                 ftrtxt[x].style.fontSize = "18px";
             }
@@ -133,7 +157,6 @@
             btn1div[0].style.height = "100px";
             btn1[0].style.backgroundSize = "140px";
             btn1[0].style.boxShadow = "0 6px rgb(180,100,20)";
-            
 
             btn2div[0].style.top = "66%";
             btn2div[0].style.left = "50%";
@@ -158,6 +181,24 @@
             }
 
         } else {
+            game[0].style.transform = "translate(0%,0%)";
+            game[0].style.fontSize = "48px";
+            game[0].style.left = "100%";
+            game[0].style.top = "18%";
+            game[0].style.textAlign = "initial";
+            game[0].style.width = "500px";
+            for (x = 0; x < box1.length; x++) {
+                box1[x].style.display = "initial";
+            }
+            for (x = 0; x < box2.length; x++) {
+                box2[x].style.display = "initial";
+            }
+            for (x = 0; x < box3.length; x++) {
+                box3[x].style.display = "initial";
+            }
+            for (x = 0; x < box4.length; x++) {
+                box4[x].style.display = "initial";
+            }
             for (x = 0; x < ftrtxt.length; x++) {
                 ftrtxt[x].style.fontSize = "24px";
             }
@@ -168,12 +209,14 @@
             btn1div[0].style.top = "50%";
             btn1div[0].style.left = "33%";
             btn1[0].style.backgroundSize = "215px";
+            btn1[0].style.boxShadow = "0 9px rgb(180,100,20)";
 
             btn2div[0].style.top = "50%";
             btn2div[0].style.left = "66%";
             btn2div[0].style.width = "150px";
             btn2div[0].style.height = "150px";
             btn2[0].style.backgroundSize = "215px";
+            btn2[0].style.boxShadow = "0 9px rgb(80,170,200)";
 
         }
 

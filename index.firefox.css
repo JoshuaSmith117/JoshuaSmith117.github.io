@@ -215,6 +215,7 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%,-50%);
+        background-color:green;
     }
 
     .box1 {
@@ -269,12 +270,13 @@
         pointer-events: none;
         display: inline-block;
         position: relative;
-        width: 600px;
         font-size: 48px;
         text-align: left;
         top: 18%;
         left: 100%;
+        width: 500px;
         color: rgb(251,176,59);
+        background-color: blue;
     }
     /*btn2 stuff----------------------------------------------------------------------*/
     .btn2div{
