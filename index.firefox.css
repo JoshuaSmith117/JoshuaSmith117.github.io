@@ -38,7 +38,7 @@
     }
 
     .footer {
-        position: absolute;
+        position: fixed;
         background-color: rgb(200, 200, 200);
         height: 70px;
         width: 100%;
@@ -46,20 +46,20 @@
         bottom: 0%;
         line-height: 70px;
         text-align: center;
-        vertical-align: middle;
         z-index:1;
         transition: 0.5s;
     }
 
     .footertxt {
-        background-color:blue;
+        display:inline-block;
+        position:relative;
         color: white;
         font-family: 'Quicksand', sans-serif;
         font-size: 24px;
     }
     /*Header Styles ----------------------------------------------*/
     .header {
-        position: absolute;
+        position: fixed;
         background-color: rgb(200, 200, 200);
         height: 70px;
         width: 100%;
@@ -68,31 +68,23 @@
         z-index:1;
         transition: 0.5s;
     }
-
-    .headerdiv {
-        left: 0px;
-        height: inherit;
-        width: auto;
-        display: inline-block;
-    }
-
     .headertxt {
-        display: inline-block;
+        float:left;
+        position:relative;
+        display: inline;
         color: white;
     }
 
     .headerbtn {
-        margin-top: 25px;
         margin-left: 15px;
         position: relative;
-        transform: translate(0%,-50%);
-        top: 50%;
+        top: 30%;
         height: 70px;
         width: 70px;
         background-position-x: 50%;
         background-position-y: 50%;
         background-repeat: no-repeat;
-        background-size: 30px;
+        background-size: 50%;
         border: 1px solid rgb(150,150,150);
         background-color: rgb(200,200,200);
         border-radius: 50%;
@@ -116,22 +108,29 @@
         box-shadow: 0 5px rgb(80,170,200);
         border: 1px solid rgb(80,170,200);
     }
-    #JSdiv {
-        height: inherit;
+    .JSdivbig {
         width: auto;
         position: absolute;
-        transform: translate(-50%,-50%);
-        left: 50%;
-        top: 50%;
-        margin: auto;
+        z-index:2;
+        top:10px;
+        left:50%;
+        transform:translate(-50%,0%);
+    }
+
+    .JSdivsmall {
+        height:40px;
+        width: auto;
+        position: absolute;
+        top: 5px;
+        right: 0%;
+        z-index:2;
     }
 
     #JSicon {
-        display: inline-block;
-        transform: translate(0%,-50%);
-        position: relative;
-        width: 50px;
-        top: 50%;
+        float:left;
+        position:relative;
+        height: 50px;
+        display:inline;
     }
 
     .emailbtn {
@@ -143,7 +142,6 @@
         background-repeat: no-repeat;
         background-size: 30px;
         border: solid 1px;
-        background-color: red;
         border-radius: 50%;
     }
     /*--------------------------------------------------*/
@@ -170,8 +168,8 @@
     }
     /*btn1 Stuff----------------------------------------------------------------------*/
     .btn1div{
-        height: 150px;
-        width: 150px;
+        height: 300px;
+        width: 300px;
         position: absolute;
         transform: translate(-50%,-50%);
         top: 50%;
@@ -183,13 +181,17 @@
         background-color: rgb(251,176,59);
         background-position-x: 50%;
         background-position-y: 55%;
-        background-size: 215px;
+        background-size: 140%;
         border: 1px solid black;
-        height: 100%;
-        width: 100%;
+        height: 50%;
+        width: 50%;
         cursor: pointer;
         border-radius: 50%;
         box-shadow: 0 9px rgb(180,100,20);
+        position:absolute;
+        transform:translate(-50%,-50%);
+        top:50%;
+        left:50%;
     }
     .btn1:hover {
         background-image: none;
@@ -215,7 +217,6 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%,-50%);
-        background-color:green;
     }
 
     .box1 {
@@ -268,39 +269,40 @@
 
     .game {
         pointer-events: none;
-        display: inline-block;
-        position: relative;
+        display: none;
+        position: absolute;
         font-size: 48px;
-        text-align: left;
-        top: 18%;
-        left: 100%;
-        width: 500px;
+        text-align: center;
+        width:100%;
         color: rgb(251,176,59);
-        background-color: blue;
     }
+
     /*btn2 stuff----------------------------------------------------------------------*/
     .btn2div{
-        height: 150px;
-        width: 150px;
+        height: 300px;
+        width: 300px;
         position: absolute;
         transform: translate(-50%,-50%);
         top: 50%;
-        left: 66%;
+        left: 33%;
     }
     .btn2 {
         background-image: url(Assets/Images/IconMouse.png);
         background-repeat: no-repeat;
+        background-color: rgb(106,215,255);
         background-position-x: 50%;
         background-position-y: 55%;
-        background-size: 215px;
+        background-size: 140%;
         border: 1px solid black;
-        height: 100%;
-        width: 100%;
+        height: 50%;
+        width: 50%;
         cursor: pointer;
         border-radius: 50%;
-        background-color: rgb(106,215,255);
         box-shadow: 0 9px rgb(80,170,200);
-
+        position:absolute;
+        transform:translate(-50%,-50%);
+        top:50%;
+        left:50%;
     }
 
     .btn2:hover {
@@ -346,13 +348,11 @@
 
     .web {
         pointer-events: none;
-        display: inline-block;
-        position: relative;
-        width: 450px;
+        display: none;
+        position: absolute;
         font-size: 48px;
-        text-align: right;
-        top: 30px;
-        right: 452px;
+        text-align: center;
+        width:100%;
         color: rgb(106,215,255);
     }
 }/*End Firefox Hack===================================================*/

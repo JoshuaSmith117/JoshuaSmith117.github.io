@@ -31,44 +31,45 @@
     <!--Begin Writing Body Content------------------------------------------------------------------------>
     <body>
         <div class="header">
-            <div class="headerdiv">
                 <button class="headerbtn" onclick="window.location.href = 'https://www.linkedin.com/in/joshsmith117/<button'" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"></button>
-            </div>
-            <div class="headerdiv">
                 <button class="headerbtn" style="background-image: url(Assets/Images/emailicon.png);"></button>
-            </div>
-            <div id="JSdiv">
-                <h2 class="headertxt" style="top:0%; transform:translate(0%,-50%);">Joshua</h2>
-                <img style="margin-left:5px;margin-right:5px;" id="JSicon" src="Assets/Images/JSIconSimple.png" />
-                <h2 class="headertxt" style="top:0%; transform:translate(0%,-50%);">Smith</h2>
+            <div class="JSdivsmall">
+                <h2 class="headertxt" style="top:-5px">Joshua Smith</h2>
+                <img style="margin-left:5px; margin-right:5px; height:30px" id="JSicon" src="Assets/Images/JSIconSimple.png" />
             </div>
         </div>
-
+        <div class="JSdivbig">
+            <h2 class="headertxt">Joshua</h2>
+            <img style="margin-left:5px;margin-right:5px;" id="JSicon" src="Assets/Images/JSIconSimple.png" />
+            <h2 class="headertxt">Smith</h2>
+        </div>
         <div class="footer">
-            <span class="footertxt">Welcome to my portfolio. &nbsp;</span><span class="footertxt">Would you like to learn more about what I do?</span>
+            <span class="footertxt">Welcome to my portfolio. Would you like to learn more about what I do?</span>
 </div>
         <div class="btn1div">
-            <button class="btn1" onclick="window.location.href = 'games.html'"><h1 class="btntxt" id="btntxt1">Learn More</h1></button>
-            <img class="arrow" src="Assets/Images/OrangeArrowRight.png" style="top: 50%; left: -60px" />
-            <img class="arrow" src="Assets/Images/OrangeArrowLeft.png" style="top: 50%; right: -60px" />
+            <h1 class="game">Game Development</h1>
+            <button class="btn1" onclick="window.location.href = 'games.html'"><h1 class="btntxt" id="btntxt1">Learn More</h1>
+                <img class="arrow" src="Assets/Images/OrangeArrowRight.png" style="top: 50%; left: -60px" />
+                <img class="arrow" src="Assets/Images/OrangeArrowLeft.png" style="top: 50%; right: -60px" />
+            </button>
             <div class="boxcont1" style="display: none;">
                 <img src="Assets/Images/ToriLogo.png" class="box1">
                 <img src="Assets/Images/TTPLogo.png" class="box2">
                 <img src="Assets/Images/IUArcade.png" class="box3">
                 <img src="Assets/Images/EscapeLogo.png" class="box4">
-                <h1 class="game" display="none;">Game Development</h1>
             </div>
         </div>
         <div class="btn2div">
-            <button class="btn2"><h1 class="btntxt" id="btntxt2">Learn More</h1></button>
-            <img class="arrow" src="Assets/Images/BlueArrowRight.png" style="top: 50%; left: -60px" />
-            <img class="arrow" src="Assets/Images/BlueArrowLeft.png" style="top: 50%; right: -60px" />
+            <h1 class="web">Web Development</h1>
+            <button class="btn2"><h1 class="btntxt" id="btntxt2">Learn More</h1>
+                <img class="arrow" src="Assets/Images/BlueArrowRight.png" style="top: 50%; left: -60px" />
+                <img class="arrow" src="Assets/Images/BlueArrowLeft.png" style="top: 50%; right: -60px" />
+            </button>
             <div class="boxcont2" style="display: none;">
                 <img src="Assets/Images/JSLogo.png" class="box1">
                 <img src="Assets/Images/TTPLogo.png" class="box2-2">
                 <img src="Assets/Images/IUArcade.png" class="box2-3">
                 <img src="Assets/Images/EscapeLogo.png" class="box4">
-                <h1 class="web">Web Development</h1>
             </div>
         </div>
     </body>
@@ -76,17 +77,22 @@
 
 
 <script>
+    var jsdivsmall = document.getElementsByClassName("JSdivsmall");
+    var jsdivbig = document.getElementsByClassName("JSdivbig");
     var btn1div = document.getElementsByClassName("btn1div");
     var btn1 = document.getElementsByClassName("btn1");
     var btn2div = document.getElementsByClassName("btn2div");
     var btn2 = document.getElementsByClassName("btn2");
+    var btntxt = document.getElementsByClassName("btntxt");
     var ftr = document.getElementsByClassName("footer");
     var ftrtxt = document.getElementsByClassName("footertxt");
     var arrow = document.getElementsByClassName("arrow");
     var hdr = document.getElementsByClassName("header");
     var hdrbtn = document.getElementsByClassName("headerbtn");
+    var hdrtxt = document.getElementsByClassName("headertxt");
     var boxcont1 = document.getElementsByClassName("boxcont1");
     var game = document.getElementsByClassName("game");
+    var web = document.getElementsByClassName("web");
     var box1 = document.getElementsByClassName("box1");
     var box2 = document.getElementsByClassName("box2");
     var box3 = document.getElementsByClassName("box3");
@@ -128,13 +134,48 @@
     }
     function resize() {
         if ((window.innerWidth < 1000)) {
-            game[0].style.position = "relative";
-            game[0].style.transform = "translate(-50%,0%)";
-            game[0].style.fontSize = "24px";
-            game[0].style.left = "50%";
-            game[0].style.top = "125%";
+            game[0].style.position = "absolute";
+            game[0].style.top = "85%";
+            game[0].style.left = "0%";
+            game[0].style.fontSize = "14px";
+            game[0].style.width = "100%";
+            game[0].style.display = "block";
             game[0].style.textAlign = "center";
-            game[0].style.width = "280px";
+            web[0].style.position = "absolute";
+            web[0].style.top = "-10%";
+            web[0].style.right = "0%";
+            web[0].style.fontSize = "14px";
+            web[0].style.width = "100%";
+            web[0].style.display = "block";
+            web[0].style.textAlign = "center";
+            btn1div[0].style.top = "25%";
+            btn1div[0].style.left = "50%";
+            btn1div[0].style.width = "150px";
+            btn1div[0].style.height = "150px";
+            btn1[0].style.boxShadow = "0 5px rgb(180,100,20)";
+            btn2div[0].style.top = "75%";
+            btn2div[0].style.left = "50%";
+            btn2div[0].style.width = "150px";
+            btn2div[0].style.height = "150px";
+            btn2[0].style.boxShadow = "0 5px rgb(80,170,200)";
+            hdr[0].style.height = "40px";
+            ftr[0].style.height = "40px";
+            jsdivbig[0].style.display = "none";
+            jsdivsmall[0].style.display = "initial";
+
+            for (x = 0; x < btntxt.length; x++) {
+                btntxt[x].style.fontSize = "12px";
+            }
+            for (x = 0; x < arrow.length; x++) {
+                arrow[x].style.maxWidth = "10px";
+            }
+            for (x = 0; x < hdrbtn.length; x++) {
+                hdrbtn[x].style.width = "50px";
+                hdrbtn[x].style.height = "50px"
+                hdrbtn[x].style.top = "30%";
+                hdrbtn[x].style.marginLeft = "15px";
+            }
+
             for (x = 0; x < box1.length; x++) {
                 box1[x].style.display = "none";
             }
@@ -149,44 +190,74 @@
             }
             for (x = 0; x < ftrtxt.length; x++) {
                 ftrtxt[x].style.fontSize = "18px";
+                ftrtxt[0].style.top = "-40%";
             }
-
-            btn1div[0].style.top = "33%";
-            btn1div[0].style.left = "50%";
-            btn1div[0].style.width = "100px";
-            btn1div[0].style.height = "100px";
-            btn1[0].style.backgroundSize = "140px";
-            btn1[0].style.boxShadow = "0 6px rgb(180,100,20)";
-
-            btn2div[0].style.top = "66%";
-            btn2div[0].style.left = "50%";
-            btn2div[0].style.width = "100px";
-            btn2div[0].style.height = "100px";
-            btn2[0].style.backgroundSize = "140px";
-            btn2[0].style.boxShadow = "0 6px rgb(80,170,200)";
-
+            for (x = 0; x < hdrtxt.length; x++) {
+                hdrtxt[x].style.fontSize = "12px";
+            }
 
             for (i = 0; i<arrow.length; i++){
                 arrow[i].style.width= "1px;"
             }
-            
 
             if ((window.innerWidth < 700)) {
-
+                hdr[0].style.height = "40px";
+                ftr[0].style.height = "40px";
+                for (x = 0; x < hdrbtn.length; x++) {
+                    hdrbtn[x].style.width = "50px";
+                    hdrbtn[x].style.height = "50px";
+                    hdrbtn[x].style.top = "20%";
+                    hdrbtn[x].style.marginLeft = "5px";
+                }
+                for (x = 0; x < ftrtxt.length; x++) {
+                    ftrtxt[x].style.fontSize = "12px";
+                    ftrtxt[0].style.top = "-40%";
+                }
                 if ((window.innerWidth < 400)) {
-                    for (x = 0; x < ftrtxt.length; x++) {
-                        ftrtxt[x].style.fontSize = "12px";
-                    }
+                    
                 }
             }
 
         } else {
-            game[0].style.transform = "translate(0%,0%)";
             game[0].style.fontSize = "48px";
-            game[0].style.left = "100%";
-            game[0].style.top = "18%";
-            game[0].style.textAlign = "initial";
+            game[0].style.top = "30%";
+            game[0].style.left = "85%";
+            game[0].style.textAlign = "left";
             game[0].style.width = "500px";
+            game[0].style.display = "none";
+            web[0].style.fontSize = "48px";
+            web[0].style.top = "30%";
+            web[0].style.right = "85%";
+            web[0].style.textAlign = "right";
+            web[0].style.width = "500px";
+            web[0].style.display = "none";
+            btn1div[0].style.height = "300px";
+            btn1div[0].style.width = "300px";
+            btn1div[0].style.top = "50%";
+            btn1div[0].style.left = "33%";
+            btn1[0].style.boxShadow = "0 9px rgb(180,100,20)";
+            btn2div[0].style.top = "50%";
+            btn2div[0].style.left = "66%";
+            btn2div[0].style.width = "300px";
+            btn2div[0].style.height = "300px";
+            btn2[0].style.boxShadow = "0 9px rgb(80,170,200)";
+            hdr[0].style.height = "70px";
+            ftr[0].style.height = "70px";
+            jsdivbig[0].style.display = "initial";
+            jsdivsmall[0].style.display = "none";
+
+            for (x = 0; x < btntxt.length; x++) {
+                btntxt[x].style.fontSize = "20px";
+            }
+            for (x = 0; x < arrow.length; x++) {
+                arrow[x].style.maxWidth = "20px";
+            }
+            for (x = 0; x < hdrbtn.length; x++) {
+                hdrbtn[x].style.width = "70px";
+                hdrbtn[x].style.height = "70px";
+                hdrbtn[x].style.marginLeft = "15px";
+            }
+
             for (x = 0; x < box1.length; x++) {
                 box1[x].style.display = "initial";
             }
@@ -201,22 +272,11 @@
             }
             for (x = 0; x < ftrtxt.length; x++) {
                 ftrtxt[x].style.fontSize = "24px";
+                ftrtxt[0].style.top = "0%";
             }
-            
-
-            btn1div[0].style.height = "150px";
-            btn1div[0].style.width = "150px";
-            btn1div[0].style.top = "50%";
-            btn1div[0].style.left = "33%";
-            btn1[0].style.backgroundSize = "215px";
-            btn1[0].style.boxShadow = "0 9px rgb(180,100,20)";
-
-            btn2div[0].style.top = "50%";
-            btn2div[0].style.left = "66%";
-            btn2div[0].style.width = "150px";
-            btn2div[0].style.height = "150px";
-            btn2[0].style.backgroundSize = "215px";
-            btn2[0].style.boxShadow = "0 9px rgb(80,170,200)";
+            for (x = 0; x < hdrtxt.length; x++) {
+                hdrtxt[x].style.fontSize = "18px";
+            }
 
         }
 
@@ -224,45 +284,66 @@
     $(document).ready(arrowmoveright);
     $(document).ready(resize);
     $(window).resize(resize);
+
     //Begin jquery portion of code------------------------------------------------------------------------>
     $('.btn1').mouseover(function () {
-        $('.boxcont1').fadeIn('fast');
-        $('.game').fadeIn('fast');
         $('#btntxt1').fadeIn('fast');
         $('.btn2').fadeOut('fast');
         $('.arrow').fadeOut('fast');
         $('.headerbtn').addClass("orange");
         ftr[0].style.backgroundColor = "rgb(251,176,59)";
         hdr[0].style.backgroundColor = "rgb(251,176,59)";
-    });
+        if ((window.innerWidth >= 1000)) {
+            $('.boxcont1').fadeIn('fast');
+            $('.game').fadeIn('fast');
+        }
+        if ((window.innerWidth < 1000)) {
+            $('.web').fadeOut('fast');
+        }
+        });
     $('.btn1').mouseout(function () {
-        $('.btn2').fadeIn('fast');
-        $('.boxcont1').fadeOut('fast');
-        $('#btntxt1').fadeOut('fast');
-        $('.game').fadeOut('fast');
-        $('.arrow').fadeIn('fast');
-        $('.headerbtn').removeClass("orange");
-        ftr[0].style.backgroundColor = "rgb(200,200,200)";
-        hdr[0].style.backgroundColor = "rgb(200,200,200)";
+            $('.btn2').fadeIn('fast');
+            $('#btntxt1').fadeOut('fast');
+            $('.arrow').fadeIn('fast');
+            $('.headerbtn').removeClass("orange");
+            ftr[0].style.backgroundColor = "rgb(200,200,200)";
+            hdr[0].style.backgroundColor = "rgb(200,200,200)";
+            if ((window.innerWidth >= 1000)) {
+                $('.boxcont1').fadeOut('fast');
+                $('.game').fadeOut('fast');
+            }
+            if ((window.innerWidth < 1000)) {
+                $('.web').fadeIn('fast');
+            }
     });
-    $('.btn2').mouseover(function () {
-        $('.web').fadeIn('fast');
-        $('#btntxt2').fadeIn('fast');
-        $('.boxcont2').fadeIn('fast');
-        $('.btn1').fadeOut('fast');
-        $('.arrow').fadeOut('fast');
-        $('.headerbtn').addClass("blue");
-        ftr[0].style.backgroundColor = "rgb(106,215,255)";
-        hdr[0].style.backgroundColor = "rgb(106,215,255)";
-    });
-    $('.btn2').mouseout(function () {
-        $('.web').fadeOut('fast');
-        $('#btntxt2').fadeOut('fast');
-        $('.boxcont2').fadeOut('fast');
-        $('.btn1').fadeIn('fast');
-        $('.arrow').fadeIn('fast');
-        $('.headerbtn').removeClass("blue");
-        ftr[0].style.backgroundColor = "rgb(200,200,200)";
-        hdr[0].style.backgroundColor = "rgb(200,200,200)";
-    });
+        $('.btn2').mouseover(function () {
+            $('#btntxt2').fadeIn('fast');
+            $('.btn1').fadeOut('fast');
+            $('.arrow').fadeOut('fast');
+            $('.headerbtn').addClass("blue");
+            ftr[0].style.backgroundColor = "rgb(106,215,255)";
+            hdr[0].style.backgroundColor = "rgb(106,215,255)";
+            if ((window.innerWidth >= 1000)) {
+                $('.web').fadeIn('fast');
+                $('.boxcont2').fadeIn('fast');
+            }
+            if ((window.innerWidth < 1000)) {
+                $('.game').fadeOut('fast');
+            }
+        });
+        $('.btn2').mouseout(function () {
+            $('#btntxt2').fadeOut('fast');
+            $('.btn1').fadeIn('fast');
+            $('.arrow').fadeIn('fast');
+            $('.headerbtn').removeClass("blue");
+            ftr[0].style.backgroundColor = "rgb(200,200,200)";
+            hdr[0].style.backgroundColor = "rgb(200,200,200)";
+            if ((window.innerWidth >= 1000)) {
+                $('.boxcont2').fadeOut('fast');
+                $('.web').fadeOut('fast');
+            }
+            if ((window.innerWidth < 1000)) {
+                $('.game').fadeIn('fast');
+            }
+        });
 </script>
