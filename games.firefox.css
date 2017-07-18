@@ -33,30 +33,11 @@
         vertical-align: middle;
         line-height: normal;
     }
-
-   .footer {
-        position: fixed;
-        background-color: rgb(200, 200, 200);
-        height: 70px;
-        width: 100%;
-        left: 0%;
-        bottom: 0%;
-        line-height: 70px;
-        text-align: center;
-        z-index:1;
-        transition: 0.5s;
-    }
-
-    .footertxt {
-        color: white;
-        font-family: 'Quicksand', sans-serif;
-        font-size: 24px;
-    }
-
     /*Header Styles ----------------------------------------------*/
     .header {
         position: fixed;
         background-color: #fbb03b;
+        border-bottom:2px solid rgb(180,100,20);
         height: 70px;
         width: 100%;
         left: 0%;
