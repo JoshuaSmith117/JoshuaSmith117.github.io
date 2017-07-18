@@ -30,24 +30,29 @@
 
     <!--Begin Writing Body Content------------------------------------------------------------------------>
     <body>
-        
         <div class="header">
-            <div class="headerdiv">
-                <button class="headerbtn" onclick="window.location.href = 'https://www.linkedin.com/in/joshsmith117/<button'" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"></button>
-            </div>
-            <div class="headerdiv">
+            <div style="position:absolute; top: 30%;">
+                <button class="headerbtn" onclick="window.location.href = 'https://www.linkedin.com/in/joshsmith117/'" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"></button>
                 <button class="headerbtn" style="background-image: url(Assets/Images/emailicon.png);"></button>
             </div>
-            <div id="JSdiv">
-                <h2 class="headertxt" style="top:0%; transform:translate(0%,-50%);">Joshua</h2>
+            <div style="display:inline-block; position:absolute; right:0%; top: 30%;">
+                <button class="headerbtn" style="background-image: url(Assets/Images/JSIconSimple.png);"></button>
+                <button class="headerbtn" style="background-image: url(Assets/Images/emailicon.png);"></button>
+            </div>
+            <div class="JSdivsmall">
+                <h2 class="headertxt">Joshua</h2>
+                <img style="margin-left:5px; margin-right:5px; height:30px" id="JSicon" src="Assets/Images/JSIconSimple.png" />
+                <h2 class="headertxt">Smith</h2>
+            </div>
+            <div class="JSdivbig">
+                <h2 class="headertxt">Joshua</h2>
                 <img style="margin-left:5px;margin-right:5px;" id="JSicon" src="Assets/Images/JSIconSimple.png" />
-                <h2 class="headertxt" style="top:0%; transform:translate(0%,-50%);">Smith</h2>
+                <h2 class="headertxt">Smith</h2>
             </div>
         </div>
-
         <div class="bodycont">
             <div class="bodydiv">
-                <div class="bodyimg" style="border: 1px solid black; background-image: url(Assets/Images/ToriLogo.png);"></div>
+                <button class="bodyimg" style="border: 1px solid black; background-image: url(Assets/Images/ToriLogo.png);"></button><h1 class="btntxt" id="btntxt1">Learn More</h1>
                     <div class="bodytitle" style="cursor:pointer;">
                         <span>Tori</span>
                         <span class="space">&nbsp|&nbsp</span>
@@ -56,7 +61,7 @@
                 <div class ="bodysummary">hjddhfhkjdshf klafhklfhafkld shhfkjjsaf hlkjsjafhkjaljsfkjlsja fklhfklahfsklajsdfkasfj hlkafkjasf kjlafkjladsfkjla sfhkhalsfkjdsjhdfkjf jdkjdfjk dfsjdf ksdfskj ksdlfj sdlfkj lksjdf kljsdf lkjsdf lkjsdf lksdf lkjsdf lksjdf lksjdf lksjdf lkjsdf lkjsdf lksjdf lkjsdf</div>
             </div>
             <div class="bodydiv">
-                <div class="bodyimg" style="border: 1px solid black; background-image: url(Assets/Images/IUArcade.png);"></div>
+                <button class="bodyimg" style="border: 1px solid black; background-image: url(Assets/Images/IUArcade.png);"></button>
                         <div class="bodytitle" style="cursor:pointer;">
                             <span>IU Arcade</span>
                             <span class="space">&nbsp|&nbsp</span>
@@ -65,7 +70,7 @@
                 <div class="bodysummary">hjddhfhkjdshf klafhklfhafkld shhfkjjsaf hlkjsjafhkjaljsfkjlsja fklhfklahfsklajsdfkasfj hlkafkjasf kjlafkjladsfkjla sfhkhalsfkjdsjhdfkjf jdkjdfjk dfsjdf ksdfskj ksdlfj sdlfkj lksjdf kljsdf lkjsdf lkjsdf lksdf lkjsdf lksjdf lksjdf lksjdf lkjsdf lkjsdf lksjdf lkjsdf</div>
             </div>
             <div class="bodydiv">
-                <div class="bodyimg" style="border: 1px solid black; background-image: url(Assets/Images/TTPLogo.png);"></div>
+                <button class="bodyimg" style="border: 1px solid black; background-image: url(Assets/Images/TTPLogo.png);"></button>
                         <div class="bodytitle" style="cursor:pointer;">
                             <span>TapTapPop!</span>
                             <span class="space">&nbsp|&nbsp</span>
@@ -83,16 +88,16 @@
                 <div class="bodysummary">hjddhfhkjdshf klafhklfhafkld shhfkjjsaf hlkjsjafhkjaljsfkjlsja fklhfklahfsklajsdfkasfj hlkafkjasf kjlafkjladsfkjla sfhkhalsfkjdsjhdfkjf jdkjdfjk dfsjdf ksdfskj ksdlfj sdlfkj lksjdf kljsdf lkjsdf lkjsdf lksdf lkjsdf lksjdf lksjdf lksjdf lkjsdf lkjsdf lksjdf lkjsdf</div>
             </div>
         </div>
-
-        <div class="footer">
-            <span class="footertxt">Welcome to my portfolio. Would you like to learn more about what I do? </span>
-        </div>
     </body>
 </html>
 
 <!--Begin Javascript------------------------------------------------------------------>
 <script>
-    var ftr = document.getElementsByClassName("footertxt");
+    var jsdivsmall = document.getElementsByClassName("JSdivsmall");
+    var jsdivbig = document.getElementsByClassName("JSdivbig");
+    var hdr = document.getElementsByClassName("header");
+    var hdrbtn = document.getElementsByClassName("headerbtn");
+    var hdrtxt = document.getElementsByClassName("headertxt");
     var bdycon = document.getElementsByClassName("bodycont");
     var bdydiv = document.getElementsByClassName("bodydiv");
     var bdyimg = document.getElementsByClassName("bodyimg");
@@ -100,9 +105,11 @@
     var bdytitle = document.getElementsByClassName("bodytitle");
     var titlesub = document.getElementsByClassName("bodytitlesub");
     var space = document.getElementsByClassName("space");
-
     function resize() {
         if ((window.innerWidth < 1040)) {
+            hdr[0].style.height = "40px";
+            jsdivbig[0].style.display = "none";
+            jsdivsmall[0].style.display = "initial";
             for (x = 0; x < bdyimg.length; x++) {
                 bdyimg[x].style.height = "150px";
                 bdyimg[x].style.width = "150px";
@@ -114,20 +121,34 @@
                 bdydiv[x].style.textAlign = "center";
                 bdytitle[x].style.textAlign = "center";
             }
-            ftr[0].style.fontSize = "18px";
-            ftr[0].innerHTML = "Welcome to my portfolio. Would you like to learn more about what I do?";
+            for (x = 0; x < hdrbtn.length; x++) {
+                hdrbtn[x].style.width = "50px";
+                hdrbtn[x].style.height = "50px"
+                hdrbtn[x].style.top = "30%";
+                hdrbtn[x].style.marginLeft = "5px";
+                hdrbtn[x].style.marginRight = "5px";
+            }
+            for (x = 0; x < hdrtxt.length; x++) {
+                hdrtxt[x].style.fontSize = "12px";
+            }
             if ((window.innerWidth < 700)) {
-                ftr[0].innerHTML = "Welcome to my portfolio. <br> Would you like to learn more about what I do?";
+                hdr[0].style.height = "40px";
+                for (x = 0; x < hdrbtn.length; x++) {
+                    hdrbtn[x].style.width = "40px";
+                    hdrbtn[x].style.height = "40px"
+                    hdrbtn[x].style.marginLeft = "0px";
+                    hdrbtn[x].style.marginRight = "0px";
+                }
                 for (x = 0; x < titlesub.length; x++) {
                     titlesub[x].style.fontSize = "18px";
                     bdysmry[x].style.fontSize = "12px";
                     space[x].innerHTML = "";
                 }
-                if ((window.innerWidth < 400)) {
-                    ftr[0].style.fontSize = "12px";
-                }
             }
         } else {
+            hdr[0].style.height = "70px";
+            jsdivbig[0].style.display = "initial";
+            jsdivsmall[0].style.display = "none";
             for (x = 0; x < bdyimg.length; x++) {
                 bdyimg[x].style.height = "200px";
                 bdyimg[x].style.width = "200px";
@@ -139,8 +160,15 @@
                 bdydiv[x].style.textAlign = "left";
                 bdyimg[x].style.margin = "initial";
             }
-            ftr[0].style.fontSize = "24px";
-            ftr[0].innerHTML = "Welcome to my portfolio. Would you like to learn more about what I do?";
+            for (x = 0; x < hdrbtn.length; x++) {
+                hdrbtn[x].style.width = "70px";
+                hdrbtn[x].style.height = "70px";
+                hdrbtn[x].style.marginLeft = "5px";
+                hdrbtn[x].style.marginRight = "5px";
+            }
+            for (x = 0; x < hdrtxt.length; x++) {
+                hdrtxt[x].style.fontSize = "18px";
+            }
         }
     }
     $(document).ready(resize);

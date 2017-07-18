@@ -31,21 +31,23 @@
     <!--Begin Writing Body Content------------------------------------------------------------------------>
     <body>
         <div class="header">
-                <button class="headerbtn" onclick="window.location.href = 'https://www.linkedin.com/in/joshsmith117/<button'" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"></button>
+                <button class="headerbtn" onclick="window.location.href = 'https://www.linkedin.com/in/joshsmith117/'" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"></button>
                 <button class="headerbtn" style="background-image: url(Assets/Images/emailicon.png);"></button>
             <div class="JSdivsmall">
-                <h2 class="headertxt" style="top:-5px">Joshua Smith</h2>
+                <h2 class="headertxt">Joshua</h2>
                 <img style="margin-left:5px; margin-right:5px; height:30px" id="JSicon" src="Assets/Images/JSIconSimple.png" />
+                <h2 class="headertxt">Smith</h2>
+            </div>
+            <div class="JSdivbig">
+                <h2 class="headertxt">Joshua</h2>
+                <img style="margin-left:5px;margin-right:5px;" id="JSicon" src="Assets/Images/JSIconSimple.png" />
+                <h2 class="headertxt">Smith</h2>
             </div>
         </div>
-        <div class="JSdivbig">
-            <h2 class="headertxt">Joshua</h2>
-            <img style="margin-left:5px;margin-right:5px;" id="JSicon" src="Assets/Images/JSIconSimple.png" />
-            <h2 class="headertxt">Smith</h2>
-        </div>
+        
         <div class="footer">
             <span class="footertxt">Welcome to my portfolio. Would you like to learn more about what I do?</span>
-</div>
+        </div>
         <div class="btn1div">
             <h1 class="game">Game Development</h1>
             <button class="btn1" onclick="window.location.href = 'games.html'"><h1 class="btntxt" id="btntxt1">Learn More</h1>
@@ -204,17 +206,13 @@
                 hdr[0].style.height = "40px";
                 ftr[0].style.height = "40px";
                 for (x = 0; x < hdrbtn.length; x++) {
-                    hdrbtn[x].style.width = "50px";
-                    hdrbtn[x].style.height = "50px";
-                    hdrbtn[x].style.top = "20%";
-                    hdrbtn[x].style.marginLeft = "5px";
+                    hdrbtn[x].style.width = "40px";
+                    hdrbtn[x].style.height = "40px"
+                    hdrbtn[x].style.marginLeft = "0px";
                 }
                 for (x = 0; x < ftrtxt.length; x++) {
                     ftrtxt[x].style.fontSize = "12px";
                     ftrtxt[0].style.top = "-40%";
-                }
-                if ((window.innerWidth < 400)) {
-                    
                 }
             }
 

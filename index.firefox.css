@@ -34,9 +34,6 @@
         line-height: normal;
     }
 
-    .button {
-    }
-
     .footer {
         position: fixed;
         background-color: rgb(200, 200, 200);
@@ -76,7 +73,6 @@
     }
 
     .headerbtn {
-        margin-left: 15px;
         position: relative;
         top: 30%;
         height: 70px;
@@ -122,27 +118,15 @@
         width: auto;
         position: absolute;
         top: 5px;
-        right: 0%;
         z-index:2;
+        left:50%;
+        transform:translate(-50%,0%);
     }
-
     #JSicon {
         float:left;
         position:relative;
         height: 50px;
         display:inline;
-    }
-
-    .emailbtn {
-        height: 70px;
-        width: 70px;
-        background-position-x: 50%;
-        background-position-y: 40%;
-        background-image: url(Assets/Images/emailicon.png);
-        background-repeat: no-repeat;
-        background-size: 30px;
-        border: solid 1px;
-        border-radius: 50%;
     }
     /*--------------------------------------------------*/
     .h11 {
@@ -182,7 +166,7 @@
         background-position-x: 50%;
         background-position-y: 55%;
         background-size: 140%;
-        border: 1px solid black;
+        border: 1px solid rgb(180,100,20);
         height: 50%;
         width: 50%;
         cursor: pointer;
@@ -293,7 +277,7 @@
         background-position-x: 50%;
         background-position-y: 55%;
         background-size: 140%;
-        border: 1px solid black;
+        border: 1px solid rgb(80,170,200);
         height: 50%;
         width: 50%;
         cursor: pointer;
