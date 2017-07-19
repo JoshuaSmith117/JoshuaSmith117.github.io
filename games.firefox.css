@@ -147,13 +147,44 @@
     }
     .btntxt {
         pointer-events: none;
-        display: none;
-        color: white;
+        display:none;
         position: center;
         text-align: center;
         width: auto;
         height: auto;
         font-size: 20px;
+    }
+    #toribtn{
+        background-color: #ef695e;
+        background-image: url(Assets/Images/ToriLogo.png);
+        border: 1px solid black;
+    }
+    #toribtn:hover{
+        background-image: none;
+    }
+    #IUArcadebtn{
+        background-color:white;
+        background-image: url(Assets/Images/IUArcade.png);
+        border: 1px solid black;
+    }
+    #IUArcadebtn:hover{
+        background-image: none;
+    }
+    #TTPbtn{
+        background-color:white;
+        background-image: url(Assets/Images/TTPLogo.png);
+        border: 1px solid black;
+    }
+    #TTPbtn:hover{
+        background-image: none;
+    }
+    #Escapebtn{
+        background-color: #512d2d;
+        background-image: url(Assets/Images/EscapeLogo.png);
+        border: 1px solid black;
+    }
+    #Escapebtn:hover{
+        background-image: none;
     }
     .bodytitle{
         color: black;
@@ -173,6 +204,20 @@
         font-family: 'Quicksand', sans-serif;
         font-size: 18px;
         line-height: 36px;
+    }
+    .learnmore{
+        width:200px;
+        height:50px;
+        border-radius: 50px;
+        box-shadow: 0 5px gray;
+        cursor:pointer;
+        border: 1px solid black;
+        transition:.5s;
+        margin-top:10px;
+        margin-bottom:20px;
+    }
+    .learnmore:hover{
+        background-color:darkgray;
     }
 }/*End Firefox Hack===================================================*/
     

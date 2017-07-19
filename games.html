@@ -52,40 +52,44 @@
         </div>
         <div class="bodycont">
             <div class="bodydiv">
-                <button class="bodyimg" style="border: 1px solid black; background-image: url(Assets/Images/ToriLogo.png);"></button><h1 class="btntxt" id="btntxt1">Learn More</h1>
+                <button class="bodyimg" id="toribtn"><h1 class="btntxt" id ="toribtntxt" style="color:white;">Learn More</h1></button>
                     <div class="bodytitle" style="cursor:pointer;">
                         <span>Tori</span>
                         <span class="space">&nbsp|&nbsp</span>
                         <span class ="bodytitlesub">UX Design, Production, 3D Modeling, Social Media Marketing</span>
                     </div>
                 <div class ="bodysummary">hjddhfhkjdshf klafhklfhafkld shhfkjjsaf hlkjsjafhkjaljsfkjlsja fklhfklahfsklajsdfkasfj hlkafkjasf kjlafkjladsfkjla sfhkhalsfkjdsjhdfkjf jdkjdfjk dfsjdf ksdfskj ksdlfj sdlfkj lksjdf kljsdf lkjsdf lkjsdf lksdf lkjsdf lksjdf lksjdf lksjdf lkjsdf lkjsdf lksjdf lkjsdf</div>
+                <button class="learnmore">Learn More</button>
             </div>
             <div class="bodydiv">
-                <button class="bodyimg" style="border: 1px solid black; background-image: url(Assets/Images/IUArcade.png);"></button>
+                <button class="bodyimg" id="IUArcadebtn"><h1 class="btntxt" id ="IUArcadebtntxt" style="color:#990000;">Learn More</h1></button>
                         <div class="bodytitle" style="cursor:pointer;">
                             <span>IU Arcade</span>
                             <span class="space">&nbsp|&nbsp</span>
                             <span class ="bodytitlesub">Project Management, UX & Systems Design, 2D Art</span>
                         </div>
                 <div class="bodysummary">hjddhfhkjdshf klafhklfhafkld shhfkjjsaf hlkjsjafhkjaljsfkjlsja fklhfklahfsklajsdfkasfj hlkafkjasf kjlafkjladsfkjla sfhkhalsfkjdsjhdfkjf jdkjdfjk dfsjdf ksdfskj ksdlfj sdlfkj lksjdf kljsdf lkjsdf lkjsdf lksdf lkjsdf lksjdf lksjdf lksjdf lkjsdf lkjsdf lksjdf lkjsdf</div>
+                <button class="learnmore">Learn More</button>
             </div>
             <div class="bodydiv">
-                <button class="bodyimg" style="border: 1px solid black; background-image: url(Assets/Images/TTPLogo.png);"></button>
+                <button class="bodyimg" id="TTPbtn"><h1 class="btntxt" id="TTPbtntxt" style="color:black;">Learn More</h1></button>
                         <div class="bodytitle" style="cursor:pointer;">
                             <span>TapTapPop!</span>
                             <span class="space">&nbsp|&nbsp</span>
                             <span class ="bodytitlesub">Project Management, UX/UI Design</span>
                         </div>
                 <div class="bodysummary">hjddhfhkjdshf klafhklfhafkld shhfkjjsaf hlkjsjafhkjaljsfkjlsja fklhfklahfsklajsdfkasfj hlkafkjasf kjlafkjladsfkjla sfhkhalsfkjdsjhdfkjf jdkjdfjk dfsjdf ksdfskj ksdlfj sdlfkj lksjdf kljsdf lkjsdf lkjsdf lksdf lkjsdf lksjdf lksjdf lksjdf lkjsdf lkjsdf lksjdf lkjsdf</div>
+                <button class="learnmore">Learn More</button>
             </div>
             <div class="bodydiv">
-                <div class="bodyimg" style="border: 1px solid black; background-image: url(Assets/Images/EscapeLogo.png);"></div>
+                <button class="bodyimg" id="Escapebtn"><h1 class="btntxt" id="Escapebtntxt" style="color:#c1464a;">Learn More</h1></button>
                     <div class="bodytitle" style="cursor:pointer;">
                         <span>Escape</span>
                         <span class="space">&nbsp|&nbsp</span>
                         <span class ="bodytitlesub">UX/UI Design, 2D Art, Sound Design, Narrative</span>
                     </div>
                 <div class="bodysummary">hjddhfhkjdshf klafhklfhafkld shhfkjjsaf hlkjsjafhkjaljsfkjlsja fklhfklahfsklajsdfkasfj hlkafkjasf kjlafkjladsfkjla sfhkhalsfkjdsjhdfkjf jdkjdfjk dfsjdf ksdfskj ksdlfj sdlfkj lksjdf kljsdf lkjsdf lkjsdf lksdf lkjsdf lksjdf lksjdf lksjdf lkjsdf lkjsdf lksjdf lkjsdf</div>
+                <button class="learnmore">Learn More</button>
             </div>
         </div>
     </body>
@@ -133,6 +137,7 @@
             }
             if ((window.innerWidth < 700)) {
                 hdr[0].style.height = "40px";
+                bdycon[0].style.marginTop = "30px";
                 for (x = 0; x < hdrbtn.length; x++) {
                     hdrbtn[x].style.width = "40px";
                     hdrbtn[x].style.height = "40px"
@@ -147,6 +152,7 @@
             }
         } else {
             hdr[0].style.height = "70px";
+            bdycon[0].style.marginTop = "70px";
             jsdivbig[0].style.display = "initial";
             jsdivsmall[0].style.display = "none";
             for (x = 0; x < bdyimg.length; x++) {
@@ -175,5 +181,28 @@
     $(window).resize(resize);
 
     //Begin jquery portion of code------------------------------------------------------------------------>
-   
+    $('#toribtn').mouseover(function () {
+        $('#toribtntxt').fadeIn(0);
+    });
+    $('#toribtn').mouseout(function () {
+        $('#toribtntxt').fadeOut(0);
+    });
+    $('#IUArcadebtn').mouseover(function () {
+        $('#IUArcadebtntxt').fadeIn(0);
+    });
+    $('#IUArcadebtn').mouseout(function () {
+        $('#IUArcadebtntxt').fadeOut(0);
+    });
+    $('#TTPbtn').mouseover(function () {
+        $('#TTPbtntxt').fadeIn(0);
+    });
+    $('#TTPbtn').mouseout(function () {
+        $('#TTPbtntxt').fadeOut(0);
+    });
+    $('#Escapebtn').mouseover(function () {
+        $('#Escapebtntxt').fadeIn(0);
+    });
+    $('#Escapebtn').mouseout(function () {
+        $('#Escapebtntxt').fadeOut(0);
+    });
 </script>
