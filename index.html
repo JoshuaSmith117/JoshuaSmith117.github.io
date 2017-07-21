@@ -175,7 +175,8 @@
                 hdrbtn[x].style.width = "50px";
                 hdrbtn[x].style.height = "50px"
                 hdrbtn[x].style.top = "30%";
-                hdrbtn[x].style.marginLeft = "15px";
+                hdrbtn[x].style.marginLeft = "5px";
+                hdrbtn[x].style.marginRight = "5px";
             }
 
             for (x = 0; x < box1.length; x++) {
@@ -209,6 +210,7 @@
                     hdrbtn[x].style.width = "40px";
                     hdrbtn[x].style.height = "40px"
                     hdrbtn[x].style.marginLeft = "0px";
+                    hdrbtn[x].style.marginRight = "0px";
                 }
                 for (x = 0; x < ftrtxt.length; x++) {
                     ftrtxt[x].style.fontSize = "12px";
@@ -253,7 +255,8 @@
             for (x = 0; x < hdrbtn.length; x++) {
                 hdrbtn[x].style.width = "70px";
                 hdrbtn[x].style.height = "70px";
-                hdrbtn[x].style.marginLeft = "15px";
+                hdrbtn[x].style.marginLeft = "5px";
+                hdrbtn[x].style.marginRight = "5px";
             }
 
             for (x = 0; x < box1.length; x++) {
@@ -290,7 +293,9 @@
         $('.arrow').fadeOut('fast');
         $('.headerbtn').addClass("orange");
         ftr[0].style.backgroundColor = "rgb(251,176,59)";
+        ftr[0].style.borderTopColor = "rgb(180,100,20)";
         hdr[0].style.backgroundColor = "rgb(251,176,59)";
+        hdr[0].style.borderBottomColor = "rgb(180,100,20)";
         if ((window.innerWidth >= 1000)) {
             $('.boxcont1').fadeIn('fast');
             $('.game').fadeIn('fast');
@@ -300,48 +305,54 @@
         }
         });
     $('.btn1').mouseout(function () {
-            $('.btn2').fadeIn('fast');
-            $('#btntxt1').fadeOut('fast');
-            $('.arrow').fadeIn('fast');
-            $('.headerbtn').removeClass("orange");
-            ftr[0].style.backgroundColor = "rgb(200,200,200)";
-            hdr[0].style.backgroundColor = "rgb(200,200,200)";
-            if ((window.innerWidth >= 1000)) {
-                $('.boxcont1').fadeOut('fast');
-                $('.game').fadeOut('fast');
-            }
-            if ((window.innerWidth < 1000)) {
-                $('.web').fadeIn('fast');
-            }
+        $('.btn2').fadeIn('fast');
+        $('#btntxt1').fadeOut('fast');
+        $('.arrow').fadeIn('fast');
+        $('.headerbtn').removeClass("orange");
+        ftr[0].style.backgroundColor = "rgb(200,200,200)";
+        ftr[0].style.borderTopColor = "rgb(150,150,150)";
+        hdr[0].style.backgroundColor = "rgb(200,200,200)";
+        hdr[0].style.borderBottomColor = "rgb(150,150,150)";
+        if ((window.innerWidth >= 1000)) {
+            $('.boxcont1').fadeOut('fast');
+            $('.game').fadeOut('fast');
+        }
+        if ((window.innerWidth < 1000)) {
+            $('.web').fadeIn('fast');
+        }
     });
-        $('.btn2').mouseover(function () {
-            $('#btntxt2').fadeIn('fast');
-            $('.btn1').fadeOut('fast');
-            $('.arrow').fadeOut('fast');
-            $('.headerbtn').addClass("blue");
-            ftr[0].style.backgroundColor = "rgb(106,215,255)";
-            hdr[0].style.backgroundColor = "rgb(106,215,255)";
-            if ((window.innerWidth >= 1000)) {
-                $('.web').fadeIn('fast');
-                $('.boxcont2').fadeIn('fast');
-            }
-            if ((window.innerWidth < 1000)) {
-                $('.game').fadeOut('fast');
-            }
-        });
-        $('.btn2').mouseout(function () {
-            $('#btntxt2').fadeOut('fast');
-            $('.btn1').fadeIn('fast');
-            $('.arrow').fadeIn('fast');
-            $('.headerbtn').removeClass("blue");
-            ftr[0].style.backgroundColor = "rgb(200,200,200)";
-            hdr[0].style.backgroundColor = "rgb(200,200,200)";
-            if ((window.innerWidth >= 1000)) {
-                $('.boxcont2').fadeOut('fast');
-                $('.web').fadeOut('fast');
-            }
-            if ((window.innerWidth < 1000)) {
-                $('.game').fadeIn('fast');
-            }
-        });
+    $('.btn2').mouseover(function () {
+        $('#btntxt2').fadeIn('fast');
+        $('.btn1').fadeOut('fast');
+        $('.arrow').fadeOut('fast');
+        $('.headerbtn').addClass("blue");
+        ftr[0].style.backgroundColor = "rgb(106,215,255)";
+        ftr[0].style.borderTopColor = "rgb(80,170,200)";
+        hdr[0].style.backgroundColor = "rgb(106,215,255)";
+        hdr[0].style.borderBottomColor = "rgb(80,170,200)";
+        if ((window.innerWidth >= 1000)) {
+            $('.web').fadeIn('fast');
+            $('.boxcont2').fadeIn('fast');
+        }
+        if ((window.innerWidth < 1000)) {
+            $('.game').fadeOut('fast');
+        }
+    });
+    $('.btn2').mouseout(function () {
+        $('#btntxt2').fadeOut('fast');
+        $('.btn1').fadeIn('fast');
+        $('.arrow').fadeIn('fast');
+        $('.headerbtn').removeClass("blue");
+        ftr[0].style.backgroundColor = "rgb(200,200,200)";
+        ftr[0].style.borderTopColor = "rgb(150,150,150)";
+        hdr[0].style.backgroundColor = "rgb(200,200,200)";
+        hdr[0].style.borderBottomColor = "rgb(150,150,150)";
+        if ((window.innerWidth >= 1000)) {
+            $('.boxcont2').fadeOut('fast');
+            $('.web').fadeOut('fast');
+        }
+        if ((window.innerWidth < 1000)) {
+            $('.game').fadeIn('fast');
+        }
+    });
 </script>

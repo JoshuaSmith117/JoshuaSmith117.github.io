@@ -69,24 +69,24 @@
         box-shadow: 0 5px rgb(180,100,20);
         transition: .05s;
     }
-    .headerbtnR {
-        margin-left: 5px;
-        margin-right: 5px;
-        position: relative;
-        top: 30%;
-        height: 70px;
-        width: 70px;
-        background-position-x: 50%;
-        background-position-y: 50%;
-        background-repeat: no-repeat;
-        background-size: 50%;
-        border: 1px solid rgb(180,100,20);
-        background-color: #fbb03b;
-        border-radius: 50%;
-        cursor: pointer;
-        box-shadow: 0 5px rgb(180,100,20);
-        transition: .05s;
+    .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #fbb03b;
+    border: 2px solid rgb(180,100,20);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    top:120%;
+    left:0px;
+    z-index: 3;
     }
+
+.headerbtn:hover .tooltiptext {
+    visibility: visible;
+}
     .headerbtn:hover {
         background-color: rgb(220,130,30);
     }
@@ -135,6 +135,26 @@
         margin-top:20px;
         margin-bottom:20px;
     }
+    .bodytitle{
+        color: black;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 36px;
+        margin-top:20px;
+    }
+    .bodytitle:hover{
+        cursor: pointer;
+        color : gray;
+    }
+    .bodytitlesub{
+        font-size: 24px;
+    }
+    .bodysummary{
+        color: gray;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 18px;
+        line-height: 36px;
+    }
+    /*Button Styles-----------------------------------------------------*/
     .bodyimg{
         height: 200px;
         width: 200px;
@@ -157,53 +177,50 @@
     #toribtn{
         background-color: #ef695e;
         background-image: url(Assets/Images/ToriLogo.png);
-        border: 1px solid black;
+        border: 1px solid #b85047;
+        box-shadow: 0 9px #b85047;
     }
     #toribtn:hover{
         background-image: none;
     }
+    #toribtn:active{
+        box-shadow: 0 5px #b85047;
+    }
     #IUArcadebtn{
         background-color:white;
         background-image: url(Assets/Images/IUArcade.png);
-        border: 1px solid black;
+        border: 1px solid #4c0101;
+        box-shadow: 0 9px #4c0101;
     }
     #IUArcadebtn:hover{
         background-image: none;
+    }
+    #IUArcadebtn:active{
+        box-shadow: 0 5px #4c0101;
     }
     #TTPbtn{
         background-color:white;
         background-image: url(Assets/Images/TTPLogo.png);
         border: 1px solid black;
+        box-shadow: 0 9px gray;
     }
     #TTPbtn:hover{
         background-image: none;
     }
+    #TTPbtn:active{
+        box-shadow: 0 5px gray;
+    }
     #Escapebtn{
         background-color: #512d2d;
         background-image: url(Assets/Images/EscapeLogo.png);
-        border: 1px solid black;
+        border: 1px solid #261515;
+        box-shadow: 0 9px #261515;
     }
     #Escapebtn:hover{
         background-image: none;
     }
-    .bodytitle{
-        color: black;
-        font-family: 'Quicksand', sans-serif;
-        font-size: 36px;
-        margin-top:20px;
-    }
-    .bodytitle:hover{
-        cursor: pointer;
-        color : gray;
-    }
-    .bodytitlesub{
-        font-size: 24px;
-    }
-    .bodysummary{
-        color: gray;
-        font-family: 'Quicksand', sans-serif;
-        font-size: 18px;
-        line-height: 36px;
+    #Escapebtn:active{
+        box-shadow: 0 5px #261515;
     }
     .learnmore{
         width:200px;
@@ -212,12 +229,15 @@
         box-shadow: 0 5px gray;
         cursor:pointer;
         border: 1px solid black;
-        transition:.5s;
+        transition:.2s;
         margin-top:10px;
         margin-bottom:20px;
     }
     .learnmore:hover{
         background-color:darkgray;
+    }
+    .learnmore:active{
+        box-shadow: 0 3px gray;
     }
 }/*End Firefox Hack===================================================*/
     
