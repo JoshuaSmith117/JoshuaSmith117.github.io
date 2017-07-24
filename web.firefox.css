@@ -36,8 +36,8 @@
     }
     .footer {
         position: page;
-        background-color: #fbb03b;
-        border-top:2px solid rgb(180,100,20);
+        background-color: rgb(106,215,255);
+        border-top:2px solid rgb(80,170,200);
         height: 70px;
         width: 100%;
         left: 0%;
@@ -58,8 +58,8 @@
     /*Header Styles ----------------------------------------------*/
     .header {
         position: fixed;
-        background-color: #fbb03b;
-        border-bottom:2px solid rgb(180,100,20);
+        background-color: rgb(106,215,255);
+        border-bottom:2px solid rgb(80,170,200);
         height: 70px;
         width: 100%;
         left: 0%;
@@ -84,18 +84,18 @@
         background-position-y: 50%;
         background-repeat: no-repeat;
         background-size: 50%;
-        border: 1px solid rgb(180,100,20);
-        background-color: #fbb03b;
+        border: 1px solid rgb(80,170,200);
+        background-color: rgb(106,215,255);
         border-radius: 50%;
         cursor: pointer;
-        box-shadow: 0 5px rgb(180,100,20);
+        box-shadow: 0 5px rgb(80,170,200);
         transition: .05s;
     }
     .tooltiptext {
         visibility: hidden;
         width: 200px;
-        background-color: #fbb03b;
-        border: 2px solid rgb(180,100,20);
+        background-color: rgb(106,215,255);
+        border: 2px solid rgb(80,170,200);
         color: white;
         text-align: center;
         border-radius: 20px;
@@ -110,10 +110,10 @@
         visibility: visible;
     }
     .headerbtn:hover {
-        background-color: rgb(220,130,30);
+        background-color: #5cc4e6;
     }
     .headerbtn:active {
-        box-shadow: 0 2px rgb(150,150,150);
+        box-shadow: 0 2px rgb(80,170,200);
     }
 
     .JSdivbig {

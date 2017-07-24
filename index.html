@@ -30,9 +30,10 @@
 
     <!--Begin Writing Body Content------------------------------------------------------------------------>
     <body>
+        <div id ="uxdiv" style="position:fixed;top:120px;left:50%;transform:translate(-50%,-50%);"><h1 id ="ux" style="color:lightgray; font-size:36px;">User Experience</h1></div>
         <div class="header">
-                <button class="headerbtn" onclick="window.location.href = 'https://www.linkedin.com/in/joshsmith117/'" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"></button>
-                <button class="headerbtn" style="background-image: url(Assets/Images/emailicon.png);"></button>
+                <button class="headerbtn" onclick="window.open('https://www.linkedin.com/in/joshsmith117/')" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"><span class="tooltiptext">linkedin.com/in/joshsmith117</span></button>
+            <button class="headerbtn" onclick="window.location.href = 'mailto:joshsmith117@yahoo.com'" style="background-image: url(Assets/Images/emailicon.png);"><span class="tooltiptext">joshsmith117@yahoo.com</span></button>
             <div class="JSdivsmall">
                 <h2 class="headertxt">Joshua</h2>
                 <img style="margin-left:5px; margin-right:5px; height:30px" id="JSicon" src="Assets/Images/JSIconSimple.png" />
@@ -44,9 +45,13 @@
                 <h2 class="headertxt">Smith</h2>
             </div>
         </div>
-        
-        <div class="footer">
-            <span class="footertxt">Welcome to my portfolio. Would you like to learn more about what I do?</span>
+        <div class="footer" >
+            <div style="position:absolute; height:inherit; left:5%;">
+                <h2 class="footertxt">joshsmith117@yahoo.com</h2>
+            </div>
+            <div style="right:5%; position:absolute; height:inherit;">
+                <h2 class="footertxt">linkedin.com/in/joshsmith117</h2>
+            </div>
         </div>
         <div class="btn1div">
             <h1 class="game">Game Development</h1>
@@ -63,7 +68,7 @@
         </div>
         <div class="btn2div">
             <h1 class="web">Web Development</h1>
-            <button class="btn2"><h1 class="btntxt" id="btntxt2">Learn More</h1>
+            <button class="btn2" onclick="window.location.href = 'web.html'"><h1 class="btntxt" id="btntxt2">Learn More</h1>
                 <img class="arrow" src="Assets/Images/BlueArrowRight.png" style="top: 50%; left: -60px" />
                 <img class="arrow" src="Assets/Images/BlueArrowLeft.png" style="top: 50%; right: -60px" />
             </button>
@@ -164,7 +169,8 @@
             ftr[0].style.height = "40px";
             jsdivbig[0].style.display = "none";
             jsdivsmall[0].style.display = "initial";
-
+            document.getElementById("uxdiv").style.top = "50%";
+            document.getElementById("ux").style.fontSize = "24px";
             for (x = 0; x < btntxt.length; x++) {
                 btntxt[x].style.fontSize = "12px";
             }
@@ -193,7 +199,7 @@
             }
             for (x = 0; x < ftrtxt.length; x++) {
                 ftrtxt[x].style.fontSize = "18px";
-                ftrtxt[0].style.top = "-40%";
+                ftrtxt[x].style.top = "-20%";
             }
             for (x = 0; x < hdrtxt.length; x++) {
                 hdrtxt[x].style.fontSize = "12px";
@@ -205,7 +211,7 @@
 
             if ((window.innerWidth < 700)) {
                 hdr[0].style.height = "40px";
-                ftr[0].style.height = "40px";
+                document.getElementById("ux").style.fontSize = "18px";
                 for (x = 0; x < hdrbtn.length; x++) {
                     hdrbtn[x].style.width = "40px";
                     hdrbtn[x].style.height = "40px"
@@ -214,7 +220,13 @@
                 }
                 for (x = 0; x < ftrtxt.length; x++) {
                     ftrtxt[x].style.fontSize = "12px";
-                    ftrtxt[0].style.top = "-40%";
+                    ftrtxt[x].style.top = "10%";
+                }
+                if ((window.innerWidth < 400)) {
+                    for (x = 0; x < ftrtxt.length; x++) {
+                        ftrtxt[x].style.fontSize = "8px";
+                        ftrtxt[x].style.top = "20%";
+                    }
                 }
             }
 
@@ -245,7 +257,8 @@
             ftr[0].style.height = "70px";
             jsdivbig[0].style.display = "initial";
             jsdivsmall[0].style.display = "none";
-
+            document.getElementById("uxdiv").style.top = "120px";
+            document.getElementById("ux").style.fontSize = "36px";
             for (x = 0; x < btntxt.length; x++) {
                 btntxt[x].style.fontSize = "20px";
             }
@@ -271,14 +284,13 @@
             for (x = 0; x < box4.length; x++) {
                 box4[x].style.display = "initial";
             }
-            for (x = 0; x < ftrtxt.length; x++) {
-                ftrtxt[x].style.fontSize = "24px";
-                ftrtxt[0].style.top = "0%";
-            }
             for (x = 0; x < hdrtxt.length; x++) {
                 hdrtxt[x].style.fontSize = "18px";
             }
-
+            for (x = 0; x < ftrtxt.length; x++) {
+                ftrtxt[x].style.fontSize = "24px";
+                ftrtxt[x].style.top = "0%";
+            }
         }
 
     }

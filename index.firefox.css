@@ -11,24 +11,33 @@
     }
 
     h1 {
-        color: black;
         font-family: 'Quicksand', sans-serif;
-        font-size: 3vw;
+        display: inline-block;
+        text-align:center;
+        vertical-align: middle;
+        line-height: normal;
+        font-family: 'Quicksand', sans-serif;
     }
 
     h2 {
-        color: black;
+        font-family: 'Quicksand', sans-serif;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
         font-family: 'Quicksand', sans-serif;
         font-size: 18px;
     }
 
     p {
-        color: black;
-        font-family: 'Quicksand', sans-serif;
+       font-family: 'Quicksand', sans-serif;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
         font-size: 36px;
     }
 
     span {
+        font-family: 'Quicksand', sans-serif;
         display: inline-block;
         vertical-align: middle;
         line-height: normal;
@@ -42,18 +51,20 @@
         width: 100%;
         left: 0%;
         bottom: 0%;
-        line-height: 70px;
         text-align: center;
         z-index:1;
         transition: 0.5s;
+        vertical-align: middle;
     }
 
     .footertxt {
-        display:inline-block;
         position:relative;
         color: white;
-        font-family: 'Quicksand', sans-serif;
         font-size: 24px;
+        user-select:text;
+        -moz-user-select: text;
+        -webkit-user-select: text;
+        -ms-user-select: text;
     }
     /*Header Styles ----------------------------------------------*/
     .header {
@@ -70,7 +81,6 @@
     .headertxt {
         float:left;
         position:relative;
-        display: inline;
         color: white;
     }
 
@@ -95,6 +105,23 @@
     }
     .headerbtn:active {
         box-shadow: 0 2px rgb(150,150,150);
+    }
+    .headerbtn:hover .tooltiptext {
+        visibility: visible;
+    }
+    .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: rgb(200,200,200);
+        border: 2px solid rgb(150,150,150);
+        color: white;
+        text-align: center;
+        border-radius: 20px;
+        padding: 5px 0;
+        position: absolute;
+        top:120%;
+        left:0px;
+        z-index: 3;
     }
     .orange{
         background-color: rgb(251,176,59);
@@ -182,7 +209,7 @@
     .btn1:hover {
         background-image: none;
     }
-    .btn1:active {
+    .btn1:active{
         box-shadow: 0 5px rgb(180,100,20);
     }
     .btntxt {
@@ -258,7 +285,6 @@
         display: none;
         position: absolute;
         font-size: 48px;
-        text-align: center;
         width:100%;
         color: rgb(251,176,59);
     }
