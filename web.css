@@ -1,0 +1,260 @@
+
+/*@supports (-moz-appearance:meterbar) { Begin Firefox Hack=============================*/
+/*Default Styles ---------------------------------*/
+    body {
+        margin:0;
+        background-color: white;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    h1 {
+        color: black;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 3vw;
+    }
+
+    h2 {
+        color: black;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 18px;
+    }
+
+    p {
+        color: black;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 24px;
+    }
+
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+    }
+    .footer {
+        position: page;
+        background-color: rgb(106,215,255);
+        border-top:2px solid rgb(80,170,200);
+        height: 70px;
+        width: 100%;
+        left: 0%;
+        bottom: 0%;
+        text-align: center;
+        z-index:1;
+        transition: 0.5s;
+    }
+    .footertxt {
+        position:relative;
+        color: white;
+        font-size: 24px;
+        user-select:text;
+        -moz-user-select: text;
+        -webkit-user-select: text;
+        -ms-user-select: text;
+    }
+    /*Header Styles ----------------------------------------------*/
+    .header {
+        position: fixed;
+        background-color: rgb(106,215,255);
+        border-bottom:2px solid rgb(80,170,200);
+        height: 70px;
+        width: 100%;
+        left: 0%;
+        top: 0%;
+        z-index:1;
+        transition: 0.5s;
+    }
+    .headertxt {
+        float:left;
+        position:relative;
+        display: inline;
+        color: white;
+    }
+    .headerbtn {
+        margin-left: 5px;
+        margin-right: 5px;
+        position: relative;
+        top: 30%;
+        height: 70px;
+        width: 70px;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        border: 1px solid rgb(80,170,200);
+        background-color: rgb(106,215,255);
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 5px rgb(80,170,200);
+        transition: .05s;
+    }
+    .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: rgb(106,215,255);
+        border: 2px solid rgb(80,170,200);
+        color: white;
+        text-align: center;
+        border-radius: 20px;
+        padding: 5px 0;
+        position: absolute;
+        top:120%;
+        left:0px;
+        z-index: 3;
+    }
+
+    .headerbtn:hover .tooltiptext {
+        visibility: visible;
+    }
+    .headerbtn:hover {
+        background-color: #5cc4e6;
+    }
+    .headerbtn:active {
+        box-shadow: 0 2px rgb(80,170,200);
+    }
+    .JSdivbig {
+        display:none;
+        width: auto;
+        position: absolute;
+        z-index:2;
+        top:10px;
+        left:50%;
+        transform:translate(-50%,0%);
+    }
+    .JSdivsmall {
+        display:none;
+        height:40px;
+        width: auto;
+        position: absolute;
+        top: 5px;
+        z-index:2;
+        left:50%;
+        transform:translate(-50%,0%);
+    }
+    #JSicon {
+        float:left;
+        position:relative;
+        height: 50px;
+        display:inline;
+    }
+/*Body Styles-----------------------------------------------------*/
+    .bodycont{
+        margin:auto;
+        margin-bottom:10px;
+        width:1000px;
+        max-width:100%;
+        padding-top:10px;
+    }
+    .bodydiv{
+        margin-top:50px;
+        margin-bottom:20px;
+    }
+    .bodytitle{
+        color: black;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 36px;
+        margin-top:20px;
+    }
+    .bodytitle:hover{
+        cursor: pointer;
+        color : gray;
+    }
+    .bodytitlesub{
+        font-size: 24px;
+    }
+    .bodysummary{
+        color: gray;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 18px;
+        line-height: 36px;
+    }
+    /*Button Styles-----------------------------------------------------*/
+    .bodyimg{
+        height: 200px;
+        width: 200px;
+        background-position-x: 50%; 
+        background-position-y: 50%;
+        background-size: 100%;
+        cursor:pointer;
+        border-radius: 50%;
+        box-shadow: 0 9px gray;
+    }
+    .btntxt {
+        pointer-events: none;
+        display:none;
+        position: center;
+        text-align: center;
+        width: auto;
+        height: auto;
+        font-size: 20px;
+    }
+    #JSbtn{
+        background-color: white;
+        background-image: url(Assets/Images/JSLogoInner.png);
+        border: 1px solid gray;
+        box-shadow: 0 9px gray;
+    }
+    #JSbtn:hover{
+        background-image: none;
+    }
+    #JSbtn:active{
+        box-shadow: 0 5px #b85047;
+    }
+    #IUArcadebtn{
+        background-color:white;
+        background-image: url(Assets/Images/IUArcade.png);
+        border: 1px solid #4c0101;
+        box-shadow: 0 9px #4c0101;
+    }
+    #IUArcadebtn:hover{
+        background-image: none;
+    }
+    #IUArcadebtn:active{
+        box-shadow: 0 5px #4c0101;
+    }
+    #TTPbtn{
+        background-color:white;
+        background-image: url(Assets/Images/TTPLogo.png);
+        border: 1px solid black;
+        box-shadow: 0 9px gray;
+    }
+    #TTPbtn:hover{
+        background-image: none;
+    }
+    #TTPbtn:active{
+        box-shadow: 0 5px gray;
+    }
+    #Escapebtn{
+        background-color: #512d2d;
+        background-image: url(Assets/Images/EscapeLogo.png);
+        border: 1px solid #261515;
+        box-shadow: 0 9px #261515;
+    }
+    #Escapebtn:hover{
+        background-image: none;
+    }
+    #Escapebtn:active{
+        box-shadow: 0 5px #261515;
+    }
+    .learnmore{
+        width:200px;
+        height:50px;
+        border-radius: 50px;
+        box-shadow: 0 5px gray;
+        cursor:pointer;
+        border: 1px solid black;
+        transition:.2s;
+        margin-top:10px;
+        margin-bottom:20px;
+    }
+    .learnmore:hover{
+        background-color:darkgray;
+    }
+    .learnmore:active{
+        box-shadow: 0 3px gray;
+    }
+}/*End Firefox Hack===================================================*/
+    

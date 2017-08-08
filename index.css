@@ -1,5 +1,5 @@
-
-    /*Default Styles ---------------------------------*/
+/*@supports (-moz-appearance:meterbar) { Begin Firefox Hack=============================*/
+/*Default Styles ---------------------------------*/
     body {
         background-color: white;
         -webkit-touch-callout: none;
@@ -8,262 +8,365 @@
         -ms-user-select: none;
         user-select: none;
     }
+
     h1 {
-        color: black;
         font-family: 'Quicksand', sans-serif;
-        font-size: 3vw;
-    }
-    h2 {
-        color: black;
-        font-family: 'Quicksand', sans-serif;
-        font-size: 16px;
-    }
-    p {
-        color: black;
-        font-family: 'Quicksand', sans-serif;
-        font-size: 36px;
-    }
-    span {
-        color: gray;
-    }
-    .button {
-        background-color: #4CAF50; /* Green */
-        color: white;
-        text-align: center;
-        text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        text-align:center;
+        vertical-align: middle;
+        line-height: normal;
+        font-family: 'Quicksand', sans-serif;
     }
 
-    /*Header Styles ----------------------------------------------*/
-    .header{
-        position:fixed;
-        background-color: rgb(250, 250, 250);
-        height:70px;
-        width:100%;
-        left:0%;
-        top:0%;
+    h2 {
+        font-family: 'Quicksand', sans-serif;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 18px;
     }
-    .headerdiv{
-        display:inline-block;
+
+    p {
+       font-family: 'Quicksand', sans-serif;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+        font-size: 36px;
+    }
+
+    span {
+        font-family: 'Quicksand', sans-serif;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+    }
+
+    .footer {
+        position: fixed;
+        background-color: rgb(200, 200, 200);
+        border-top:2px solid rgb(150,150,150);
+        height: 70px;
+        width: 100%;
+        left: 0%;
+        bottom: 0%;
+        text-align: center;
+        z-index:1;
+        transition: 0.5s;
+        vertical-align: middle;
+    }
+
+    .footertxt {
         position:relative;
-        width:auto;
-        height:70px;
+        color: white;
+        font-size: 24px;
+        user-select:text;
+        -moz-user-select: text;
+        -webkit-user-select: text;
+        -ms-user-select: text;
+    }
+    /*Header Styles ----------------------------------------------*/
+    .header {
+        position: fixed;
+        background-color: rgb(200, 200, 200);
+        border-bottom: 2px solid rgb(150,150,150);
+        height: 70px;
+        width: 100%;
+        left: 0%;
+        top: 0%;
+        z-index:1;
+        transition: 0.5s;
     }
     .headertxt {
-        display:inline-block;
+        float:left;
         position:relative;
-        width: auto;
-        text-align:left;
-        top: 15%;
+        color: white;
     }
-    .headerbtn{
-        transform: translate(0%, -50%);
+
+    .headerbtn {
         position: relative;
+        top: 30%;
+        height: 70px;
+        width: 70px;
         background-position-x: 50%;
-        background-position-y: 55%;
-        background-size: 60px;
-        height: 60px;
-        width: 60px;
-        cursor: pointer;
+        background-position-y: 50%;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        border: 1px solid rgb(150,150,150);
+        background-color: rgb(200,200,200);
         border-radius: 50%;
-        top: 50%;
-        border: 3px solid rgb(0,0, 0);
+        cursor: pointer;
+        box-shadow: 0 5px rgb(150,150,150);
+        transition: .05s;
     }
-    .linkedinbtn{
-        background-image: url(Assets/Images/LinkedInLogo.png);
+    .headerbtn:hover {
+        background-color: rgb(180,180,180);
     }
-    .email{
-        display:inline-block;
-        position: relative;
-        top: 2.5px;
-        border: 3px solid rgb(0,0,0);
-        width:20%
+    .headerbtn:active {
+        box-shadow: 0 2px rgb(150,150,150);
     }
-    .emailbtn{
-        background-image: url(Assets/Images/JSLogo.png);
+    .headerbtn:hover .tooltiptext {
+        visibility: visible;
     }
-    .phone{
-        display:inline-block;
-        position: relative;
-        top: 2.5px;
-        border: 3px solid rgb(0,0,0);
-        width:20%
+    .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: rgb(200,200,200);
+        border: 2px solid rgb(150,150,150);
+        color: white;
+        text-align: center;
+        border-radius: 20px;
+        padding: 5px 0;
+        position: absolute;
+        top:120%;
+        left:0px;
+        z-index: 3;
     }
-    .phonebtn{
-        background-image: url(Assets/Images/PhoneIconPop.png);
+    .orange{
+        background-color: rgb(251,176,59);
+        box-shadow: 0 5px rgb(180,100,20);
+        border: 1px solid rgb(180,100,20);
     }
-    .h11{      
+    .blue{
+        background-color: rgb(106,215,255);
+        box-shadow: 0 5px rgb(80,170,200);
+        border: 1px solid rgb(80,170,200);
+    }
+    .JSdivbig {
+        display:none;
+        width: auto;
+        position: absolute;
+        z-index:2;
+        top:10px;
+        left:50%;
+        transform:translate(-50%,0%);
+    }
+
+    .JSdivsmall {
+        display:none;
+        height:40px;
+        width: auto;
+        position: absolute;
+        top: 5px;
+        z-index:2;
+        left:50%;
+        transform:translate(-50%,0%);
+    }
+    #JSicon {
+        float:left;
+        position:relative;
+        height: 50px;
+        display:inline;
+    }
+    /*--------------------------------------------------*/
+    .h11 {
         position: absolute;
         width: 100%;
-        top: 60px;
         left: 0%;
         text-align: center;
-        cursor: default;  
+        cursor: default;
     }
-    .h12{
-                
+
+    .h12 {
         position: absolute;
         width: 100%;
-        left: 0%;
-        bottom: 20px;
         cursor: default;
         text-align: center;
     }
-    .btntxt{
-        display:none;
-        color:white;
-        position:center;
-        text-align:center;
-        width:auto;
-        height:auto;
-        font-size: 20px;
+
+    .arrow {
+        transform: translate(0%,-50%);
+        max-width: 20px;
+        position: absolute;
+        pointer-events: none;
     }
     /*btn1 Stuff----------------------------------------------------------------------*/
-    .btn1cont{
-        transform: translate(-50%, -50%);
-        height: 200px;
-        width:200px;
-        position: absolute; 
+    .btn1div{
+        height: 300px;
+        width: 300px;
+        position: absolute;
+        transform: translate(-50%,-50%);
         top: 50%;
         left: 33%;
     }
-    .btn1{
+    .btn1 {
         background-image: url(Assets/Images/IconGameController.png);
-        transform: translate(-50%, -50%);
+        background-repeat: no-repeat;
+        background-color: rgb(251,176,59);
         background-position-x: 50%;
         background-position-y: 55%;
-        background-size: 190px;
-        background-color: rgb(251,176,59);
-        height: 145px;
-        width: 140px;
-        border: 0px solid;
+        background-size: 140%;
+        border: 1px solid rgb(180,100,20);
+        height: 50%;
+        width: 50%;
         cursor: pointer;
         border-radius: 50%;
-        position: relative;
-        top: 50%;
-        left: 50%; 
         box-shadow: 0 9px rgb(180,100,20);
+        position:absolute;
+        transform:translate(-50%,-50%);
+        top:50%;
+        left:50%;
     }
-    .btn1.hide-bg {
+    .btn1:hover {
         background-image: none;
-    }
-    .box1{
-        transform: translate(-50%, -50%);
-        width: 100px;
-        height: 100px;
-        position: fixed;
-        top: -30%;
-        left: 50%;
-        border: 3px solid lightgrey;
-        border-radius: 50%;
-    }
-    .box2{
-        transform: translate(-50%, -50%);
-        width: 100px;
-        height: 100px;
-                
-        position: fixed;
-        top: 10%;
-        left: -25%;
-        border: 3px solid lightgrey;
-        border-radius: 50%;
-    }
-    .box3{
-        transform: translate(-50%, -50%);
-        width: 100px;
-        height: 100px;
-        position: fixed;
-        top: 90%;
-        left: -25%;
-        border: 3px solid lightgrey;
-        border-radius: 50%;
-    }
-    .box4{
-        transform: translate(-50%, -50%);
-        width: 100px;
-        height: 100px;
-        position: fixed;
-        top: 130%;
-        left: 50%;
-        border: 3px solid lightgrey;
-        border-radius: 50%;
     }
     .btn1:active{
         box-shadow: 0 5px rgb(180,100,20);
     }
-    .game{
-        transform: translate(0%, -10%);
-        display:none;   
-        position:relative;
-        width:600px;
-        text-align: left; 
-        font-size: 48px;
-        left:100%;
-        bottom:50%;
-        color:black;
+    .btntxt {
+        pointer-events: none;
+        display: none;
+        color: white;
+        position: center;
+        text-align: center;
+        width: auto;
+        height: auto;
+        font-size: 20px;
     }
-    /*btn2 stuff----------------------------------------------------------------------*/
-    .btn2cont{
-        transform: translate(-50%, -50%);
-        height: 200px;
-        width:200px;
-        position: absolute; 
+    .boxcont1 {
+        pointer-events: none;
+        position: absolute;
+        height: 180px;
+        width: 180px;
+        left: 50%;
         top: 50%;
-        left: 66%;
+        transform: translate(-50%,-50%);
+    }
+
+    .box1 {
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -30%;
+        left: 50%;
+        border: 1px solid grey;
+        border-radius: 50%;
+    }
+
+    .box2 {
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 10%;
+        left: -25%;
+        border: 1px solid grey;
+        border-radius: 50%;
+    }
+
+    .box3 {
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 90%;
+        left: -25%;
+        border: 1px solid grey;
+        border-radius: 50%;
+    }
+
+    .box4 {
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 130%;
+        left: 50%;
+        border: 1px solid lightgrey;
+        border-radius: 50%;
+    }
+
+    .game {
+        pointer-events: none;
+        display: none;
+        position: absolute;
+        font-size: 48px;
+        width:100%;
+        color: rgb(251,176,59);
+    }
+
+    /*btn2 stuff----------------------------------------------------------------------*/
+    .btn2div{
+        height: 300px;
+        width: 300px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 33%;
     }
     .btn2 {
         background-image: url(Assets/Images/IconMouse.png);
-        transform: translate(-50%, -50%);
+        background-repeat: no-repeat;
+        background-color: rgb(106,215,255);
         background-position-x: 50%;
         background-position-y: 55%;
-        background-size: 190px;
-        background-color: rgb(106,215,255);
-        height: 145px;
-        width: 140px;
-        border: 0px solid;
+        background-size: 140%;
+        border: 1px solid rgb(80,170,200);
+        height: 50%;
+        width: 50%;
         cursor: pointer;
         border-radius: 50%;
-        position: relative;
-        top: 50%;
-        left: 50%; 
         box-shadow: 0 9px rgb(80,170,200);
+        position:absolute;
+        transform:translate(-50%,-50%);
+        top:50%;
+        left:50%;
     }
-    .btn2.hide-bg {
+
+    .btn2:hover {
         background-image: none;
     }
-    .box2-2{
-        transform: translate(-50%, -50%);
-        width: 100px;
-        height: 100px;
-        position: fixed;
-        top: 10%;
-        left: 125%;
-        border: 3px solid lightgrey;
-        border-radius: 50%;
-    }
-    .box2-3{
-        transform: translate(-50%, -50%);
-        width: 100px;
-        height: 100px;
-        position: fixed;
-        top: 90%;
-        left: 125%;
-        border: 3px solid lightgrey;
-        border-radius: 50%;
-    }
-    .btn2:active{
+
+    .btn2:active {
         box-shadow: 0 5px rgb(80,170,200);
     }
-    .web{
-        transform: translate(0%, -10%);
-        display:none;   
-        position:relative;
-        width:500px;
-        text-align: right; 
-        font-size: 48px;
-        right:250%;
-        bottom:50%;
-        color:black;
+    .boxcont2 {
+        pointer-events: none;
+        position: absolute;
+        height: 180px;
+        width: 180px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
     }
+
+    .box2-2 {
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 10%;
+        left: 125%;
+        border: 1px solid grey;
+        border-radius: 50%;
+    }
+
+    .box2-3 {
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 90%;
+        left: 125%;
+        border: 1px solid grey;
+        border-radius: 50%;
+    }
+
+    .web {
+        pointer-events: none;
+        display: none;
+        position: absolute;
+        font-size: 48px;
+        text-align: center;
+        width:100%;
+        color: rgb(106,215,255);
+    }
+}/*End Firefox Hack===================================================*/
     
