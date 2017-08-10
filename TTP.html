@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+
+<!--Begin html portion of code------------------------------------------------------------------------>
+<html>
+
+<head>
+    <!--jQuery download needed for javascript to work------------------------------------------------------------------------>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <!--Link to custom font from google fonts------------------------------------------------------------------------>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+
+    <!--Link to index.css stylesheets ------------------------------------------------------------------------>
+
+    <link href="tori.css" rel="stylesheet">
+    <!--<link href="index.chrome.css" rel="stylesheet">-->
+    <!--<link href="index.ie.css" rel="stylesheet">-->
+
+
+    <link rel="prefetch" href="Assets/Images/GameControllerIconPop_NoBG.png">
+
+    <!--Allow for easy debugging in IE------------------------------------------------------>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Automatically scale  with viewport---------------------------------------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<!--Begin Writing Body Content------------------------------------------------------------------------>
+<body>
+    <div class="header">
+        <div style="position:absolute; top: 30%;">
+            <button class="headerbtn" onclick="window.location.href = 'https://www.linkedin.com/in/joshsmith117/'" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"><span class="tooltiptext">linkedin.com/in/joshsmith117</span></button>
+            <button class="headerbtn" onclick="window.location.href = 'mailto:joshsmith117@yahoo.com'" style="background-image: url(Assets/Images/emailicon.png);"><span class="tooltiptext">joshsmith117@yahoo.com</span></button>
+        </div>
+        <div style="display:inline-block; position:absolute; right:0%; top: 30%;">
+            <button class="headerbtn" onclick="window.location.href = 'games.html'" style="background-image: url(Assets/Images/backarrow.png);"></button>
+            <button class="headerbtn" onclick="window.location.href = 'index.html'" style="background-image: url(Assets/Images/home-icon.png);"></button>
+        </div>
+        <div class="JSdivsmall">
+            <h2 class="headertxt">Joshua</h2>
+            <img style="margin-left:5px; margin-right:5px; height:30px" id="JSicon" src="Assets/Images/JSIconSimple.png" />
+            <h2 class="headertxt">Smith</h2>
+        </div>
+        <div class="JSdivbig">
+            <h2 class="headertxt">Joshua</h2>
+            <img style="margin-left:5px;margin-right:5px;" id="JSicon" src="Assets/Images/JSIconSimple.png" />
+            <h2 class="headertxt">Smith</h2>
+        </div>
+    </div>
+    <div class="bodycont">
+        <div class="bodydiv">
+            <div class="bodytitle">
+                <span>Learning from Play-Testing</span>
+            </div>
+            <br />
+            <div class="bodysummary">
+                When we created the first prototype of TapTapPop!, we weren't concerned with a polished user interface, we simply 
+                needed a version that displayed everything the player might need to know. It displayed a current score count, lives 
+                and highscore along the top edge of the screen. The display used basic black font.
+            </div>
+            <img class="bodyimg" src="Assets/Images/TTP/Prototype.png" />
+            <div class="bodysummary">
+                While this format technically displayed what the player needed to see, it not only looked thrown together, but we learned through 
+                play-testing that it had two problems: it either distracted the player from the rather hectic gameplay, or the player never saw it 
+                because they were too focused on the gameplay. These problems ultimately hurt the player’s score, and more importantly, their experience.
+            </div>
+        </div>
+        <div class="bodydiv">
+            <div class="bodytitle">
+                <span>Making Effective UI Changes Based on Feedback</span>
+            </div>
+            <br />
+            <div class="bodysummary">
+                In order to address these issues, I first decided that displaying the highscore during gameplay was unnecessary,
+                as we could simply display it on the game over screen, so I removed it. Next, I merged the "Lives" and "Score"
+                values into a single entity and moved them into the center of the screen in the background.
+                The score is displayed clearly in the center of the screen, but since it’s grayed out and in the background,
+                it doesn’t distract the eye. But where are the Lives being displayed? The Lives are actually displayed based
+                on the size of the score. Whenever a life is lost, the number gets significantly larger. This was confusing to
+                the player for the first couple tries, but since the gameplay is very short and retrying occurs a lot, they
+                learned quickly what this size change meant. During later playtesting, there were no more complaints about distraction.
+            </div>
+            <img class="bodyimg" src="Assets/Images/TTP/Prehit.png" />
+            <img class="bodyimg" src="Assets/Images/TTP/Posthit.png" />
+        </div>
+        <div class="bodydiv">
+            <div class="bodytitle">
+                <span>Creating Simple, Mobile-Friendly Menus</span>
+            </div>
+            <br />
+            <div class="bodysummary">
+                When creating menus for a mobile app, less is always better. People play mobile games with just a few minutes to spare, 
+                so they need to be able to get right into the action. This is the philosophy that drove my menu design for TapTapPop!
+            </div>
+            <img class="bodyimg" src="Assets/Images/TTP/MainMenu.png" />
+            <div class="bodysummary">
+                In TapTapPop! we decided that the only necessary options were centered around the adjusting of audio. Unlike a PC game, 
+                mobile games don't usually require any display options. This minimal options menu allowed us to easily and fit our options 
+                directly onto the main menu screen, preventing the player from having to jump through extra, unnecessary hoops to change the audio. 
+            </div>
+            <img class="bodyimg" src="Assets/Images/TTP/Gameover.png" />
+            <div class="bodysummary">
+                Similar to the main menu, the game over screen is very minimal in nature. It displays only the basic necessities: score, highscore, 
+                a retry button and a main menu button. Notice how the retry button is larger than the main menu button and is closer to the center 
+                of the screen. This causes players to be more likely to press it than if it shared equal weight with the main menu button.
+            </div>
+            <br />
+            <button class="backbtn" onclick="window.location.href = 'games.html'">See More Games</button>
+        </div>
+    </div>
+    <div class="footer">
+        <div style="position:absolute; height:inherit; left:5%;">
+            <h2 class="footertxt">joshsmith117@yahoo.com</h2>
+        </div>
+        <div style="right:5%; position:absolute; height:inherit;">
+            <h2 class="footertxt">linkedin.com/in/joshsmith117</h2>
+        </div>
+    </div>
+</body>
+</html>
+
+<!--Begin Javascript------------------------------------------------------------------>
+<script>
+    var jsdivsmall = document.getElementsByClassName("JSdivsmall");
+    var jsdivbig = document.getElementsByClassName("JSdivbig");
+    var hdr = document.getElementsByClassName("header");
+    var hdrbtn = document.getElementsByClassName("headerbtn");
+    var hdrtxt = document.getElementsByClassName("headertxt");
+    var ftr = document.getElementsByClassName("footer");
+    var ftrtxt = document.getElementsByClassName("footertxt");
+    var bdycon = document.getElementsByClassName("bodycont");
+    var bdydiv = document.getElementsByClassName("bodydiv");
+    var bdyimg = document.getElementsByClassName("bodyimg");
+    var bdysmry = document.getElementsByClassName("bodysummary");
+    var bdytitle = document.getElementsByClassName("bodytitle");
+    function resize() {
+        if ((window.innerWidth < 1040)) {
+            hdr[0].style.height = "40px";
+            jsdivbig[0].style.display = "none";
+            jsdivsmall[0].style.display = "initial";
+            ftr[0].style.height = "40px";
+            ftr[0].style.bottom = "0%";
+            for (x = 0; x < bdydiv.length; x++) {
+                bdydiv[x].style.textAlign = "center";
+                bdytitle[x].style.textAlign = "center";
+                bdytitle[x].style.fontSize = "24px";
+            }
+            for (x = 0; x < bdysmry.length; x++) {
+                bdysmry[x].style.fontSize = "18px";
+                bdysmry[x].style.marginLeft = "20px";
+                bdysmry[x].style.marginRight = "20px";
+                bdysmry[x].style.lineHeight = "30px";
+            }
+            for (x = 0; x < bdyimg.length; x++) {
+                bdyimg[x].style.height = "200px";
+                bdyimg[x].style.margin = "auto";
+                bdyimg[x].style.marginTop = "10px";
+                bdyimg[x].style.marginBottom = "10px";
+            }
+            for (x = 0; x < hdrbtn.length; x++) {
+                hdrbtn[x].style.width = "50px";
+                hdrbtn[x].style.height = "50px";
+                hdrbtn[x].style.top = "30%";
+                hdrbtn[x].style.marginLeft = "5px";
+                hdrbtn[x].style.marginRight = "5px";
+            }
+            for (x = 0; x < hdrtxt.length; x++) {
+                hdrtxt[x].style.fontSize = "12px";
+            }
+
+            for (x = 0; x < ftrtxt.length; x++) {
+                ftrtxt[x].style.fontSize = "12px";
+                ftrtxt[x].style.top = "10%";
+            }
+            if ((window.innerWidth < 700)) {
+                hdr[0].style.height = "40px";
+                bdycon[0].style.marginTop = "30px";
+                for (x = 0; x < bdydiv.length; x++) {
+                    bdytitle[x].style.fontSize = "18px";
+                }
+                for (x = 0; x < hdrbtn.length; x++) {
+                    hdrbtn[x].style.width = "40px";
+                    hdrbtn[x].style.height = "40px"
+                    hdrbtn[x].style.marginLeft = "0px";
+                    hdrbtn[x].style.marginRight = "0px";
+                }
+                for (x = 0; x < bdyimg.length; x++) {
+                    bdyimg[x].style.height = "150px";
+                    bdyimg[x].style.margin = "initial";
+                    bdyimg[x].style.marginTop = "10px";
+                    bdyimg[x].style.marginBottom = "10px";
+                }
+                for (x = 0; x < bdysmry.length; x++) {
+                    bdysmry[x].style.fontSize = "12px";
+                    bdysmry[x].style.lineHeight = "20px";
+                }
+                for (x = 0; x < ftrtxt.length; x++) {
+                    ftrtxt[x].style.fontSize = "12px";
+                    ftrtxt[x].style.top = "10%";
+                }
+                if ((window.innerWidth < 400)) {
+                    for (x = 0; x < ftrtxt.length; x++) {
+                        ftrtxt[x].style.fontSize = "8px";
+                        ftrtxt[x].style.top = "20%";
+                    }
+                }
+            }
+        } else {
+            hdr[0].style.height = "70px";
+            bdycon[0].style.marginTop = "70px";
+            jsdivbig[0].style.display = "initial";
+            jsdivsmall[0].style.display = "none";
+            ftr[0].style.height = "70px";
+            for (x = 0; x < bdydiv.length; x++) {
+                bdytitle[x].style.textAlign = "left";
+                bdytitle[x].style.textAlign = "left";
+                bdytitle[x].style.fontSize = "36px";
+                bdydiv[x].style.textAlign = "left";
+
+            }
+            for (x = 0; x < bdyimg.length; x++) {
+                bdyimg[x].style.height = "250px";
+                bdyimg[x].style.margin = "initial";
+                bdyimg[x].style.marginTop = "10px";
+                bdyimg[x].style.marginBottom = "10px";
+            }
+            for (x = 0; x < bdysmry.length; x++) {
+                bdysmry[x].style.fontSize = "18px";
+                bdysmry[x].style.marginLeft = "0px";
+                bdysmry[x].style.marginRight = "0px";
+                bdysmry[x].style.lineHeight = "36px";
+            }
+            for (x = 0; x < hdrbtn.length; x++) {
+                hdrbtn[x].style.width = "70px";
+                hdrbtn[x].style.height = "70px";
+                hdrbtn[x].style.marginLeft = "5px";
+                hdrbtn[x].style.marginRight = "5px";
+            }
+            for (x = 0; x < hdrtxt.length; x++) {
+                hdrtxt[x].style.fontSize = "18px";
+            }
+            for (x = 0; x < ftrtxt.length; x++) {
+                ftrtxt[x].style.fontSize = "24px";
+                ftrtxt[x].style.top = "0%";
+            }
+        }
+    }
+    $(document).ready(resize);
+    $(window).resize(resize);
+</script>

@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+
+<!--Begin html portion of code------------------------------------------------------------------------>
+<html>
+
+<head>
+    <!--jQuery download needed for javascript to work------------------------------------------------------------------------>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <!--Link to custom font from google fonts------------------------------------------------------------------------>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+
+    <!--Link to index.css stylesheets ------------------------------------------------------------------------>
+
+    <link href="tori.css" rel="stylesheet">
+    <!--<link href="index.chrome.css" rel="stylesheet">-->
+    <!--<link href="index.ie.css" rel="stylesheet">-->
+
+
+    <link rel="prefetch" href="Assets/Images/GameControllerIconPop_NoBG.png">
+
+    <!--Allow for easy debugging in IE------------------------------------------------------>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Automatically scale  with viewport---------------------------------------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<!--Begin Writing Body Content------------------------------------------------------------------------>
+<body>
+    <div class="header">
+        <div style="position:absolute; top: 30%;">
+            <button class="headerbtn" onclick="window.location.href = 'https://www.linkedin.com/in/joshsmith117/'" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"><span class="tooltiptext">linkedin.com/in/joshsmith117</span></button>
+            <button class="headerbtn" onclick="window.location.href = 'mailto:joshsmith117@yahoo.com'" style="background-image: url(Assets/Images/emailicon.png);"><span class="tooltiptext">joshsmith117@yahoo.com</span></button>
+        </div>
+        <div style="display:inline-block; position:absolute; right:0%; top: 30%;">
+            <button class="headerbtn" onclick="window.location.href = 'games.html'" style="background-image: url(Assets/Images/backarrow.png);"></button>
+            <button class="headerbtn" onclick="window.location.href = 'index.html'" style="background-image: url(Assets/Images/home-icon.png);"></button>
+        </div>
+        <div class="JSdivsmall">
+            <h2 class="headertxt">Joshua</h2>
+            <img style="margin-left:5px; margin-right:5px; height:30px" id="JSicon" src="Assets/Images/JSIconSimple.png" />
+            <h2 class="headertxt">Smith</h2>
+        </div>
+        <div class="JSdivbig">
+            <h2 class="headertxt">Joshua</h2>
+            <img style="margin-left:5px;margin-right:5px;" id="JSicon" src="Assets/Images/JSIconSimple.png" />
+            <h2 class="headertxt">Smith</h2>
+        </div>
+    </div>
+    <div class="bodycont">
+        <div class="bodydiv">
+            <div class="bodytitle">
+                <span>Collecting and Analyzing Play-Test Data</span>
+            </div>
+            <br />
+            <div class="bodysummary">
+                Play-testing is essential for understanding how players interact with your game and 
+                finding flaws that you may have been unable to see yourself. 
+                This is why I conducted weekly play-test sessions, allowing the general public to play and give their feedback.
+            </div>
+            <img class ="bodyimg" src="Assets/Images/Tori/playtesting.jpg" />
+            <img class="bodyimg" src="Assets/Images/Tori/playtesting2.jpeg" />
+            <div class="bodysummary">
+                I collected qualitative data by taking notes about what each player was doing at any given moment as they played. 
+                I also took note any time anyone said something of note, such as "Oh, inverted controls. I wasn't expecting that." 
+                These notes can offer valuable insight into what the player is doing and thinking as they play, as opposed to what they  think about the game after playing.
+            </div>
+            <br />
+            <div class="bodysummary">
+                Play-testing is essential for understanding how players interact with your game and
+                finding flaws that you may have been unable to see yourself.
+                This is why I conducted weekly play-test sessions, allowing the general public to play and give their feedback.
+            </div>
+        </div>
+        <div class="bodydiv">
+            <div class="bodytitle">
+                <span>Developing Quick Wire-Frames</span>
+            </div>
+            <br />
+            <div class="bodysummary">
+                As a UX Designer working on Tori, I design the UI, control schemes, and menu screens. 
+                I use a program called Balsamiq to whip up quick and easy-to-test wire-frames. 
+                These wire-frames are the bear-bones, first-pass mock-ups of the the user interface that will eventually make it into the final product.
+            </div> 
+            <img class="bodyimg" src="Assets/Images/Tori/MainMenu.png" />
+            <img class="bodyimg" src="Assets/Images/Tori/PauseMenu.png" />
+            <div class="bodysummary">
+                As of right now, I am testing and improving upon the menu screen mock-ups until we are happy with the layout. Once a layout passes through this process, 
+                I will add art to it and begin the next steps of testing the aesthetic appeal of the layout. Designing menus in this manner prevents wasted time and 
+                back-tracking, since these mock-ups only really take a few minutes each to create.
+            </div>  
+            <br />  
+            <div class="bodysummary">
+                I have also used these mock-ups to demonstrate control systems and UI art and functionality. 
+                For example, there is a system in which the bird can collect up to 5 musical auras, known in the game as "Kami," and fly around with them. 
+                We wanted to display the carrying capacity for this within the game world, rather than pasting it on some sort of HUD. 
+                I used a mock-up to display what this display would approximately look like in-game. I decided to use the bird's wings and tail feathers 
+                to act as a sort of fill bar that represents how "full" the bird is. 
+            </div>   
+        </div>
+        <div class="bodydiv">
+            <div class="bodytitle">
+                <span>Designing Visual/Audio Feedback</span>
+            </div>
+            <br />
+            <div class="bodysummary">
+                In Tori, it's important that the user understands that they have control over the sounds that they hear in the world. 
+                Currently, sounds are being produced by objects in the world. The player is able to collect the sound, or "Kami," 
+                from the object and fly around with it. By running weekly public play-test sessions, I discovered that players struggled 
+                to grasp the idea that objects were producing the sounds that players were hearing. They understood that there was 
+                something worth collecting, they just didn't know exactly what they were collecting.
+            </div> 
+            <img class="bodyimg" src="Assets/Images/Tori/SoundBurst.png" />
+            <div class="bodysummary">
+                In order to tackle this issue, I created a particle burst radiating out from the object. This burst activates as soon as 
+                the sound is played. The immediate correlation between the sound and the visual particle burst demonstrates to the player 
+                that the particles that they are seeing and collecting actually represent the sound that is playing in that moment. Upon 
+                further play-testing, I expect to find data that reveals a higher level of understanding of this sound collection concept.
+            </div>
+            <br />
+            <button class="backbtn" onclick="window.location.href = 'games.html'">See More Games</button>
+        </div>
+    </div>
+    <div class="footer">
+        <div style="position:absolute; height:inherit; left:5%;">
+            <h2 class="footertxt">joshsmith117@yahoo.com</h2>
+        </div>
+        <div style="right:5%; position:absolute; height:inherit;">
+            <h2 class="footertxt">linkedin.com/in/joshsmith117</h2>
+        </div>
+    </div>
+</body>
+</html>
+
+<!--Begin Javascript------------------------------------------------------------------>
+<script>
+    var jsdivsmall = document.getElementsByClassName("JSdivsmall");
+    var jsdivbig = document.getElementsByClassName("JSdivbig");
+    var hdr = document.getElementsByClassName("header");
+    var hdrbtn = document.getElementsByClassName("headerbtn");
+    var hdrtxt = document.getElementsByClassName("headertxt");
+    var ftr = document.getElementsByClassName("footer");
+    var ftrtxt = document.getElementsByClassName("footertxt");
+    var bdycon = document.getElementsByClassName("bodycont");
+    var bdydiv = document.getElementsByClassName("bodydiv");
+    var bdyimg = document.getElementsByClassName("bodyimg");
+    var bdysmry = document.getElementsByClassName("bodysummary");
+    var bdytitle = document.getElementsByClassName("bodytitle");
+    function resize() {
+        if ((window.innerWidth < 1040)) {
+            hdr[0].style.height = "40px";
+            jsdivbig[0].style.display = "none";
+            jsdivsmall[0].style.display = "initial";
+            ftr[0].style.height = "40px";
+            ftr[0].style.bottom = "0%";
+            for (x = 0; x < bdydiv.length; x++) {
+                bdydiv[x].style.textAlign = "center";
+                bdytitle[x].style.textAlign = "center";
+                bdytitle[x].style.fontSize = "24px";
+            }
+            for (x = 0; x < bdysmry.length; x++) {
+                bdysmry[x].style.fontSize = "18px";
+                bdysmry[x].style.marginLeft = "20px";
+                bdysmry[x].style.marginRight = "20px";
+                bdysmry[x].style.lineHeight = "30px";
+            }
+            for (x = 0; x < bdyimg.length; x++) {
+                bdyimg[x].style.height = "200px";
+                bdyimg[x].style.margin = "auto";
+                bdyimg[x].style.marginTop = "10px";
+                bdyimg[x].style.marginBottom = "10px";
+            }
+            for (x = 0; x < hdrbtn.length; x++) {
+                hdrbtn[x].style.width = "50px";
+                hdrbtn[x].style.height = "50px";
+                hdrbtn[x].style.top = "30%";
+                hdrbtn[x].style.marginLeft = "5px";
+                hdrbtn[x].style.marginRight = "5px";
+            }
+            for (x = 0; x < hdrtxt.length; x++) {
+                hdrtxt[x].style.fontSize = "12px";
+            }
+
+            for (x = 0; x < ftrtxt.length; x++) {
+                ftrtxt[x].style.fontSize = "12px";
+                ftrtxt[x].style.top = "10%";
+            }
+            if ((window.innerWidth < 700)) {
+                hdr[0].style.height = "40px";
+                bdycon[0].style.marginTop = "30px";
+                for (x = 0; x < bdydiv.length; x++) {
+                    bdytitle[x].style.fontSize = "18px";
+                }
+                for (x = 0; x < hdrbtn.length; x++) {
+                    hdrbtn[x].style.width = "40px";
+                    hdrbtn[x].style.height = "40px"
+                    hdrbtn[x].style.marginLeft = "0px";
+                    hdrbtn[x].style.marginRight = "0px";
+                }
+                for (x = 0; x < bdyimg.length; x++) {
+                    bdyimg[x].style.height = "150px";
+                    bdyimg[x].style.margin = "initial";
+                    bdyimg[x].style.marginTop = "10px";
+                    bdyimg[x].style.marginBottom = "10px";
+                }
+                for (x = 0; x < bdysmry.length; x++) {
+                    bdysmry[x].style.fontSize = "12px";
+                    bdysmry[x].style.lineHeight = "20px";
+                }
+                for (x = 0; x < ftrtxt.length; x++) {
+                    ftrtxt[x].style.fontSize = "12px";
+                    ftrtxt[x].style.top = "10%";
+                }
+                if ((window.innerWidth < 400)) {
+                    for (x = 0; x < ftrtxt.length; x++) {
+                        ftrtxt[x].style.fontSize = "8px";
+                        ftrtxt[x].style.top = "20%";
+                    }
+                }
+            }
+        } else {
+            hdr[0].style.height = "70px";
+            bdycon[0].style.marginTop = "70px";
+            jsdivbig[0].style.display = "initial";
+            jsdivsmall[0].style.display = "none";
+            ftr[0].style.height = "70px";
+            for (x = 0; x < bdydiv.length; x++) {
+                bdytitle[x].style.textAlign = "left";
+                bdytitle[x].style.textAlign = "left";
+                bdytitle[x].style.fontSize = "36px";
+                bdydiv[x].style.textAlign = "left";
+                
+            }
+            for (x = 0; x < bdyimg.length; x++) {
+                bdyimg[x].style.height = "250px";
+                bdyimg[x].style.margin = "initial";
+                bdyimg[x].style.marginTop = "10px";
+                bdyimg[x].style.marginBottom = "10px";
+            }
+            for (x = 0; x < bdysmry.length; x++) {
+                bdysmry[x].style.fontSize = "18px";
+                bdysmry[x].style.marginLeft = "0px";
+                bdysmry[x].style.marginRight = "0px";
+                bdysmry[x].style.lineHeight = "36px";
+            }
+            for (x = 0; x < hdrbtn.length; x++) {
+                hdrbtn[x].style.width = "70px";
+                hdrbtn[x].style.height = "70px";
+                hdrbtn[x].style.marginLeft = "5px";
+                hdrbtn[x].style.marginRight = "5px";
+            }
+            for (x = 0; x < hdrtxt.length; x++) {
+                hdrtxt[x].style.fontSize = "18px";
+            }
+            for (x = 0; x < ftrtxt.length; x++) {
+                ftrtxt[x].style.fontSize = "24px";
+                ftrtxt[x].style.top = "0%";
+            }
+        }
+    }
+    $(document).ready(resize);
+    $(window).resize(resize);
+</script>

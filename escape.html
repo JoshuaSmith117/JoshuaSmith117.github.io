@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+
+<!--Begin html portion of code------------------------------------------------------------------------>
+<html>
+
+<head>
+    <!--jQuery download needed for javascript to work------------------------------------------------------------------------>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <!--Link to custom font from google fonts------------------------------------------------------------------------>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+
+    <!--Link to index.css stylesheets ------------------------------------------------------------------------>
+
+    <link href="tori.css" rel="stylesheet">
+    <!--<link href="index.chrome.css" rel="stylesheet">-->
+    <!--<link href="index.ie.css" rel="stylesheet">-->
+
+
+    <link rel="prefetch" href="Assets/Images/GameControllerIconPop_NoBG.png">
+
+    <!--Allow for easy debugging in IE------------------------------------------------------>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Automatically scale  with viewport---------------------------------------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<!--Begin Writing Body Content------------------------------------------------------------------------>
+<body>
+    <div class="header">
+        <div style="position:absolute; top: 30%;">
+            <button class="headerbtn" onclick="window.location.href = 'https://www.linkedin.com/in/joshsmith117/'" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"><span class="tooltiptext">linkedin.com/in/joshsmith117</span></button>
+            <button class="headerbtn" onclick="window.location.href = 'mailto:joshsmith117@yahoo.com'" style="background-image: url(Assets/Images/emailicon.png);"><span class="tooltiptext">joshsmith117@yahoo.com</span></button>
+        </div>
+        <div style="display:inline-block; position:absolute; right:0%; top: 30%;">
+            <button class="headerbtn" onclick="window.location.href = 'games.html'" style="background-image: url(Assets/Images/backarrow.png);"></button>
+            <button class="headerbtn" onclick="window.location.href = 'index.html'" style="background-image: url(Assets/Images/home-icon.png);"></button>
+        </div>
+        <div class="JSdivsmall">
+            <h2 class="headertxt">Joshua</h2>
+            <img style="margin-left:5px; margin-right:5px; height:30px" id="JSicon" src="Assets/Images/JSIconSimple.png" />
+            <h2 class="headertxt">Smith</h2>
+        </div>
+        <div class="JSdivbig">
+            <h2 class="headertxt">Joshua</h2>
+            <img style="margin-left:5px;margin-right:5px;" id="JSicon" src="Assets/Images/JSIconSimple.png" />
+            <h2 class="headertxt">Smith</h2>
+        </div>
+    </div>
+    <div class="bodycont">
+        <div class="bodydiv">
+            <div class="bodytitle">
+                <span>Fitting UI to Art Aesthetic</span>
+            </div>
+            <br />
+            <div class="bodysummary">
+                Escape utilizes an entirely red color palette, so I created the UI art to match that theme. 
+                Since the color palettes of the background and the UI elements are the same, the UI practically 
+                fades into the background when the player is focused on something else.
+            </div>
+            <img class="bodyimg" src="Assets/Images/Escape/Escape1.png" />
+            <div class="bodysummary">
+                When dealing with interactive objects within the game world, I broadened the color palette slightly 
+                to give these elements a brighter and more noticeable shade of red. This allows the important elements within the scene to be seen more easily.
+            </div>
+            <img class="bodyimg" id="inventory" src="Assets/Images/Escape/Inventory.png" />
+        </div>
+        <div class="bodydiv">
+            <div class="bodytitle">
+                <span>Taking UI a Step Further</span>
+            </div>
+            <br />
+            <div class="bodysummary">
+                It is also possible for the UI to come forward and add to the game experience, rather than simply stay out of the way. 
+                Doing this requires imaginative solutions that depend entirely on the situation.
+                For example, in Escape there is a moment when the player is forced to kill a rat in order to collect a key it just swallowed. 
+                I wanted this moment to be extremely powerful, as it would act as the climax within the narrative. In order to do this, 
+                I created a version of the dialogue box that was covered in blood and displayed it as soon as the rat had been killed. 
+                This added to the visceral emotion of the moment and left players with their mouths agape.
+            </div>
+            <img class="bodyimg" id="blood" src="Assets/Images/Escape/Blood.png" />
+            <br />
+            <button class="backbtn" onclick="window.location.href = 'games.html'">See More Games</button>
+        </div>
+    </div>
+    <div class="footer">
+        <div style="position:absolute; height:inherit; left:5%;">
+            <h2 class="footertxt">joshsmith117@yahoo.com</h2>
+        </div>
+        <div style="right:5%; position:absolute; height:inherit;">
+            <h2 class="footertxt">linkedin.com/in/joshsmith117</h2>
+        </div>
+    </div>
+</body>
+</html>
+
+<!--Begin Javascript------------------------------------------------------------------>
+<script>
+    var jsdivsmall = document.getElementsByClassName("JSdivsmall");
+    var jsdivbig = document.getElementsByClassName("JSdivbig");
+    var hdr = document.getElementsByClassName("header");
+    var hdrbtn = document.getElementsByClassName("headerbtn");
+    var hdrtxt = document.getElementsByClassName("headertxt");
+    var ftr = document.getElementsByClassName("footer");
+    var ftrtxt = document.getElementsByClassName("footertxt");
+    var bdycon = document.getElementsByClassName("bodycont");
+    var bdydiv = document.getElementsByClassName("bodydiv");
+    var bdyimg = document.getElementsByClassName("bodyimg");
+    var bdysmry = document.getElementsByClassName("bodysummary");
+    var bdytitle = document.getElementsByClassName("bodytitle");
+    function resize() {
+        if ((window.innerWidth < 1040)) {
+            hdr[0].style.height = "40px";
+            jsdivbig[0].style.display = "none";
+            jsdivsmall[0].style.display = "initial";
+            ftr[0].style.height = "40px";
+            ftr[0].style.bottom = "0%";
+            
+            for (x = 0; x < bdydiv.length; x++) {
+                bdydiv[x].style.textAlign = "center";
+                bdytitle[x].style.textAlign = "center";
+                bdytitle[x].style.fontSize = "24px";
+            }
+            for (x = 0; x < bdysmry.length; x++) {
+                bdysmry[x].style.fontSize = "18px";
+                bdysmry[x].style.marginLeft = "20px";
+                bdysmry[x].style.marginRight = "20px";
+                bdysmry[x].style.lineHeight = "30px";
+            }
+            for (x = 0; x < bdyimg.length; x++) {
+                bdyimg[x].style.height = "200px";
+                bdyimg[x].style.margin = "auto";
+                bdyimg[x].style.marginTop = "10px";
+                bdyimg[x].style.marginBottom = "10px";
+            }
+            for (x = 0; x < hdrbtn.length; x++) {
+                hdrbtn[x].style.width = "50px";
+                hdrbtn[x].style.height = "50px";
+                hdrbtn[x].style.top = "30%";
+                hdrbtn[x].style.marginLeft = "5px";
+                hdrbtn[x].style.marginRight = "5px";
+            }
+            for (x = 0; x < hdrtxt.length; x++) {
+                hdrtxt[x].style.fontSize = "12px";
+            }
+
+            for (x = 0; x < ftrtxt.length; x++) {
+                ftrtxt[x].style.fontSize = "12px";
+                ftrtxt[x].style.top = "10%";
+            }
+            document.getElementById("inventory").style.height = "85px";
+            document.getElementById("blood").style.height = "85px";
+            if ((window.innerWidth < 700)) {
+                hdr[0].style.height = "40px";
+                bdycon[0].style.marginTop = "30px";
+                for (x = 0; x < bdydiv.length; x++) {
+                    bdytitle[x].style.fontSize = "18px";
+                }
+                for (x = 0; x < hdrbtn.length; x++) {
+                    hdrbtn[x].style.width = "40px";
+                    hdrbtn[x].style.height = "40px"
+                    hdrbtn[x].style.marginLeft = "0px";
+                    hdrbtn[x].style.marginRight = "0px";
+                }
+                for (x = 0; x < bdyimg.length; x++) {
+                    bdyimg[x].style.height = "150px";
+                    bdyimg[x].style.margin = "initial";
+                    bdyimg[x].style.marginTop = "10px";
+                    bdyimg[x].style.marginBottom = "10px";
+                }
+                for (x = 0; x < bdysmry.length; x++) {
+                    bdysmry[x].style.fontSize = "12px";
+                    bdysmry[x].style.lineHeight = "20px";
+                }
+                for (x = 0; x < ftrtxt.length; x++) {
+                    ftrtxt[x].style.fontSize = "12px";
+                    ftrtxt[x].style.top = "10%";
+                }
+                document.getElementById("inventory").style.height = "65px";
+                document.getElementById("blood").style.height = "60px";
+                if ((window.innerWidth < 400)) {
+                    for (x = 0; x < ftrtxt.length; x++) {
+                        ftrtxt[x].style.fontSize = "8px";
+                        ftrtxt[x].style.top = "20%";
+                    }
+                }
+            }
+        } else {
+            hdr[0].style.height = "70px";
+            bdycon[0].style.marginTop = "70px";
+            jsdivbig[0].style.display = "initial";
+            jsdivsmall[0].style.display = "none";
+            ftr[0].style.height = "70px";
+            for (x = 0; x < bdydiv.length; x++) {
+                bdytitle[x].style.textAlign = "left";
+                bdytitle[x].style.textAlign = "left";
+                bdytitle[x].style.fontSize = "36px";
+                bdydiv[x].style.textAlign = "left";
+
+            }
+            for (x = 0; x < bdyimg.length; x++) {
+                bdyimg[x].style.height = "250px";
+                bdyimg[x].style.margin = "initial";
+                bdyimg[x].style.marginTop = "10px";
+                bdyimg[x].style.marginBottom = "10px";
+            }
+            for (x = 0; x < bdysmry.length; x++) {
+                bdysmry[x].style.fontSize = "18px";
+                bdysmry[x].style.marginLeft = "0px";
+                bdysmry[x].style.marginRight = "0px";
+                bdysmry[x].style.lineHeight = "36px";
+            }
+            for (x = 0; x < hdrbtn.length; x++) {
+                hdrbtn[x].style.width = "70px";
+                hdrbtn[x].style.height = "70px";
+                hdrbtn[x].style.marginLeft = "5px";
+                hdrbtn[x].style.marginRight = "5px";
+            }
+            for (x = 0; x < hdrtxt.length; x++) {
+                hdrtxt[x].style.fontSize = "18px";
+            }
+            for (x = 0; x < ftrtxt.length; x++) {
+                ftrtxt[x].style.fontSize = "24px";
+                ftrtxt[x].style.top = "0%";
+            }
+            document.getElementById("inventory").style.height = "110px";
+            document.getElementById("blood").style.height = "110px";
+        }
+    }
+    $(document).ready(resize);
+    $(window).resize(resize);
+</script>
