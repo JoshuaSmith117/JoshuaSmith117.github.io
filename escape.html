@@ -12,7 +12,7 @@
 
     <!--Link to index.css stylesheets ------------------------------------------------------------------------>
 
-    <link href="tori.css" rel="stylesheet">
+    <link href="escape.css" rel="stylesheet">
     <!--<link href="index.chrome.css" rel="stylesheet">-->
     <!--<link href="index.ie.css" rel="stylesheet">-->
 
@@ -52,6 +52,8 @@
     </div>
     <div class="bodycont">
         <div class="bodydiv">
+            <img class="titleimg" src="Assets/Images/EscapeLogo.png">
+            <h1 class="title">UX/UI DESIGN</h1>
             <div class="bodytitle">
                 <span>Fitting UI to Art Aesthetic</span>
             </div>
@@ -83,6 +85,9 @@
             </div>
             <img class="bodyimg" id="blood" src="Assets/Images/Escape/Blood.png" />
             <br />
+            <h1 class="title">2D ART</h1>
+            <h1 class="title">SOUND DESIGN</h1>
+            <h1 class="title">NARRATIVE</h1>
             <button class="backbtn" onclick="window.location.href = 'games.html'">See More Games</button>
         </div>
     </div>
@@ -111,6 +116,8 @@
     var bdyimg = document.getElementsByClassName("bodyimg");
     var bdysmry = document.getElementsByClassName("bodysummary");
     var bdytitle = document.getElementsByClassName("bodytitle");
+    var title = document.getElementsByClassName("title");
+    var titleimg = document.getElementsByClassName("titleimg");
     function resize() {
         if ((window.innerWidth < 1040)) {
             hdr[0].style.height = "40px";
@@ -118,7 +125,11 @@
             jsdivsmall[0].style.display = "initial";
             ftr[0].style.height = "40px";
             ftr[0].style.bottom = "0%";
-            
+            titleimg[0].style.width = "150px";
+            titleimg[0].style.height = "150px";
+            for (x = 0; x < title.length; x++) {
+                title[x].style.fontSize = "36px";
+            }
             for (x = 0; x < bdydiv.length; x++) {
                 bdydiv[x].style.textAlign = "center";
                 bdytitle[x].style.textAlign = "center";
@@ -146,7 +157,6 @@
             for (x = 0; x < hdrtxt.length; x++) {
                 hdrtxt[x].style.fontSize = "12px";
             }
-
             for (x = 0; x < ftrtxt.length; x++) {
                 ftrtxt[x].style.fontSize = "12px";
                 ftrtxt[x].style.top = "10%";
@@ -156,6 +166,9 @@
             if ((window.innerWidth < 700)) {
                 hdr[0].style.height = "40px";
                 bdycon[0].style.marginTop = "30px";
+                for (x = 0; x < title.length; x++) {
+                    title[x].style.fontSize = "24px";
+                }
                 for (x = 0; x < bdydiv.length; x++) {
                     bdytitle[x].style.fontSize = "18px";
                 }
@@ -194,12 +207,16 @@
             jsdivbig[0].style.display = "initial";
             jsdivsmall[0].style.display = "none";
             ftr[0].style.height = "70px";
+            titleimg[0].style.width = "200px";
+            titleimg[0].style.height = "200px";
+            for (x = 0; x < title.length; x++) {
+                title[x].style.fontSize = "48px";
+            }
             for (x = 0; x < bdydiv.length; x++) {
                 bdytitle[x].style.textAlign = "left";
                 bdytitle[x].style.textAlign = "left";
                 bdytitle[x].style.fontSize = "36px";
                 bdydiv[x].style.textAlign = "left";
-
             }
             for (x = 0; x < bdyimg.length; x++) {
                 bdyimg[x].style.height = "250px";

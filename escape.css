@@ -10,10 +10,11 @@
         user-select: none;
     }
 
-    h1 {
+     h1 {
+        font-weight: normal;
         color: black;
         font-family: 'Quicksand', sans-serif;
-        font-size: 3vw;
+        font-size: 48px;
     }
 
     h2 {
@@ -141,6 +142,10 @@
         display:inline;
     }
 /*Body Styles-----------------------------------------------------*/
+    .title {
+        font-size: 48px;
+        text-decoration: underline;
+    }
     .bodycont{
         margin:auto;
         margin-bottom:10px;
@@ -175,6 +180,16 @@
         background-size: 100%;
         margin: 10px;
         border: 2px solid black;
+    }
+    .titleimg{
+        background-color: white;
+        border: 1px solid gray;
+        height: 200px;
+        width: 200px;
+        background-position-x: 50%; 
+        background-position-y: 50%;
+        background-size: 100%;
+        border-radius: 50%;
     }
     .btntxt {
         pointer-events: none;
