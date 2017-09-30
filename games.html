@@ -32,7 +32,7 @@
     <body>
         <div class="header">
             <div style="position:absolute; top: 30%;">
-                <button class="headerbtn" onclick="window.location.href = 'https://www.linkedin.com/in/joshsmith117/'" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"><span class="tooltiptext">linkedin.com/in/joshsmith117</span></button>
+                <button class="headerbtn" onclick="window.open('https://www.linkedin.com/in/joshsmith117/')" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"><span class="tooltiptext">linkedin.com/in/joshsmith117</span></button>
                 <button class="headerbtn" onclick="window.location.href = 'mailto:joshsmith117@yahoo.com'" style="background-image: url(Assets/Images/emailicon.png);"><span class="tooltiptext">joshsmith117@yahoo.com</span></button>
             </div>
             <div style="display:inline-block; position:absolute; right:0%; top: 30%;">
@@ -56,14 +56,12 @@
                     <div class="bodytitle" style="cursor:pointer;">
                         <a href="tori.html">
                             <span>Tori</span>
-                            <span class="space">&nbsp|&nbsp</span>
-                            <span class="bodytitlesub">UX Design, Production, 3D Modeling, Social Media Marketing</span>
                         </a>
                     </div>
                 <br/>
                 <div class ="bodysummary">Among my other roles on Team Tori, I am the acting User Experience Designer. 
                                           I've crafted a UI that exists almost entirely in the game space. I’ve also designed 
-                                          a simple, yet effective control scheme, as well as several interaction sequences, including the tutorial.  </div>
+                                          a minimal, yet effective control scheme, as well as several interaction sequences, including the tutorial.  </div>
                 <br />
                 <button class="learnmore" onclick="window.location.href = 'tori.html'">Learn More</button>
             </div>
@@ -71,8 +69,6 @@
                 <button class="bodyimg" id="IUArcadebtn"><h1 class="btntxt" id ="IUArcadebtntxt" style="color:#990000;">Learn More</h1></button>
                         <div class="bodytitle" style="cursor:pointer;">
                             <span>Mark Cuban Center IU Arcade</span>
-                            <span class="space">&nbsp|&nbsp</span>
-                            <span class ="bodytitlesub">Project Management, UX & Systems Design, 2D Art</span>
                         </div>
                 <br/>
                 <div class="bodysummary">I was the project manager of the Mark Cuban Center IU Arcade, which is currently comprised of 3 games.
@@ -86,8 +82,6 @@
                     <div class="bodytitle" style="cursor:pointer;">
                         <a href="TTP.html">
                             <span>TapTapPop!</span>
-                            <span class="space">&nbsp|&nbsp</span>
-                            <span class="bodytitlesub">Project Management, UX/UI Design</span>
                         </a>
                     </div>
                 <br />
@@ -101,8 +95,6 @@
                     <div class="bodytitle" style="cursor:pointer;">
                         <a href="Escape.html">
                             <span>Escape</span>
-                            <span class="space">&nbsp|&nbsp</span>
-                            <span class="bodytitlesub">UX/UI Design, 2D Art, Sound Design, Narrative</span>
                         </a>
                     </div>
                 <br />
@@ -137,8 +129,9 @@
     var bdyimg = document.getElementsByClassName("bodyimg");
     var bdysmry = document.getElementsByClassName("bodysummary");
     var bdytitle = document.getElementsByClassName("bodytitle");
-    var titlesub = document.getElementsByClassName("bodytitlesub");
-    var space = document.getElementsByClassName("space");
+    //var titlesub = document.getElementsByClassName("bodytitlesub");
+    //var space = document.getElementsByClassName("space");
+    
     function resize() {
         if ((window.innerWidth < 1040)) {
             hdr[0].style.height = "40px";
@@ -146,20 +139,23 @@
             jsdivsmall[0].style.display = "initial";
             ftr[0].style.height = "40px";
             ftr[0].style.bottom = "0%";
+            
             for (x = 0; x < bdyimg.length; x++) {
                 bdyimg[x].style.height = "150px";
                 bdyimg[x].style.width = "150px";
-                titlesub[x].style.fontSize = "24px";
-                titlesub[x].style.width = "100%";
+                
+                //titlesub[x].style.fontSize = "24px";
+                //titlesub[x].style.width = "100%";
+
                 bdysmry[x].style.fontSize = "18px";
                 bdysmry[x].style.marginLeft = "20px";
                 bdysmry[x].style.marginRight = "20px";
                 bdysmry[x].style.lineHeight = "30px";
-                space[x].innerHTML = "";
                 bdyimg[x].style.margin = "auto";
                 bdydiv[x].style.textAlign = "center";
                 bdytitle[x].style.textAlign = "center";
                 bdysmry[x].style.textAlign = "left";
+
             }
             for (x = 0; x < hdrbtn.length; x++) {
                 hdrbtn[x].style.width = "50px";
@@ -185,13 +181,9 @@
                     hdrbtn[x].style.marginLeft = "0px";
                     hdrbtn[x].style.marginRight = "0px";
                 }
-                for (x = 0; x < titlesub.length; x++) {
-                    titlesub[x].style.fontSize = "18px";
+                for (x = 0; x < hdrbtn.length; x++) {
                     bdysmry[x].style.fontSize = "12px";
-                    bdysmry[x].style.lineHeight = "20px";
-                    space[x].innerHTML = "";
                 }
-
                 for (x = 0; x < ftrtxt.length; x++) {
                     ftrtxt[x].style.fontSize = "12px";
                     ftrtxt[x].style.top = "10%";
@@ -212,16 +204,16 @@
             for (x = 0; x < bdyimg.length; x++) {
                 bdyimg[x].style.height = "200px";
                 bdyimg[x].style.width = "200px";
-                titlesub[x].style.fontSize = "24px";
-                titlesub[x].style.width = "initial";
+                //titlesub[x].style.fontSize = "24px";
+                //titlesub[x].style.width = "initial";
                 bdysmry[x].style.fontSize = "18px";
                 bdysmry[x].style.marginLeft = "0px";
                 bdysmry[x].style.marginRight = "0px";
                 bdysmry[x].style.lineHeight = "36px";
-                space[x].innerHTML = "&nbsp|&nbsp";
-                bdytitle[x].style.textAlign = "left";
-                bdydiv[x].style.textAlign = "left";
-                bdyimg[x].style.margin = "initial";
+                bdytitle[x].style.textAlign = "center";
+                bdydiv[x].style.textAlign = "center";
+                bdyimg[x].style.margin = "auto";
+                bdysmry[x].style.textAlign = "left";
             }
             for (x = 0; x < hdrbtn.length; x++) {
                 hdrbtn[x].style.width = "70px";
