@@ -68,7 +68,7 @@
     }
     /*Header Styles ----------------------------------------------*/
     .header {
-        position: fixed;
+        position: absolute;
         background-color: rgb(200, 200, 200);
         border-bottom: 2px solid rgb(150,150,150);
         height: 70px;

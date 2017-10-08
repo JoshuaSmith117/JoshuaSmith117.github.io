@@ -85,74 +85,100 @@
                 <a href="#codeword3">Blue Words, Blue Words</a>
             </h1>
             <div class="line"></div>
-            <h1 class="bodytitle">Collecting and Analyzing Play-Test Data</h1>
+            <h1 class="bodytitle">Introduction</h1>
             <div class="line"></div>
             <br />
             <div class="bodysummary">
-                Play-testing is essential for understanding how players interact with your game and
-                finding flaws that you may have been unable to see yourself.
-                This is why I conducted weekly play-test sessions, allowing the general public to play and give their feedback.
-            </div>
-            <img class="bodyimg" src="Assets/Images/Tori/playtesting.jpg" />
-            <img class="bodyimg" src="Assets/Images/Tori/playtesting2.jpeg" />
-            <div class="bodysummary">
-                I collected qualitative data by taking notes about what each player was doing at any given moment as they played.
-                I also took note any time anyone said something of note, such as "Oh, inverted controls. I wasn't expecting that."
-                These notes can offer valuable insight into what the player is doing and thinking as they play, as opposed to what they  think about the game after playing.
+                Tori is a PC game about the exploration of sound. The player takes control of a little bird, named Tori. 
+                They fly freely around the land of Oto-Kai, a Shinto-inspired world floating high in the sky above feudal Japan. 
+                Tori has the power to harness the kami, or spirits of this world and use those kami to breathe new life into the environment. 
+                Each kami produces its own unique sound for the player to enjoy.
             </div>
             <br />
             <div class="bodysummary">
-                Play-testing is essential for understanding how players interact with your game and
-                finding flaws that you may have been unable to see yourself.
-                This is why I conducted weekly play-test sessions, allowing the general public to play and give their feedback.
+                Currently, we are about 1 year into production of the 2-year long project that is Tori. 
+                Already, Tori has taught me some of the most valuable lessons of my career as a game developer. 
+                For over a year, we’ve been designing, developing, testing, iterating, and growing as both a game and a team. 
+                What started as a passion project developed by 3 people, has quickly transformed into a 7-person company.
             </div>
             <a name="codeword2"></a>
             <br />
             <br />
             <div class = "line"></div>
-            <h1 class="bodytitle">Developing Quick Wire-Frames</h1>
+            <h1 class="bodytitle">Designing minimal controls for a minimal game.</h1>
             <div class="line"></div>
             <br />
             <div class="bodysummary">
-                As a UX Designer working on Tori, I design the UI, control schemes, and menu screens.
-                I use a program called Balsamiq to whip up quick and easy-to-test wire-frames.
-                These wire-frames are the bear-bones, first-pass mock-ups of the the user interface that will eventually make it into the final product.
-            </div>
-            <img class="bodyimg" src="Assets/Images/Tori/MainMenu.png" />
-            <img class="bodyimg" src="Assets/Images/Tori/PauseMenu.png" />
-            <div class="bodysummary">
-                As of right now, I am testing and improving upon the menu screen mock-ups until we are happy with the layout. Once a layout passes through this process,
-                I will add art to it and begin the next steps of testing the aesthetic appeal of the layout. Designing menus in this manner prevents wasted time and
-                back-tracking, since these mock-ups only really take a few minutes each to create.
+                I designed a control scheme to reflect Tori’s minimal style. This control scheme aims to take advantage of only the mouse. 
+                This also keeps the controls as intuitive and simple as possible. 
+                We don’t expect our target audience to have a large amount of gaming skill, therefore it’s important that they don’t have to learn an array of
+                keyboard controls to play. 
             </div>
             <br />
             <div class="bodysummary">
-                I have also used these mock-ups to demonstrate control systems and UI art and functionality.
-                For example, there is a system in which the bird can collect up to 5 musical auras, known in the game as "Kami," and fly around with them.
-                We wanted to display the carrying capacity for this within the game world, rather than pasting it on some sort of HUD.
-                I used a mock-up to display what this display would approximately look like in-game. I decided to use the bird's wings and tail feathers
-                to act as a sort of fill bar that represents how "full" the bird is.
+                Through rigorous user testing, I discovered that most players prefer non-inverted controls for flight. 
+                As someone who played my fair share of flight-based games, this came as a surprise to me. 
+                It felt much more natural for me to fly with inverted controls. Luckily, user testing taught me that this not the case for our target audience, 
+                so I made decided to make the default controls non-inverted. However, inverted controls are certainly still an option in the options menu. 
+            </div>
+            <br />
+            <div class="bodysummary">
+                Now on to the most important control of all: the left-mouse click. This button is the meat and potatoes of our control scheme. 
+                It’s context sensitive and allows the player to do many different things under certain circumstances. 
+                For example, if you click it while passing through a kami’s area, you will absorb that kami and begin carrying it with you. 
+                And if you click it again while you’re already carrying a kami, you will drop that kami. 
+                However, if you click it while flying through empty air, you will simply chirp. Believe it or not, this chirp is actually a very 
+                important interaction, because it acts as a form of feedback to the player, letting them know that clicking does do SOMETHING, 
+                rather than doing absolutely NOTHING.
             </div>
             <a name="codeword3"></a>
             <br />
             <br />
             <div class="line"></div>
-            <h1 class="bodytitle">Designing Visual/Audio Feedback</h1>
+            <h1 class="bodytitle">Creating a User Interface without a HUD.</h1>
             <div class="line"></div>
             <br />
             <div class="bodysummary">
-                In Tori, it's important that the user understands that they have control over the sounds that they hear in the world.
-                Currently, sounds are being produced by objects in the world. The player is able to collect the sound, or "Kami,"
-                from the object and fly around with it. By running weekly public play-test sessions, I discovered that players struggled
-                to grasp the idea that objects were producing the sounds that players were hearing. They understood that there was
-                something worth collecting, they just didn't know exactly what they were collecting.
+                Early on, I decided that a heads-up-display was going to be both unnecessary for the amount of information we needed to convey to the player, 
+                and immersion-breaking, given the airy and mystical nature of our game world. Therefore, I needed to design a User Interface that properly 
+                conveyed the necessary info to the player, while remaining in the world space. I quickly realized that our player character, Tori, 
+                would be the perfect medium through which to display this information, since the camera view is nearly always focused on Tori in a 3rd-person 
+                perspective.
             </div>
-            <img class="bodyimg" src="Assets/Images/Tori/SoundBurst.png" />
+            <br />
             <div class="bodysummary">
-                In order to tackle this issue, I created a particle burst radiating out from the object. This burst activates as soon as
-                the sound is played. The immediate correlation between the sound and the visual particle burst demonstrates to the player
-                that the particles that they are seeing and collecting actually represent the sound that is playing in that moment. Upon
-                further play-testing, I expect to find data that reveals a higher level of understanding of this sound collection concept.
+                I made a slight modification to Tori’s character model that would both act as an effective UI element and a way to convey Tori’s 
+                emotions visually from the back. I simply added a feather that sticks up off the top of Tori’s head. 
+                This head feather is easily visible from behind and acts as a great way for Tori to communicate with the player.
+            </div>
+            <a name="codeword4"></a>
+            <br />
+            <br />
+            <div class="line"></div>
+            <h1 class="bodytitle">Crafting a non-intrusive Tutorial Sequence.</h1>
+            <div class="line"></div>
+            <br />
+            <div class="bodysummary">
+                The tutorial sequence is arguably the most important sequence in the game. 
+                It is one of the first experiences the player has in the game, after the main menu, and it must tell them how to effectively play the 
+                game in an interesting and engaging way. Because this world is designed to feel open and free for the player to explore, we avoided creating a 
+                ‘rail-road’ tutorial sequence. Instead, we decided to use the secondary character, the story bird, to guide the player into 
+                learning the game’s core mechanics and controls.
+            </div>
+            <br />
+            <div class="bodysummary">
+                Throughout the tutorial segment, the story bird flies to the recommended next step for progressing through the game, 
+                continues to fly around that object, whatever it may be, and chirps repeatedly. It’s a way of saying, “you should probably 
+                come over here,” but importantly the player is never actually required to follow the story bird.
+            </div>
+            <br />
+            <div class="bodysummary">
+                We used a cross between story-boarding and descriptive writing to explain the step-by-step sequence of the tutorial. 
+                First, the story bird guides the player to the Koi’s puzzle stone. This stone, which has a hole through the center of it 
+                and the image of a koi fish etched into it, is waiting for the player to fly through with a Koi’s kami. 
+                So, if the player decides to follow the story bird and tries fly through without yet having the required kami, 
+                they will be rejected and bounced back, as if they hit a wall. This will hopefully tell the player that they did something wrong. 
+                Now, the story bird will turn its attention to the kami required, which rests close by.
             </div>
             <br />
             <br />
