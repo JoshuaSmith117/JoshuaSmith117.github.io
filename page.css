@@ -197,12 +197,13 @@
     }
     /*Button Styles-----------------------------------------------------*/
     .bodyimg{
-        height: 250px;
+        width: 500px;
         background-position-x: 50%; 
         background-position-y: 50%;
         background-size: 100%;
         margin: 10px;
         border: 2px solid black;
+        max-width: 100%
     }
     .titleimg{
         background-color: white;
@@ -248,11 +249,11 @@
 
     /* Slideshow container */
     .slideshow-container {
-      max-width: 1000px;
+      max-width: 1200px;
       position: relative;
       margin: auto;
       padding:10px;
-      min-height:210px;
+      min-height:320px;
     }
 
     .active {
