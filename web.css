@@ -239,6 +239,18 @@
     #Escapebtn:active{
         box-shadow: 0 5px #261515;
     }
+    #Rhinosbtn{
+        background-color: rgb(60,60,60);
+        background-image: url(Assets/Images/Rhinos/rhinos_logo_gray.png);
+        border: 1px solid black;
+        box-shadow: 0 9px black;
+    }
+    #Rhinosbtn:hover{
+        background-image: none;
+    }
+    #Rhinosbtn:active{
+        box-shadow: 0 5px #261515;
+    }
     .learnmore{
         width:200px;
         height:50px;

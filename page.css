@@ -38,11 +38,12 @@
         font-size:36px;
     }
     a {
-        color:#fbb03b;
+        color:black;
         text-decoration:none;
     }
     a:hover {
-        color:rgb(220,130,30);;
+        color: gray;
+        text-decoration:underline;
     }
 
     .footer {
@@ -78,6 +79,17 @@
         z-index:1;
         transition: 0.5s;
     }
+    .headerweb {
+        position: fixed;
+        height: 70px;
+        width: 100%;
+        left: 0%;
+        top: 0%;
+        z-index:1;
+        transition: 0.5s;
+        background-color: rgb(106,215,255);
+        border-bottom:2px solid rgb(80,170,200);
+    }
     .headertxt {
         float:left;
         position:relative;
@@ -100,6 +112,24 @@
         border-radius: 50%;
         cursor: pointer;
         box-shadow: 0 5px rgb(180,100,20);
+        transition: .05s;
+    }
+    .headerwebbtn {
+        margin-left: 5px;
+        margin-right: 5px;
+        position: relative;
+        top: 30%;
+        height: 70px;
+        width: 70px;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-color: rgb(106,215,255);
+        border:1px solid rgb(80,170,200);
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 5px rgb(80,170,200);
         transition: .05s;
     }
     .tooltiptext {
@@ -154,11 +184,16 @@
         display:inline;
     }
 /*Body Styles-----------------------------------------------------*/
+    .glossary {
+        padding:10px;
+        margin:10px;
+    }
     .pagelink {
         font-weight: normal;
         color: black;
         font-family: 'Quicksand', sans-serif;
         margin:20px;
+        text-align:left;
     }
     .line {
         border-top: 1px solid rgb(150,150,150);

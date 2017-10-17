@@ -336,14 +336,26 @@
         transform: translate(-50%,-50%);
     }
 
+    .box2-1 {
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -20%;
+        left: 100%;
+        border: 1px solid grey;
+        border-radius: 50%;
+    }
+
     .box2-2 {
         pointer-events: none;
         transform: translate(-50%, -50%);
         width: 100px;
         height: 100px;
         position: absolute;
-        top: 10%;
-        left: 125%;
+        top: 50%;
+        left: 130%;
         border: 1px solid grey;
         border-radius: 50%;
     }
@@ -354,8 +366,8 @@
         width: 100px;
         height: 100px;
         position: absolute;
-        top: 90%;
-        left: 125%;
+        top: 120%;
+        left: 100%;
         border: 1px solid grey;
         border-radius: 50%;
     }

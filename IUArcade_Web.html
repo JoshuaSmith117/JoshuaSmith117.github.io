@@ -33,14 +33,14 @@
 
 <!--Begin Writing Body Content------------------------------------------------------------------------>
 <body>
-    <div class="header">
+    <div class="headerweb">
         <div style="position:absolute; top: 30%;">
-            <button class="headerbtn" onclick="window.open('https://www.linkedin.com/in/joshsmith117/')" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"><span class="tooltiptext">linkedin.com/in/joshsmith117</span></button>
-            <button class="headerbtn" onclick="window.location.href = 'mailto:joshsmith117@yahoo.com'" style="background-image: url(Assets/Images/emailicon.png);"><span class="tooltiptext">joshsmith117@yahoo.com</span></button>
+            <button class="headerwebbtn" onclick="window.open('https://www.linkedin.com/in/joshsmith117/')" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"><span class="tooltiptext">linkedin.com/in/joshsmith117</span></button>
+            <button class="headerwebbtn" onclick="window.location.href = 'mailto:joshsmith117@yahoo.com'" style="background-image: url(Assets/Images/emailicon.png);"><span class="tooltiptext">joshsmith117@yahoo.com</span></button>
         </div>
         <div style="display:inline-block; position:absolute; right:0%; top: 30%;">
-            <button class="headerbtn" onclick="window.location.href = 'games.html'" style="background-image: url(Assets/Images/backarrow.png);"></button>
-            <button class="headerbtn" onclick="window.location.href = 'index.html'" style="background-image: url(Assets/Images/home-icon.png);"></button>
+            <button class="headerwebbtn" onclick="window.location.href = 'web.html'" style="background-image: url(Assets/Images/backarrow.png);"></button>
+            <button class="headerwebbtn" onclick="window.location.href = 'index.html'" style="background-image: url(Assets/Images/home-icon.png);"></button>
         </div>
         <div class="JSdivsmall">
             <h2 class="headertxt">Joshua</h2>
@@ -55,7 +55,7 @@
     </div>
     <div class="bodycont">
         <div class="bodydiv">
-            <h1 class="bodytitle">Tori</h1>
+            <h1 class="bodytitle">Mark Cuban Center IU Arcade</h1>
 
             <!--/////////////////////////////////////////-->
             <div class="slideshow-container">
@@ -71,18 +71,22 @@
                     <img src="Assets/Images/Tori/SoundBurst.png" style="max-height:300px; max-width:100%;">
                 </div>
             </div>
-            <!--/////////////////////////////////////////-->
             <div class ="glossary"style="background-color: rgba(200,200,200,.2);">
                 <h1 class="bodytitle" style="text-decoration:underline;">Glossary</h1>
                 <h1 class="pagelink">
-                    <a href="#codeword1">Designing minimal controls for a minimal game.</a>
+                    <a href="#codeword1">Encouraging Player Login: High-scores</a>
                 </h1>
                 <h1 class="pagelink">
-                    <a href="#codeword2">Creating a User Interface without a HUD.</a>
+                    <a href="#codeword2">Crafting a Consistent Experience Between Games</a>
                 </h1>
-            
                 <h1 class="pagelink">
-                    <a href="#codeword3">Crafting a non-intrusive Tutorial Sequence.</a>
+                    <a href="#codeword3">Designing Mobile-Friendly Gameplay for Max Usability</a>
+                </h1>
+                <h1 class="pagelink">
+                    <a href="#codeword4">Problem Solving: Poor Visuals at Low Resolutions</a>
+                </h1>
+                <h1 class="pagelink">
+                    <a href="#codeword5">Case Study: Designing Mobile Controls for B-Ball Balance</a>
                 </h1>
             </div>
             <div class="line"></div>
@@ -90,96 +94,139 @@
             <div class="line"></div>
             <br />
             <div class="bodysummary">
-                Tori is a PC game about the exploration of sound. The player takes control of a little bird, named Tori. 
-                They fly freely around the land of Oto-Kai, a Shinto-inspired world floating high in the sky above feudal Japan. 
-                Tori has the power to harness the kami, or spirits of this world and use those kami to breathe new life into the environment. 
-                Each kami produces its own unique sound for the player to enjoy.
-            </div>
-            <br />
-            <div class="bodysummary">
-                Currently, we are about 1 year into production of the 2-year long project that is Tori. 
-                Already, Tori has taught me some of the most valuable lessons of my career as a game developer. 
-                For over a year, we’ve been designing, developing, testing, iterating, and growing as both a game and a team. 
-                What started as a passion project developed by 3 people, has quickly transformed into a 7-person company.
+                The Mark Cuban Center for Sports Media and Technology at IU needed a small online arcade of IU Athletics games to be built. 
+                The primary purpose of this arcade was to gather email addresses so that the Mark Cuban Center could then advertise tickets 
+                for upcoming sporting events to these email addresses. We developed three arcade games over the course of three months: B-Ball 
+                Balance, Lil’ 5, and Pigskin Pitch. I also designed and developed the website that houses these games. Learn more about my 
+                web design work ****here.
             </div>
             <a name="codeword1"></a>
             <br />
             <br />
             <div class = "line"></div>
-            <h1 class="bodytitle">Designing minimal controls for a minimal game.</h1>
+            <h1 class="bodytitle">Encouraging Player Login: High-scores</h1>
             <div class="line"></div>
             <br />
             <div class="bodysummary">
-                I designed a control scheme to reflect Tori’s minimal style. This control scheme aims to take advantage of only the mouse. 
-                This also keeps the controls as intuitive and simple as possible. 
-                We don’t expect our target audience to have a large amount of gaming skill, therefore it’s important that they don’t have to learn an array of
-                keyboard controls to play. 
+                Since user logins were the primary purpose of this arcade, encouraging users to login was a major point of discussion. 
+                What incentive did we want to give our players to persuade them to log into the site and give us their email address? 
+                There were multiple routes to explore:
+                <br/>
+                1)	Require the player to log in to play the game.
+                <br />
+                2)	Allow 1 or 2 plays of the game before requiring a login.
+                <br />
+                3)	Deactivate some feature(s) of the game, unless the player is logged in.
             </div>
             <br />
             <div class="bodysummary">
-                Through rigorous user testing, I discovered that most players prefer non-inverted controls for flight. 
-                As someone who played my fair share of flight-based games, this came as a surprise to me. 
-                It felt much more natural for me to fly with inverted controls. Luckily, user testing taught me that this not the case for our target audience, 
-                so I made decided to make the default controls non-inverted. However, inverted controls are certainly still an option in the options menu. 
-            </div>
-            <br />
-            <div class="bodysummary">
-                Now on to the most important control of all: the left-mouse click. This button is the meat and potatoes of our control scheme. 
-                It’s context sensitive and allows the player to do many different things under certain circumstances. 
-                For example, if you click it while passing through a kami’s area, you will absorb that kami and begin carrying it with you. 
-                And if you click it again while you’re already carrying a kami, you will drop that kami. 
-                However, if you click it while flying through empty air, you will simply chirp. Believe it or not, this chirp is actually a very 
-                important interaction, because it acts as a form of feedback to the player, letting them know that clicking does do SOMETHING, 
-                rather than doing absolutely NOTHING.
+                Each of these options has its pros and cons. After much deliberation, I decided on the most user-friendly of the options: #3. 
+                Each player is always able to play the games, whether or not they are logged in, however they will be reminded as they play 
+                that they’re missing out on a cool feature (in this case that feature would be a permanent high-score). High-scores are the 
+                bread and butter of the 60-second arcade game, and therefore the player would be forfeiting much of the arcade experience by 
+                opting out of them. If the player cares about high-scores, they will want to log in. The only downside to this method is that 
+                many players might not care, but no method is perfect.
             </div>
             <a name="codeword2"></a>
             <br />
             <br />
             <div class="line"></div>
-            <h1 class="bodytitle">Creating a User Interface without a HUD.</h1>
+            <h1 class="bodytitle">Crafting a Consistent Experience Between Games</h1>
             <div class="line"></div>
             <br />
             <div class="bodysummary">
-                Early on, I decided that a heads-up-display was going to be both unnecessary for the amount of information we needed to convey to the player, 
-                and immersion-breaking, given the airy and mystical nature of our game world. Therefore, I needed to design a User Interface that properly 
-                conveyed the necessary info to the player, while remaining in the world space. I quickly realized that our player character, Tori, 
-                would be the perfect medium through which to display this information, since the camera view is nearly always focused on Tori in a 3rd-person 
-                perspective.
+                These games all exist in the same universe, under one roof: the IU Arcade. Therefore, it’s important 
+                that they all feel like they belong together. This effect can be achieved through consistency. 
+                Retaining consistent art-style is the easiest way to tie them all together. As you can see, that was 
+                certainly a goal of ours. However, there’s another, more subtle method: crafting a consistent flow. 
             </div>
             <br />
             <div class="bodysummary">
-                I made a slight modification to Tori’s character model that would both act as an effective UI element and a way to convey Tori’s 
-                emotions visually from the back. I simply added a feather that sticks up off the top of Tori’s head. 
-                This head feather is easily visible from behind and acts as a great way for Tori to communicate with the player.
+                Each of these games shares the same user flow. The player is presented with the main menu. Here, they 
+                can either hit the “play” button or alter some minor options. Once the player clicks “play,” they are 
+                presented with a quick how-to-play screen, which tells them the basics of how to earn a score. The 
+                gameplay then begins. Once they’ve played the game, a game-over prompt is displayed, showing them 
+                their high and current scores, as well as the options to continue or to play again. This exact flow 
+                is replicated across all the games, contributing toward a consistent flow throughout the arcade.
             </div>
             <a name="codeword3"></a>
             <br />
             <br />
             <div class="line"></div>
-            <h1 class="bodytitle">Crafting a non-intrusive Tutorial Sequence.</h1>
+            <h1 class="bodytitle">Designing Mobile-Friendly Gameplay for Max Usability</h1>
             <div class="line"></div>
             <br />
             <div class="bodysummary">
-                The tutorial sequence is arguably the most important sequence in the game. 
-                It is one of the first experiences the player has in the game, after the main menu, and it must tell them how to effectively play the 
-                game in an interesting and engaging way. Because this world is designed to feel open and free for the player to explore, we avoided creating a 
-                ‘rail-road’ tutorial sequence. Instead, we decided to use the secondary character, the story bird, to guide the player into 
-                learning the game’s core mechanics and controls.
+                A large portion of our potential users browses the web on their smartphones. With this in mind, 
+                I knew we had to make these games mobile-friendly. That meant designing gameplay mechanics that 
+                worked well with both mouse and touch controls. This was an important decision early in the process, as
+                it would shape the games’ core gameplay moving forward. 
             </div>
             <br />
             <div class="bodysummary">
-                Throughout the tutorial segment, the story bird flies to the recommended next step for progressing through the game, 
-                continues to fly around that object, whatever it may be, and chirps repeatedly. It’s a way of saying, “you should probably 
-                come over here,” but importantly the player is never actually required to follow the story bird.
+                Touch controls forced us to think “simple” with our designs. While this may sound like a problematic limitation, 
+                I believe it pushed us to be more creative with our solutions. How could we make an interaction as simple as tapping 
+                the screen for 60 seconds at a time, fun?
+                <br/>
+                Pigskin Pitch utilized skill-based timing: Stop the meters where you want the ball to land. 
+                <br/>
+                Lil’5 focused on stamina management: Don’t over-exert yourself, or you’ll regret it.
+                <br/>
+                B-Ball Balance relied on physics-based balancing: Careful, don’t drop it!
+            </div>
+            <a name="codeword4"></a>
+            <br />
+            <br />
+            <div class="line"></div>
+            <h1 class="bodytitle">Problem Solving: Poor Visuals at Low Resolutions</h1>
+            <div class="line"></div>
+            <br />
+            <div class="bodysummary">
+                A major issue we ran into was scaling. Although the aspect ratio of the game window stayed constant, 
+                scaling down to resolutions as low as 320x240 caused a serious drop in the quality of the visuals. 
+                On top of that, there were major text readability issues. There simply weren’t enough pixels on the 
+                screen to display text, in a legible manner. 
             </div>
             <br />
             <div class="bodysummary">
-                We used a cross between story-boarding and descriptive writing to explain the step-by-step sequence of the tutorial. 
-                First, the story bird guides the player to the Koi’s puzzle stone. This stone, which has a hole through the center of it 
-                and the image of a koi fish etched into it, is waiting for the player to fly through with a Koi’s kami. 
-                So, if the player decides to follow the story bird and tries fly through without yet having the required kami, 
-                they will be rejected and bounced back, as if they hit a wall. This will hopefully tell the player that they did something wrong. 
-                Now, the story bird will turn its attention to the kami required, which rests close by.
+                To try and solve the poor visual quality, we began switching our pixel art to vector graphics, but that 
+                caused our performance to suffer tremendously. In the end, instead of suffer performance and frame-rate drops, 
+                which would ultimately hurt the player’s ability to get as high a score as possible, I made the decision to sacrifice 
+                visual appeal at low resolutions. 
+            </div>
+            <br />
+            <div class="bodysummary">
+            We still had the issue of text readability, however, and to solve this problem, I simply changed the text font to be less 
+                stylized and easier to render with fewer pixels.
+            </div>
+            <a name="codeword5"></a>
+            <br />
+            <br />
+            <div class="line"></div>
+            <h1 class="bodytitle">Case Study: Designing Mobile Controls for B-Ball Balance</h1>
+            <div class="line"></div>
+            <br />
+            <div class="bodysummary">
+                B-Ball Balance is a game where the player balances a basketball on their finger for as long as they can, while dodging incoming food 
+                being thrown at them. To balance the ball, the player simply needs to move their in-game finger around on the screen. 
+                On the computer, the tip of the finger follows the mouse. On the phone, the tip of the in-game finger intuitively follows the 
+                tip of the player’s real finger. 
+            </div>
+            <br />
+            <div class="bodysummary">
+                Movement on the screen was a straight forward design, however I wanted to allow the player to toss the ball up to dodge the 
+                food and then catch it again. On the PC, a left click made the most sense to initiate the toss, but the solution wasn’t as 
+                simple on the phone. Since the player’s finger is on the screen at all times, tapping isn’t an option. The player could 
+                have used a second finger to do the tapping, but then they’d be playing with their thumbs, rather than their index finger. 
+                This would have detracted from the feeling of balancing a ball on their finger. The player needed to be able to play the game 
+                with just one hand.
+            </div>
+            <br />
+            <div class="bodysummary">
+                I realized that if the ball was in mid-air, there would be a moment when the player wouldn’t need to move their finger around. 
+                This meant they could let go of the screen for a moment while the ball was in the air. This led me to design a control in which 
+                the act of the player lifting their finger off the screen caused the ball to jump into the air. They would then have some time 
+                to place their finger back on the screen before the ball came back down.
             </div>
             <br />
             <br />
@@ -203,8 +250,8 @@
 <script>
     var jsdivsmall = document.getElementsByClassName("JSdivsmall");
     var jsdivbig = document.getElementsByClassName("JSdivbig");
-    var hdr = document.getElementsByClassName("header");
-    var hdrbtn = document.getElementsByClassName("headerbtn");
+    var hdr = document.getElementsByClassName("headerweb");
+    var hdrbtn = document.getElementsByClassName("headerwebbtn");
     var hdrtxt = document.getElementsByClassName("headertxt");
     var ftr = document.getElementsByClassName("footer");
     var ftrtxt = document.getElementsByClassName("footertxt");

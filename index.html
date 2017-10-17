@@ -32,7 +32,7 @@
     <body>
         
             <div id ="uxdiv" style="position:fixed;top:150px;width:80%; left:50%;transform:translate(-50%,-50%);"><h1 id ="ux" style="color:rgb(100,100,100); font-size:12px; text-align:center;">
-                All media tries to present a message. Without users, that message falls on deaf ears. That is why I aim to create impactful, user-friendly experiences, no matter the medium.</h1></div>
+                All media tries to present a message. It is important that this message gets through to users. That is why I aim to create impactful, user-friendly experiences, no matter the medium.</h1></div>
             <div class="header">
                 <button class="headerbtn" onclick="window.open('https://www.linkedin.com/in/joshsmith117/')" style="background-image: url(Assets/Images/LinkedInLogoSimple.png); background-position-y:40%;"><span class="tooltiptext">linkedin.com/in/joshsmith117</span></button>
                 <button class="headerbtn" onclick="window.location.href = 'mailto:joshsmith117@yahoo.com'" style="background-image: url(Assets/Images/emailicon.png);"><span class="tooltiptext">joshsmith117@yahoo.com</span></button>
@@ -58,8 +58,6 @@
             <div class="btn1div">
                 <h1 class="game">Game Development</h1>
                 <button class="btn1" onclick="window.location.href = 'games.html'"><h1 class="btntxt" id="btntxt1">Learn More</h1>
-                    <img class="arrow" src="Assets/Images/OrangeArrowRight.png" style="top: 50%; left: -60px" />
-                    <img class="arrow" src="Assets/Images/OrangeArrowLeft.png" style="top: 50%; right: -60px" />
                 </button>
                 <div class="boxcont1" style="display: none;">
                     <img src="Assets/Images/Tori/ToriLogo.png" class="box1">
@@ -71,12 +69,11 @@
             <div class="btn2div">
                 <h1 class="web">Web Development</h1>
                 <button class="btn2" onclick="window.location.href = 'web.html'"><h1 class="btntxt" id="btntxt2">Learn More</h1>
-                    <img class="arrow" src="Assets/Images/BlueArrowRight.png" style="top: 50%; left: -60px" />
-                    <img class="arrow" src="Assets/Images/BlueArrowLeft.png" style="top: 50%; right: -60px" />
                 </button>
                 <div class="boxcont2" style="display: none;">
-                    <img src="Assets/Images/JSLogoInner.png" class="box2-2">
-                    <img src="Assets/Images/IUArcade.png" class="box2-3">
+                    <img src="Assets/Images/JSLogoInner.png" class="box2-1">
+                    <img src="Assets/Images/IUArcade.png" class="box2-2">
+                    <img src="Assets/Images/Rhinos/rhinos_logo_gray.png" class="box2-3">
                 </div>
             </div>
         
@@ -94,7 +91,6 @@
     var btntxt = document.getElementsByClassName("btntxt");
     var ftr = document.getElementsByClassName("footer");
     var ftrtxt = document.getElementsByClassName("footertxt");
-    var arrow = document.getElementsByClassName("arrow");
     var hdr = document.getElementsByClassName("header");
     var hdrbtn = document.getElementsByClassName("headerbtn");
     var hdrtxt = document.getElementsByClassName("headertxt");
@@ -105,41 +101,8 @@
     var box2 = document.getElementsByClassName("box2");
     var box3 = document.getElementsByClassName("box3");
     var box4 = document.getElementsByClassName("box4");
+    
 
-    function arrowmoveright() {
-        var pos = -60;
-        var id = setInterval(frame, 20);
-        function frame() {
-            if (pos == -30) {
-                clearInterval(id);
-                arrowmoveleft();
-            }
-            else{
-                pos++;
-                arrow[0].style.left = pos + 'px';
-                arrow[1].style.right = pos + 'px';
-                arrow[2].style.left = pos + 'px';
-                arrow[3].style.right = pos + 'px';
-            } 
-        }
-    }
-    function arrowmoveleft() {
-        var pos = -30;
-        var id = setInterval(frame, 20);
-        function frame() {
-            if (pos == -60) {
-                clearInterval(id);
-                arrowmoveright();
-            }
-            else {
-                pos--;
-                arrow[0].style.left = pos + 'px';
-                arrow[1].style.right = pos + 'px';
-                arrow[2].style.left = pos + 'px';
-                arrow[3].style.right = pos + 'px';
-            }
-        }
-    }
     function resize() {
         if ((window.innerWidth < 1000)) {
             game[0].style.position = "absolute";
@@ -175,9 +138,6 @@
             for (x = 0; x < btntxt.length; x++) {
                 btntxt[x].style.fontSize = "12px";
             }
-            for (x = 0; x < arrow.length; x++) {
-                arrow[x].style.maxWidth = "10px";
-            }
             for (x = 0; x < hdrbtn.length; x++) {
                 hdrbtn[x].style.width = "50px";
                 hdrbtn[x].style.height = "50px"
@@ -204,10 +164,6 @@
             }
             for (x = 0; x < hdrtxt.length; x++) {
                 hdrtxt[x].style.fontSize = "12px";
-            }
-
-            for (i = 0; i<arrow.length; i++){
-                arrow[i].style.width= "1px;"
             }
 
             if ((window.innerWidth < 700)) {
@@ -263,9 +219,6 @@
             for (x = 0; x < btntxt.length; x++) {
                 btntxt[x].style.fontSize = "20px";
             }
-            for (x = 0; x < arrow.length; x++) {
-                arrow[x].style.maxWidth = "20px";
-            }
             for (x = 0; x < hdrbtn.length; x++) {
                 hdrbtn[x].style.width = "70px";
                 hdrbtn[x].style.height = "70px";
@@ -295,7 +248,6 @@
         }
 
     }
-    $(document).ready(arrowmoveright);
     $(document).ready(resize);
     $(window).resize(resize);
 
@@ -303,7 +255,6 @@
     $('.btn1').mouseover(function () {
         $('#btntxt1').fadeIn('fast');
         $('.btn2').fadeOut('fast');
-        $('.arrow').fadeOut('fast');
         $('.headerbtn').addClass("orange");
         ftr[0].style.backgroundColor = "rgb(251,176,59)";
         ftr[0].style.borderTopColor = "rgb(180,100,20)";
@@ -320,7 +271,6 @@
     $('.btn1').mouseout(function () {
         $('.btn2').fadeIn('fast');
         $('#btntxt1').fadeOut('fast');
-        $('.arrow').fadeIn('fast');
         $('.headerbtn').removeClass("orange");
         ftr[0].style.backgroundColor = "rgb(200,200,200)";
         ftr[0].style.borderTopColor = "rgb(150,150,150)";
@@ -337,7 +287,6 @@
     $('.btn2').mouseover(function () {
         $('#btntxt2').fadeIn('fast');
         $('.btn1').fadeOut('fast');
-        $('.arrow').fadeOut('fast');
         $('.headerbtn').addClass("blue");
         ftr[0].style.backgroundColor = "rgb(106,215,255)";
         ftr[0].style.borderTopColor = "rgb(80,170,200)";
@@ -354,7 +303,6 @@
     $('.btn2').mouseout(function () {
         $('#btntxt2').fadeOut('fast');
         $('.btn1').fadeIn('fast');
-        $('.arrow').fadeIn('fast');
         $('.headerbtn').removeClass("blue");
         ftr[0].style.backgroundColor = "rgb(200,200,200)";
         ftr[0].style.borderTopColor = "rgb(150,150,150)";
