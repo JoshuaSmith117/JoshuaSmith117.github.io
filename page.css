@@ -58,6 +58,18 @@
         z-index:1;
         transition: 0.5s;
     }
+    .footerweb {
+        position: page;
+        background-color: rgb(106,215,255);
+        border-top:2px solid rgb(80,170,200);
+        height: 70px;
+        width: 100%;
+        left: 0%;
+        bottom: 0%;
+        text-align: center;
+        z-index:1;
+        transition: 0.5s;
+    }
     .footertxt {
         position:relative;
         color: white;

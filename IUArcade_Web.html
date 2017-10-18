@@ -74,19 +74,16 @@
             <div class ="glossary"style="background-color: rgba(200,200,200,.2);">
                 <h1 class="bodytitle" style="text-decoration:underline;">Glossary</h1>
                 <h1 class="pagelink">
-                    <a href="#codeword1">Encouraging Player Login: High-scores</a>
+                    <a href="#codeword1">Utilizing Responsive Design Techniques</a>
                 </h1>
                 <h1 class="pagelink">
-                    <a href="#codeword2">Crafting a Consistent Experience Between Games</a>
+                    <a href="#codeword2">Persuading Users to Register</a>
                 </h1>
                 <h1 class="pagelink">
-                    <a href="#codeword3">Designing Mobile-Friendly Gameplay for Max Usability</a>
+                    <a href="#codeword3">Case Study: The Home Page</a>
                 </h1>
                 <h1 class="pagelink">
-                    <a href="#codeword4">Problem Solving: Poor Visuals at Low Resolutions</a>
-                </h1>
-                <h1 class="pagelink">
-                    <a href="#codeword5">Case Study: Designing Mobile Controls for B-Ball Balance</a>
+                    <a href="#codeword4">Case Study: The Game Page</a>
                 </h1>
             </div>
             <div class="line"></div>
@@ -96,137 +93,128 @@
             <div class="bodysummary">
                 The Mark Cuban Center for Sports Media and Technology at IU needed a small online arcade of IU Athletics games to be built. 
                 The primary purpose of this arcade was to gather email addresses so that the Mark Cuban Center could then advertise tickets 
-                for upcoming sporting events to these email addresses. We developed three arcade games over the course of three months: B-Ball 
-                Balance, Lil’ 5, and Pigskin Pitch. I also designed and developed the website that houses these games. Learn more about my 
-                web design work ****here.
+                for upcoming sporting events to these email addresses. I designed and developed the website that would house these games and 
+                make it easy and for users to play them. I even created the login system and created incentive to register. I also led development 
+                and designed the user experiences for the games themselves. Learn more about my game design ****here.
             </div>
             <a name="codeword1"></a>
             <br />
             <br />
             <div class = "line"></div>
-            <h1 class="bodytitle">Encouraging Player Login: High-scores</h1>
+            <h1 class="bodytitle">Utilizing Responsive Design Techniques</h1>
             <div class="line"></div>
             <br />
             <div class="bodysummary">
-                Since user logins were the primary purpose of this arcade, encouraging users to login was a major point of discussion. 
-                What incentive did we want to give our players to persuade them to log into the site and give us their email address? 
-                There were multiple routes to explore:
-                <br/>
-                1)	Require the player to log in to play the game.
-                <br />
-                2)	Allow 1 or 2 plays of the game before requiring a login.
-                <br />
-                3)	Deactivate some feature(s) of the game, unless the player is logged in.
+                Today, it is required that all websites are responsive and scale to any screen size. With more people browsing the web on their smartphones than ever before, 
+                I created a website that functions properly across all devices.
             </div>
             <br />
             <div class="bodysummary">
-                Each of these options has its pros and cons. After much deliberation, I decided on the most user-friendly of the options: #3. 
-                Each player is always able to play the games, whether or not they are logged in, however they will be reminded as they play 
-                that they’re missing out on a cool feature (in this case that feature would be a permanent high-score). High-scores are the 
-                bread and butter of the 60-second arcade game, and therefore the player would be forfeiting much of the arcade experience by 
-                opting out of them. If the player cares about high-scores, they will want to log in. The only downside to this method is that 
-                many players might not care, but no method is perfect.
+                All elements of each page fit within a body div element that has a max-width of around
+                1000 pixels. This prevents the pages from having too scale proportionately to potentially massive screens. Once the screen size is scaled down to 1000 pixels,
+                it breaks the PC-Mobile threshold. At this point, the screen will switch to a mobile format and elements will begin scaling down accordingly. I do this
+                scaling in a series of steps. For example, at 720 pixels or less, all text elements shrink to a smaller font size. Game window sizes shrink accordingly as well.
+            </div>
+            <br />
+            <div class="bodysummary">
+                In addition to element downsizing, unnecessary elements, such as text in the login bar, will disappear entirely upon reaching a small enough screen width.
+                The body’s width also runs flush with the edges of the screen upon entering the mobile format, allowing it and all inner div elements to scale down along
+                with the screen width. Many of the elements even align to the center of the screen while in the mobile format.
             </div>
             <a name="codeword2"></a>
             <br />
             <br />
             <div class="line"></div>
-            <h1 class="bodytitle">Crafting a Consistent Experience Between Games</h1>
+            <h1 class="bodytitle">Persuading Users to Register</h1>
             <div class="line"></div>
             <br />
             <div class="bodysummary">
-                These games all exist in the same universe, under one roof: the IU Arcade. Therefore, it’s important 
-                that they all feel like they belong together. This effect can be achieved through consistency. 
-                Retaining consistent art-style is the easiest way to tie them all together. As you can see, that was 
-                certainly a goal of ours. However, there’s another, more subtle method: crafting a consistent flow. 
+                The primary goal of the Mark Cuban Center with this website is to provide a fun gaming experience, but also to gather user emails so they can then 
+                email users with ticket sales for upcoming sporting events. To accomplish this task, I developed a system for saving the users’ high-scores to a 
+                database, but only while they are logged in.  
             </div>
             <br />
             <div class="bodysummary">
-                Each of these games shares the same user flow. The player is presented with the main menu. Here, they 
-                can either hit the “play” button or alter some minor options. Once the player clicks “play,” they are 
-                presented with a quick how-to-play screen, which tells them the basics of how to earn a score. The 
-                gameplay then begins. Once they’ve played the game, a game-over prompt is displayed, showing them 
-                their high and current scores, as well as the options to continue or to play again. This exact flow 
-                is replicated across all the games, contributing toward a consistent flow throughout the arcade.
+                This high-score system acts as some good incentive to login, however players need to be well-aware of the system so that they can take advantage of it. 
+                On every page, along with each game link, there is an area that displays the user’s high-score for that game. In each of those areas, the user will 
+                see: “Highscore: Please Login”. This acts as a constant reminder, no matter where the user is on the site, that logging in will allow them to see 
+                their high-score.
+            </div>
+            <br />
+            <div class="bodysummary">
+                To add to this, throughout every page, I placed the login bar at the top-center of the screen with brightly colored buttons to highlight it. 
+                I even added text to the login bar that guides the user toward a call to action. “First time here? Register. Already Registered? Login.” 
+                This text is context sensitive as well. If the player is on the game page, playing a game, the text instead asks: “Want to save your highscores for this game? 
+                Login or Register.” This helpful and person-like text might just encourage the user to take that extra step toward registering.
             </div>
             <a name="codeword3"></a>
             <br />
             <br />
             <div class="line"></div>
-            <h1 class="bodytitle">Designing Mobile-Friendly Gameplay for Max Usability</h1>
+            <h1 class="bodytitle">Case Study: The Home Page</h1>
             <div class="line"></div>
             <br />
             <div class="bodysummary">
-                A large portion of our potential users browses the web on their smartphones. With this in mind, 
-                I knew we had to make these games mobile-friendly. That meant designing gameplay mechanics that 
-                worked well with both mouse and touch controls. This was an important decision early in the process, as
-                it would shape the games’ core gameplay moving forward. 
+                The home page is arguably the most important page for any website. It’s the first thing that a user sees when entering a site, 
+                so it must make a good impression and encourage them to explore the site further by making it easy for them to find what they’re looking for. 
             </div>
             <br />
             <div class="bodysummary">
-                Touch controls forced us to think “simple” with our designs. While this may sound like a problematic limitation, 
-                I believe it pushed us to be more creative with our solutions. How could we make an interaction as simple as tapping 
-                the screen for 60 seconds at a time, fun?
-                <br/>
-                Pigskin Pitch utilized skill-based timing: Stop the meters where you want the ball to land. 
-                <br/>
-                Lil’5 focused on stamina management: Don’t over-exert yourself, or you’ll regret it.
-                <br/>
-                B-Ball Balance relied on physics-based balancing: Careful, don’t drop it!
+                The first impression that I wanted users to get from this sight is this: It’s a high energy arcade with a lot of potential for fun. 
+                To convey this message as soon as possible, I want users to immediately see a lot of movement. I took inspiration from IU’s main home page 
+                and included a full-width video displays on the screen as soon as the user enters the site. This creates a lot of movement, while also showing 
+                them a sneak peak of the games that they could play in this arcade.
+            </div>
+            <br />
+            <div class="bodysummary">
+                Users also need to be reminded where they are within the first moments of visiting the site. They will be expecting an IU site, so they need 
+                to be met by a warm IU greeting. This is handled by the large header across the top and the logo directly in the center of the video. The 
+                red and white color scheme also adds to the IU theming.
+            </div>
+            <br />
+            <div class="bodysummary">
+                After the first few moments, the user will get to inspect the less impactful areas of the page. They might spot the brightly colored login buttons 
+                (one of the most important aspects of the site) and the social media icons in the top right corner 
+                (The Mark Cuban Center cares about their social media outreach). 
+            </div>
+            <br />
+            <div class="bodysummary">
+                Soon, the user will scroll down to see the full list of games that they can play, clearly presented down the center of the screen. Each game is 
+                presented with a thumbnail image, title, short description, and high-score display. This information helps the user make an informed decision of 
+                which game they want to play, if any. If they hover over the thumbnail images or the title text, a red highlight will grab their attention and 
+                let them know that these game sections are clickable. By selecting a game from this list, the player will be sent directly to the game page. In 
+                just one click, they’ve gone from entering the site to being able to play.
+            </div>
+            <br />
+            <div class="bodysummary">
+                Finally, in a small footer at the bottom of the screen, the user will find the legal and contact information for the Mark Cuban Center. 
+                None of this information is at the top of the Mark Cuban Center’s priority list. It’s available to anyone who wants to view it, but it’s 
+                neatly out of the way for anyone who doesn’t care and just wants to jump into the action.
             </div>
             <a name="codeword4"></a>
             <br />
             <br />
             <div class="line"></div>
-            <h1 class="bodytitle">Problem Solving: Poor Visuals at Low Resolutions</h1>
+            <h1 class="bodytitle">Case Study: The Game Page</h1>
             <div class="line"></div>
             <br />
             <div class="bodysummary">
-                A major issue we ran into was scaling. Although the aspect ratio of the game window stayed constant, 
-                scaling down to resolutions as low as 320x240 caused a serious drop in the quality of the visuals. 
-                On top of that, there were major text readability issues. There simply weren’t enough pixels on the 
-                screen to display text, in a legible manner. 
+                The game page is another important page on the site. This is where the user can dive right in and play the games. It looks very similar 
+                to the home page, with the same header, login bar, games list, and footer. However, just under the header and login bar, I have placed 
+                the game window. This is where the action happens. Alongside the game, sits a full description of the game as well as the user’s high score. 
+                If they are not logged in, the high-score area instead asks that they please log in, further working toward persuading the user to log in. 
             </div>
             <br />
             <div class="bodysummary">
-                To try and solve the poor visual quality, we began switching our pixel art to vector graphics, but that 
-                caused our performance to suffer tremendously. In the end, instead of suffer performance and frame-rate drops, 
-                which would ultimately hurt the player’s ability to get as high a score as possible, I made the decision to sacrifice 
-                visual appeal at low resolutions. 
+                Unfortunately, certain games have a loading time of a few seconds. This causes the game to display a black screen for the first few seconds 
+                after the page opens, which may lead users to believe that the page isn’t working properly. I attempted to remedy this issue by reminding 
+                users that the games may take a few seconds to load. It’s a small addition, but it can make a large impact on the experience of the user 
+                by keeping them on the page for just a few more seconds while the game loads.
             </div>
             <br />
             <div class="bodysummary">
             We still had the issue of text readability, however, and to solve this problem, I simply changed the text font to be less 
                 stylized and easier to render with fewer pixels.
-            </div>
-            <a name="codeword5"></a>
-            <br />
-            <br />
-            <div class="line"></div>
-            <h1 class="bodytitle">Case Study: Designing Mobile Controls for B-Ball Balance</h1>
-            <div class="line"></div>
-            <br />
-            <div class="bodysummary">
-                B-Ball Balance is a game where the player balances a basketball on their finger for as long as they can, while dodging incoming food 
-                being thrown at them. To balance the ball, the player simply needs to move their in-game finger around on the screen. 
-                On the computer, the tip of the finger follows the mouse. On the phone, the tip of the in-game finger intuitively follows the 
-                tip of the player’s real finger. 
-            </div>
-            <br />
-            <div class="bodysummary">
-                Movement on the screen was a straight forward design, however I wanted to allow the player to toss the ball up to dodge the 
-                food and then catch it again. On the PC, a left click made the most sense to initiate the toss, but the solution wasn’t as 
-                simple on the phone. Since the player’s finger is on the screen at all times, tapping isn’t an option. The player could 
-                have used a second finger to do the tapping, but then they’d be playing with their thumbs, rather than their index finger. 
-                This would have detracted from the feeling of balancing a ball on their finger. The player needed to be able to play the game 
-                with just one hand.
-            </div>
-            <br />
-            <div class="bodysummary">
-                I realized that if the ball was in mid-air, there would be a moment when the player wouldn’t need to move their finger around. 
-                This meant they could let go of the screen for a moment while the ball was in the air. This led me to design a control in which 
-                the act of the player lifting their finger off the screen caused the ball to jump into the air. They would then have some time 
-                to place their finger back on the screen before the ball came back down.
             </div>
             <br />
             <br />
@@ -235,7 +223,7 @@
         </div>
         
     </div>
-    <div class="footer">
+    <div class="footerweb">
         <div style="position:absolute; height:inherit; left:5%;">
             <h2 class="footertxt">joshsmith117@yahoo.com</h2>
         </div>
@@ -253,7 +241,7 @@
     var hdr = document.getElementsByClassName("headerweb");
     var hdrbtn = document.getElementsByClassName("headerwebbtn");
     var hdrtxt = document.getElementsByClassName("headertxt");
-    var ftr = document.getElementsByClassName("footer");
+    var ftr = document.getElementsByClassName("footerweb");
     var ftrtxt = document.getElementsByClassName("footertxt");
     var bdycon = document.getElementsByClassName("bodycont");
     var bdydiv = document.getElementsByClassName("bodydiv");
