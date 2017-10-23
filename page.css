@@ -244,13 +244,27 @@
     }
     /*Button Styles-----------------------------------------------------*/
     .bodyimg{
-        width: 500px;
+        max-width:50%;
+        min-width: 300px;
         background-position-x: 50%; 
         background-position-y: 50%;
         background-size: 100%;
-        margin: 10px;
-        border: 2px solid black;
-        max-width: 100%
+        margin:auto;
+        display: inline-block;
+    }
+    .bodyimgl{
+        max-width:50%;
+        min-width: 300px;
+        background-position-x: 50%; 
+        background-position-y: 50%;
+        background-size: 100%;
+        margin:auto;
+        display: inline-block;
+    }
+    @media screen and (min-width: 1040px) {
+        .bodyimgl {
+            float:left;
+        }
     }
     .titleimg{
         background-color: white;
@@ -296,11 +310,10 @@
 
     /* Slideshow container */
     .slideshow-container {
-      max-width: 1200px;
+      max-width: 90%;
       position: relative;
       margin: auto;
-      padding:10px;
-      min-height:320px;
+      margin-top: 20px;
     }
 
     .active {
