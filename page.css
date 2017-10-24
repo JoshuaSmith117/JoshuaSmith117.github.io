@@ -45,7 +45,7 @@
         color: gray;
         text-decoration:underline;
     }
-
+    /*Footer Styles ----------------------------------------------*/
     .footer {
         position: page;
         background-color: #fbb03b;
@@ -244,8 +244,7 @@
     }
     /*Button Styles-----------------------------------------------------*/
     .bodyimg{
-        max-width:50%;
-        min-width: 300px;
+        max-width:90%;
         background-position-x: 50%; 
         background-position-y: 50%;
         background-size: 100%;
@@ -253,8 +252,7 @@
         display: inline-block;
     }
     .bodyimgl{
-        max-width:50%;
-        min-width: 300px;
+        max-width:90%;
         background-position-x: 50%; 
         background-position-y: 50%;
         background-size: 100%;
@@ -263,7 +261,7 @@
     }
     @media screen and (min-width: 1040px) {
         .bodyimgl {
-            float:left;
+            margin-right:50px;
         }
     }
     .titleimg{
@@ -318,24 +316,6 @@
 
     .active {
       background-color: #717171;
-    }
-
-    /* Fading animation */
-    .fade {
-      -webkit-animation-name: fade;
-      -webkit-animation-duration: 1.5s;
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-
-    @-webkit-keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
-    }
-
-    @keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
     }
 
     /* On smaller screens, decrease text size */
